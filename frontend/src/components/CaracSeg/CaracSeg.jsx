@@ -1,7 +1,6 @@
-import React from "react";
 import "../../assets/variables.css";
 import "./caracSeg.css";
-import medievalBtn from "../../assets/dnd_ico/medieval.png";
+import FlagBtn from "./FlagBtn";
 
 function CaracSeg(props) {
   const { name, value, bonus, save } = props;
@@ -25,7 +24,7 @@ function CaracSeg(props) {
         <p className="bonus_save_num">{save}</p>
       </div>
       {/* // flagBtn // */}
-      <img className="Comp_Btn" src={medievalBtn} alt="-" />
+      <FlagBtn />
     </div>
   );
 }

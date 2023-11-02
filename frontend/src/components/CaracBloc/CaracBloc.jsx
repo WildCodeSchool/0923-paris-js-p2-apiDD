@@ -1,4 +1,3 @@
-import React from "react";
 import "./caracBloc.css";
 import CaracSeg from "../CaracSeg/CaracSeg";
 import SkillsBloc from "../SkillsBloc/SkillsBloc";
@@ -51,6 +50,7 @@ function CaracBloc() {
         name: "Athletics",
         value: "+x",
       },
+      display: "none",
     },
     {
       skillBlocTitle: "DEXTERITY BASED SKILLS",

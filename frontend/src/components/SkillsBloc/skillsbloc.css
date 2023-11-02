@@ -1,0 +1,78 @@
+.skill_bloc {
+  width: 315px;
+  height: 475px;
+}
+.skill_bloc_bkg {
+  width: 315px;
+  height: 395px;
+  background: url(../../assets/dnd_ico/parchem.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sword_cross_position {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.sword_cross {
+  width: 30px;
+  height: 30px;
+}
+.skills_content {
+  margin-top: 10px;
+}
+.skill_bloc_title {
+  font-family: "Eagle Lake";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--main-font-color);
+  padding-left: 22px;
+}
+.skill_lines {
+  padding-left: 12px;
+  margin-top: 10px;
+}
+.skill_line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.radio_btn {
+  border: solid 2px black;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+}
+.value_imput {
+  width: 45px;
+  height: 40px;
+  border: solid 1px black;
+  background: var(--input-bg-color);
+}
+.skill_value {
+  font-family: "Eagle Lake";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-font-color);
+}
+
+.skill_name {
+  margin: 10px 0 12px 10px;
+  font-family: "Eagle Lake";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  color: var(--main-font-color);
+}

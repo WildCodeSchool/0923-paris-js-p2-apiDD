@@ -1,0 +1,29 @@
+#strength {
+  position: absolute;
+  top: 37%;
+  display: none;
+}
+
+#dexterity {
+  position: absolute;
+  top: 37%;
+  display: none;
+}
+
+#intelligence {
+  position: absolute;
+  top: 37%;
+  display: none;
+}
+
+#wisdom {
+  position: absolute;
+  top: 16%;
+  display: none;
+}
+
+#charisma {
+  position: absolute;
+  top: 16%;
+  display: none;
+}

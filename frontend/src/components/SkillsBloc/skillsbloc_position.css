@@ -27,3 +27,33 @@
   top: 16%;
   display: none;
 }
+
+@media (min-width: 1024px) {
+  .skill_bloc {
+    display: flex;
+    width: 585px;
+    height: 622px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  #strength {
+    top: 21px;
+  }
+  #dexterity {
+    top: 21px;
+  }
+
+  #intelligence {
+    top: 21px;
+  }
+
+  #wisdom {
+    top: 21px;
+  }
+
+  #charisma {
+    top: 21px;
+  }
+}

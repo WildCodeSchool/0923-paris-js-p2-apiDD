@@ -3,10 +3,11 @@ import "./caracSeg.css";
 import FlagBtn from "./FlagBtn";
 
 function CaracSeg(props) {
-  const { name, value, bonus, save } = props;
+  const { name, value, bonus, save, id } = props;
+  const isFlagBtnHidden = id === "CONST";
 
   return (
-    <div className="carac_segment">
+    <div className="carac_segment" id={id}>
       {/* // top // */}
       <div className="carac_num_container">
         <p className="carac_num">{value}</p>
@@ -23,8 +24,7 @@ function CaracSeg(props) {
         <p className="bonus_save">save</p>
         <p className="bonus_save_num">{save}</p>
       </div>
-      {/* // flagBtn // */}
-      <FlagBtn />
+      {!isFlagBtnHidden && <FlagBtn />}
     </div>
   );
 }

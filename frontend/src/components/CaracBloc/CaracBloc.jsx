@@ -144,6 +144,7 @@ function CaracBloc() {
         {caracs.map((carac) => (
           <CaracSeg
             key={carac.caracName}
+            id={carac.caracName}
             name={carac.caracName}
             value={carac.caracValue}
             bonus={carac.caracBonus}
@@ -151,7 +152,7 @@ function CaracBloc() {
           />
         ))}
       </div>
-      <div>
+      <div className="skills_B_posT">
         {SkillsBlocs.map((skill) => (
           <SkillsBloc
             key={skill.skillBlocTitle}

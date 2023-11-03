@@ -7,3 +7,13 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+@media (min-width: 600px) {
+  #caracs_skills_section {
+    width: 585px;
+  }
+
+  .carac_Bloc {
+    margin: 35px;
+  }
+}

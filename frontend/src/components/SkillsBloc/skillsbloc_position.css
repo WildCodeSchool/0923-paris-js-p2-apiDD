@@ -33,7 +33,7 @@
   .skill_bloc {
     display: flex;
     width: 585px;
-    height: 700px;
+    height: 600px;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.95);

@@ -6,6 +6,7 @@ import ArrowLine2 from "../../assets/dnd_ico/ArrowLine_2.png";
 function CaracSeg(props) {
   const { name, value, bonus, save, id } = props;
   const isFlagBtnHidden = id === "CONST";
+  const showArrowLine = id !== "CHAR";
 
   return (
     <>
@@ -28,9 +29,11 @@ function CaracSeg(props) {
         </div>
         {!isFlagBtnHidden && <FlagBtn />}
       </div>
-      <div id="caracs_arrow_line_2">
-        <img src={ArrowLine2} alt="-" />
-      </div>
+      {showArrowLine && (
+        <div id="caracs_arrow_line_2">
+          <img src={ArrowLine2} alt="-" />
+        </div>
+      )}
     </>
   );
 }

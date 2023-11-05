@@ -16,8 +16,8 @@
   display: none;
 }
 
-/* MEDIA SCREEN MIN-WIDTH 600 */
-@media (min-width: 600px) {
+/* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
+@media (min-width: 1024px) {
   #caracs_skills_section_screen {
     width: 585px;
   }
@@ -39,7 +39,8 @@
     display: initial;
   }
 }
-/* MEDIA PRINT */
+
+/* MEDIA-QUERIES PRINT */
 @media print {
   #caracs_skills_section_screen {
     display: none;

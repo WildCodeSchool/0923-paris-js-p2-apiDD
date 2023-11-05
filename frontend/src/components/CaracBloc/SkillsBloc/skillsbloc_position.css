@@ -1,35 +1,39 @@
 #strength {
   position: absolute;
-  top: 37%;
+  top: 273px;
   display: none;
 }
 
 #dexterity {
   position: absolute;
-  top: 37%;
+  top: 273px;
   display: none;
 }
 
 #intelligence {
   position: absolute;
-  top: 37%;
+  top: 390px;
   display: none;
 }
 
 #wisdom {
   position: absolute;
-  top: 16%;
+  top: 114px;
   display: none;
 }
 
 #charisma {
   position: absolute;
-  top: 16%;
+  top: 390px;
   display: none;
 }
 
-/* MEDIA SCREEN MIN-WIDTH 600 */
-@media (min-width: 600px) {
+/*/////////////////////
+// MEDIAS-QUIERIES ///
+///////////////////*/
+
+/* MEDIA SCREEN MIN-WIDTH 1024px ------------------------- */
+@media (min-width: 1024px) {
   .skill_bloc {
     display: flex;
     width: 585px;
@@ -38,7 +42,6 @@
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.95);
   }
-
   #strength {
     top: 21px;
   }
@@ -58,7 +61,8 @@
     top: 21px;
   }
 }
-/* MEDIA PRINT */
+
+/* MEDIA-QUIERIES PRINT ------------------------- */
 @media print {
   .skill_bloc {
     top: 59px;

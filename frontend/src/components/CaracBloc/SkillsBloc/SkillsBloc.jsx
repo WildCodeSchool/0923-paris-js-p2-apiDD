@@ -1,7 +1,7 @@
 import React from "react";
 import "./skillsbloc.css";
 import "./skillsbloc_position.css";
-import SwordCross from "../../assets/dnd_ico/epees.png";
+import SwordCross from "../../../assets/dnd_ico/epees.png";
 
 function SkillsBloc(props) {
   const { skillTitle, skillsId, skill1, skill2, skill3, skill4, skill5 } =
@@ -11,11 +11,15 @@ function SkillsBloc(props) {
     <>
       <article className="skill_bloc" id={skillsId}>
         <div className="skill_bloc_bkg">
+          {/* TOP */}
           <div className="sword_cross_position">
             <img className="sword_cross" src={SwordCross} alt="-" />
           </div>
+          {/* CONTENT */}
           <div className="skills_content">
+            {/* CARAC SKILLS TITLE */}
             <h1 className="skill_bloc_title">{skillTitle}</h1>
+            {/* SKILL LINE */}
             <div className="skill_lines">
               <div className="skill_line">
                 <div className="radio_btn"> </div>

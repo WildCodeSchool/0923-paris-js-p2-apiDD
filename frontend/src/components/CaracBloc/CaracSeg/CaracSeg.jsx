@@ -1,7 +1,7 @@
-import "../../assets/variables.css";
+import "../../../assets/variables.css";
 import "./caracSeg.css";
 import FlagBtn from "./FlagBtn";
-import ArrowLine2 from "../../assets/dnd_ico/ArrowLine_2.png";
+import ArrowLine2 from "../../../assets/dnd_ico/ArrowLine_2.png";
 
 function CaracSeg(props) {
   const { name, value, bonus, save, id } = props;

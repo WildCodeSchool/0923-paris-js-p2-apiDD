@@ -1,6 +1,6 @@
-import "../../assets/variables.css";
+import "../../../assets/variables.css";
 import "./caracSeg.css";
-import medievalBtn from "../../assets/dnd_ico/medieval.png";
+import medievalBtn from "../../../assets/dnd_ico/medieval.png";
 
 function FlagBtn(props) {
   const { id } = props;

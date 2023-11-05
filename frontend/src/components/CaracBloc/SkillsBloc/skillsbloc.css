@@ -3,12 +3,14 @@
   height: 475px;
 }
 .skill_bloc_bkg {
-  width: 275px;
+  width: 315px;
   height: 395px;
-  background: url(../../assets/dnd_ico/parchem.png);
+  background: url(../../../assets/dnd_ico/parchem.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* --- [TOP] ------------------------------------------- */
 .sword_cross_position {
   display: flex;
   justify-content: flex-end;
@@ -19,9 +21,13 @@
   width: 30px;
   height: 30px;
 }
+
+/* --- [CONTENT] ------------------------------------------- */
 .skills_content {
   margin-top: 10px;
 }
+
+/* --- [CARAC SKILLS TITLE] ------------------------------------------- */
 .skill_bloc_title {
   font-family: "Eagle Lake";
   font-style: normal;
@@ -31,6 +37,7 @@
   color: var(--main-font-color);
   padding-left: 22px;
 }
+/* --- [SKILL LINE] ------------------------------------------- */
 .skill_lines {
   padding-left: 12px;
   margin-top: 10px;
@@ -64,7 +71,6 @@
   justify-content: center;
   color: var(--main-font-color);
 }
-
 .skill_name {
   margin: 10px 0 12px 10px;
   font-family: "Eagle Lake";
@@ -77,16 +83,11 @@
   color: var(--main-font-color);
 }
 
-/* MEDIA SCREEN MIN-WIDTH 600 */
-.skill_bloc_bkg {
-  width: 315px;
-  height: 395px;
-  background: url(../../assets/dnd_ico/parchem.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+/*/////////////////////
+// MEDIAS-QUIERIES ///
+///////////////////*/
 
-/* MEDIA PRINT */
+/* MEDIA-QUIERIES PRINT ------------------------- */
 @media print {
   .skill_bloc {
     width: 315px;

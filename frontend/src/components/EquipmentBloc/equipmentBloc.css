@@ -1,0 +1,41 @@
+#equipment_bloc {
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 334px;
+}
+
+#equipment_title {
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 39px;
+  text-align: center;
+  color: var(--main-font-color);
+}
+
+#stuff_area {
+  width: 87.778%;
+  border: solid 1px black;
+  background: var(--input-bg-color);
+}
+
+#stuff_ul {
+  padding: 10px 10px 0 10px;
+}
+
+.stuff_item {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-bottom: 10px;
+}
+
+#money_aera {
+  width: 87.778%;
+  border: solid 1px black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

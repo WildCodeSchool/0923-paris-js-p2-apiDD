@@ -1,6 +1,7 @@
 import "./caracBloc.css";
 import CaracSeg from "../CaracSeg/CaracSeg";
 import SkillsBloc from "../SkillsBloc/SkillsBloc";
+import ArrowLine from "../../assets/dnd_ico/ArrowLine_1.png";
 
 function CaracBloc() {
   const caracs = [
@@ -139,34 +140,97 @@ function CaracBloc() {
   ];
 
   return (
-    <section id="caracs_skills_section">
-      <div className="carac_Bloc">
-        {caracs.map((carac) => (
-          <CaracSeg
-            key={carac.caracName}
-            id={carac.caracName}
-            name={carac.caracName}
-            value={carac.caracValue}
-            bonus={carac.caracBonus}
-            save={carac.caracSave}
-          />
-        ))}
-      </div>
-      <div className="skills_B_posT">
-        {SkillsBlocs.map((skill) => (
-          <SkillsBloc
-            key={skill.skillBlocTitle}
-            skillTitle={skill.skillBlocTitle}
-            skillsId={skill.skillId}
-            skill1={skill.skills1}
-            skill2={skill.skills2}
-            skill3={skill.skills3}
-            skill4={skill.skills4}
-            skill5={skill.skills5}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <section id="caracs_skills_section_screen">
+        <div id="carac_MQ_smartPh">
+          <div className="carac_Bloc">
+            {caracs.map((carac) => (
+              <CaracSeg
+                key={carac.caracName}
+                id={carac.caracName}
+                name={carac.caracName}
+                value={carac.caracValue}
+                bonus={carac.caracBonus}
+                save={carac.caracSave}
+              />
+            ))}
+          </div>
+        </div>
+        <div id="carac_MQ_deskT">
+          <div className="carac_Bloc">
+            {caracs.slice(0, 3).map((carac) => (
+              <CaracSeg
+                key={carac.caracName}
+                id={carac.caracName}
+                name={carac.caracName}
+                value={carac.caracValue}
+                bonus={carac.caracBonus}
+                save={carac.caracSave}
+              />
+            ))}
+          </div>
+
+          <div id="caracs_arrow_line">
+            <img src={ArrowLine} alt="-" />
+          </div>
+
+          <div className="carac_Bloc">
+            {caracs.slice(3).map((carac) => (
+              <CaracSeg
+                key={carac.caracName}
+                id={carac.caracName}
+                name={carac.caracName}
+                value={carac.caracValue}
+                bonus={carac.caracBonus}
+                save={carac.caracSave}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="skills_bloc">
+          {SkillsBlocs.map((skill) => (
+            <SkillsBloc
+              key={skill.skillBlocTitle}
+              skillTitle={skill.skillBlocTitle}
+              skillsId={skill.skillId}
+              skill1={skill.skills1}
+              skill2={skill.skills2}
+              skill3={skill.skills3}
+              skill4={skill.skills4}
+              skill5={skill.skills5}
+            />
+          ))}
+        </div>
+      </section>
+      <section id="caracs_skills_section_Print">
+        <div className="carac_Bloc_Print">
+          {caracs.slice(0).map((carac) => (
+            <CaracSeg
+              key={carac.caracName}
+              id={carac.caracName}
+              name={carac.caracName}
+              value={carac.caracValue}
+              bonus={carac.caracBonus}
+              save={carac.caracSave}
+            />
+          ))}
+        </div>
+        <div className="skills_bloc_Print">
+          {SkillsBlocs.slice(0).map((skill) => (
+            <SkillsBloc
+              key={skill.skillBlocTitle}
+              skillTitle={skill.skillBlocTitle}
+              skillsId={skill.skillId}
+              skill1={skill.skills1}
+              skill2={skill.skills2}
+              skill3={skill.skills3}
+              skill4={skill.skills4}
+              skill5={skill.skills5}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 

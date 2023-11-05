@@ -76,3 +76,73 @@
   align-items: center;
   color: var(--main-font-color);
 }
+
+/* MEDIA PRINT */
+@media print {
+  .skill_bloc {
+    width: 315px;
+    height: 475px;
+  }
+  .skill_bloc_bkg {
+    height: 54px;
+    background: none;
+  }
+  .sword_cross_position {
+    display: none;
+  }
+  .skill_bloc_title {
+    display: none;
+  }
+
+  .carac_num_container {
+    width: 21px;
+    height: 16px;
+  }
+  .carac_num {
+    font-size: 10px;
+    line-height: 39px;
+  }
+  .radio_btn {
+    width: 8px;
+    height: 8px;
+  }
+  .value_imput {
+    width: 15px;
+    height: 13px;
+  }
+  .carac_main_content {
+    width: 57px;
+  }
+  .carac_title {
+    font-size: 10px;
+    margin: 10px 0 10px 0;
+  }
+  .carac_bonus_content {
+    width: 40px;
+    height: 18px;
+    margin-bottom: 10px;
+  }
+  .carac_bonus {
+    font-size: 10px;
+  }
+
+  .skill_lines {
+    padding-left: 0px;
+    margin-top: 0px;
+  }
+  .skill_line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 21px;
+  }
+  .skill_value {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .skill_name {
+    margin: 10px 0 12px 10px;
+    font-size: 8px;
+    line-height: 1px;
+  }
+}

@@ -109,3 +109,45 @@
   height: 50px;
   margin-top: -5px;
 }
+
+#caracs_arrow_line_2 {
+  display: none;
+}
+
+/* MEDIA PRINT */
+@media print {
+  .carac_segment {
+    padding-right: 130px;
+    margin: 9px 16px 9px 16px;
+  }
+  .bonus_save_content {
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: solid 1px black;
+    border-radius: 100%;
+  }
+  .bonus_save {
+    width: 11px;
+    height: 28px;
+    transform: rotate(0deg);
+    font-size: 10px;
+  }
+  .bonus_save_num {
+    position: relative;
+    right: 5px;
+    margin-top: 19px;
+    font-size: 10px;
+  }
+  .Comp_Btn {
+    display: none;
+  }
+  #caracs_arrow_line_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,4 +1,4 @@
-#caracs_skills_section {
+#caracs_skills_section_screen {
   border: solid 1px black;
 }
 
@@ -8,12 +8,50 @@
   justify-content: space-around;
 }
 
+#carac_MQ_deskT {
+  display: none;
+}
+
+#caracs_skills_section_Print {
+  display: none;
+}
+
+/* MEDIA SCREEN MIN-WIDTH 600 */
 @media (min-width: 600px) {
-  #caracs_skills_section {
+  #caracs_skills_section_screen {
     width: 585px;
   }
 
   .carac_Bloc {
-    margin: 35px;
+    margin: 2.3%;
+  }
+
+  #caracs_arrow_line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #carac_MQ_smartPh {
+    display: none;
+  }
+  #carac_MQ_deskT {
+    display: initial;
+  }
+}
+/* MEDIA PRINT */
+@media print {
+  #caracs_skills_section_screen {
+    display: none;
+  }
+
+  #caracs_skills_section_Print {
+    display: block;
+    width: 216px;
+    height: 677px;
+  }
+
+  .carac_Bloc_Print {
+    border: solid 1px black;
   }
 }

@@ -4,9 +4,9 @@
   display: block;
   /*Sans les positions absolue*/
   /* margin: 0 0px -0.9rem 74%;*/
-  position: relative;
-  top: 0.9rem;
-  right: -74%;
+  position: static;
+  margin-left: 78%;
+  margin-bottom: -0.3rem;
 }
 
 .deathSaveRoll {
@@ -15,8 +15,8 @@
   font-weight: 400;
   border: 1px solid #000000;
   padding: 3%;
-  margin: 3%;
   height: 28.625rem;
+  width: 94%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -141,7 +141,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
-    padding: 3%;
+    padding: 1%;
     gap: 1%;
   }
   .deathSaveRoll p {

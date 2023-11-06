@@ -116,6 +116,12 @@ function Combat() {
                 type="text"
                 value={initStat}
                 onChange={initChange}
+                onInput={(e) => {
+                  const inputValue = e.target.value;
+                  if (!/^[0-9+-]*$/.test(inputValue)) {
+                    e.target.value = inputValue.replace(/[^0-9+-]/g, "");
+                  }
+                }}
                 className="initInput"
               />
             </div>
@@ -129,6 +135,12 @@ function Combat() {
                 type="text"
                 value={acStat}
                 onChange={acChange}
+                onInput={(e) => {
+                  const inputValue = e.target.value;
+                  if (!/^[0-9]*$/.test(inputValue)) {
+                    e.target.value = inputValue.replace(/[^0-9]/g, "");
+                  }
+                }}
                 className="acInput"
               />
             </div>
@@ -142,6 +154,12 @@ function Combat() {
                 type="text"
                 value={speedStat}
                 onChange={speedChange}
+                onInput={(e) => {
+                  const inputValue = e.target.value;
+                  if (!/^[0-9]*$/.test(inputValue)) {
+                    e.target.value = inputValue.replace(/[^0-9]/g, "");
+                  }
+                }}
                 className="speedInput"
               />
             </div>

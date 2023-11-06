@@ -1,3 +1,9 @@
 body {
-  padding: 20px;
+  margin: 3%;
+}
+@media (min-width: 1023px) {
+  .result {
+    display: flex;
+    gap: 0.49%;
+  }
 }

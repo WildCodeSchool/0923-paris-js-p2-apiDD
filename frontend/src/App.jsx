@@ -51,7 +51,8 @@ function App() {
       <CaracSeg />
       <Combat />
       {/* <DeathSave /> */}
-      {window.innerWidth < 1024 && <HealthDice />}
+      {/* {window.innerWidth < 1024 && <HealthDice />} */}
+      <HealthDice />
     </>
   );
 }

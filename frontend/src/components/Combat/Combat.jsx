@@ -25,7 +25,6 @@ function Combat() {
 
   const isMobile = window.innerWidth < 1024;
   const isAlive = hpStat > 0;
-  const isSuccess = success1 && success2 && success3;
 
   const initChange = (e) => {
     const valueInit = e.target.value;
@@ -47,16 +46,41 @@ function Combat() {
 
   const increaseHP = () => {
     setHpStat(parseInt(hpStat, 10) + 1);
-    // console.log(hpStat);
   };
 
   const decreaseHP = () => {
     if (hpStat > 0) {
       setHpStat(parseInt(hpStat, 10) - 1);
     }
-    // console.log(hpStat);
   };
 
+  const succesDeathSave = (succesNUmber) => {
+    if (succesNUmber === 1) {
+      setSuccess1(!success1);
+      if (success2 && success3) {
+        setHpStat(1);
+        setSuccess1(false);
+        setSuccess2(false);
+        setSuccess3(false);
+      }
+    } else if (succesNUmber === 2) {
+      setSuccess2(!success2);
+      if (success1 && success3) {
+        setHpStat(1);
+        setSuccess1(false);
+        setSuccess2(false);
+        setSuccess3(false);
+      }
+    } else {
+      setSuccess3(!success3);
+      if (success1 && success2) {
+        setHpStat(1);
+        setSuccess1(false);
+        setSuccess2(false);
+        setSuccess3(false);
+      }
+    }
+  };
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -79,7 +103,7 @@ function Combat() {
     };
   }, []);
 
-  return isAlive || isSuccess ? (
+  return isAlive ? (
     <div className="combatComponent">
       <img src={knightImg} alt="knight logo" className="knightLogo" />
       <div className="combatStats">
@@ -168,7 +192,7 @@ function Combat() {
                 <input
                   type="checkbox"
                   checked={success1}
-                  onChange={() => setSuccess1(!success1)}
+                  onChange={() => succesDeathSave(1)}
                   className="input-success"
                 />
                 <span className="custom-checkbox" />
@@ -177,7 +201,7 @@ function Combat() {
                 <input
                   type="checkbox"
                   checked={success2}
-                  onChange={() => setSuccess2(!success2)}
+                  onChange={() => succesDeathSave(2)}
                   className="input-success"
                 />
                 <span className="custom-checkbox" />
@@ -186,12 +210,7 @@ function Combat() {
                 <input
                   type="checkbox"
                   checked={success3}
-                  onChange={() => {
-                    setSuccess3(!success3);
-                    //   if (success3) {
-                    //     setHpStat(1);
-                    //   }
-                  }}
+                  onChange={() => succesDeathSave(3)}
                   className="input-success"
                 />
                 <span className="custom-checkbox" />

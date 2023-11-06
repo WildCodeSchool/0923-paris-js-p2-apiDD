@@ -55,11 +55,10 @@ function EquipmentBloc() {
           <div className="purse_exchange">
             <p id="exchange_rate_title">EXCHANGE</p>
             <div id="exchange_infos">
-              <p className="exchange_info">PC = 1</p>
-              <p className="exchange_info">PA = 10</p>
-              <p className="exchange_info">PE = 50</p>
-              <p className="exchange_info">PO = 100</p>
-              <p className="exchange_info">PP = 1000</p>
+              <p className="exchange_info">1 PA = 10 PC</p>
+              <p className="exchange_info">1 PE = 5 PA</p>
+              <p className="exchange_info">1 PO = 2 PE</p>
+              <p className="exchange_info">1 PP = 10 PO</p>
             </div>
           </div>
         </div>

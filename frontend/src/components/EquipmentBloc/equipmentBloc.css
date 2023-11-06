@@ -58,3 +58,15 @@
   justify-content: space-around;
   margin-bottom: 25px;
 }
+/* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
+@media (min-width: 1024px) {
+  #equipment_ico {
+    display: none;
+  }
+  .purse_exchange {
+    display: none;
+  }
+  #equipment_bloc {
+    width: 43.81%;
+  }
+}

@@ -1,9 +1,16 @@
+#equipment_ico {
+  width: 58px;
+  height: 58px;
+  position: static;
+  margin-left: 82%;
+  margin-bottom: -0.3rem;
+}
+
 #equipment_bloc {
   border: solid 1px black;
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 334px;
 }
 
 #equipment_title {
@@ -14,22 +21,33 @@
   line-height: 39px;
   text-align: center;
   color: var(--main-font-color);
+  margin: 15px 0 15px 0;
 }
 
 #stuff_area {
   width: 87.778%;
+  height: 12rem;
   border: solid 1px black;
   background: var(--input-bg-color);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #stuff_ul {
-  padding: 10px 10px 0 10px;
+  overflow: auto;
+}
+
+#stuff_ul .stuff_item:nth-child(2n) {
+  background-color: rgb(191, 191, 191);
 }
 
 .stuff_item {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  padding-bottom: 10px;
+  line-height: 20px;
+  padding-left: 10px;
 }
 
 #money_aera {
@@ -38,4 +56,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 25px;
 }

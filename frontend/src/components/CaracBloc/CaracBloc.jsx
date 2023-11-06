@@ -1,7 +1,7 @@
 import "./caracBloc.css";
 import CaracSeg from "./CaracSeg/CaracSeg";
 import SkillsBloc from "./SkillsBloc/SkillsBloc";
-import ArrowLine from "../../assets/dnd_ico/ArrowLine_1.png";
+import ArrowLine from "../../assets/dnd_ico/ArrowLine_1_b.png";
 
 function CaracBloc() {
   const caracs = [

@@ -7,8 +7,9 @@ import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
 function App() {
   return (
     <>
-      {/* <CaracBloc /> */}
       <EquipmentBloc />
+      {/* <CaracBloc /> */}
+
       <div> </div>
     </>
   );

@@ -19,7 +19,7 @@
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
   #caracs_skills_section_screen {
-    width: 585px;
+    width: 40.75%;
   }
 
   .carac_Bloc {

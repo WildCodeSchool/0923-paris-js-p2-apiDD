@@ -2,6 +2,9 @@ import React from "react";
 import "./resetStyle.css";
 import "./App.css";
 import CaracSeg from "./components/CaracSeg/CaracSeg";
+import Combat from "./components/Combat/Combat";
+// import DeathSave from "./components/Combat/DeathSave";
+import HealthDice from "./components/Combat/HealthDice";
 
 function App() {
   // const caracs = [
@@ -45,8 +48,10 @@ function App() {
 
   return (
     <>
-      <div> </div>
       <CaracSeg />
+      <Combat />
+      {/* <DeathSave /> */}
+      {window.innerWidth < 1024 && <HealthDice />}
     </>
   );
 }

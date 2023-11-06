@@ -1,0 +1,220 @@
+.deathSaveComponent .knightLogo {
+  width: 72px;
+  height: 72px;
+  display: block;
+  /*Sans les positions absolue*/
+  /* margin: 0 0px -0.9rem 74%;*/
+  position: relative;
+  top: 0.9rem;
+  right: -74%;
+}
+
+.deathSaveRoll {
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  border: 1px solid #000000;
+  padding: 3%;
+  margin: 3%;
+  height: 28.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.deathSaveRoll p {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.successBloc p {
+  color: #22a50b;
+}
+.failBloc p {
+  color: #ec2127;
+}
+.deathSaveText {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.skullImage {
+  width: 60px;
+  height: 60px;
+}
+.deathImage {
+  width: 80px;
+  height: 80px;
+}
+
+.checkBoxesSuccess,
+.checkBoxesFail {
+  text-align: center;
+}
+.successBloc p {
+  text-align: center;
+}
+.failBloc p {
+  text-align: center;
+}
+
+/*
+  .checkbox-label input {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #989898;
+    border: 2px solid #000;
+  } */
+.checkbox-label {
+  display: inline-block;
+  margin: 0.625rem;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background: #989898;
+  border: 2px solid #000;
+  line-height: 60px;
+  vertical-align: top;
+  position: relative;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.checkbox-label .input-success:checked + .custom-checkbox {
+  background: #22a50b;
+}
+
+.checkbox-label .input-success:checked + .custom-checkbox::before {
+  content: "\2713";
+  font-size: 1.875rem;
+  color: #fff;
+}
+
+.checkbox-label .input-fail:checked + .custom-checkbox {
+  background: #ec2127;
+}
+
+.checkbox-label .input-fail:checked + .custom-checkbox::before {
+  content: "\2717";
+  font-size: 1.875rem;
+  color: #fff;
+}
+
+@media (min-width: 1023px) {
+  .combatComponent .knightLogo {
+    display: none;
+  }
+  .deathSaveComponent {
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .deathSaveRoll {
+    width: 27rem;
+    height: 8.1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 3%;
+    gap: 1%;
+  }
+  .deathSaveRoll p {
+    font-size: 1.1rem;
+  }
+  .allCheckbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .successBloc {
+    gap: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .skullImage {
+    width: 60px;
+    height: 60px;
+  }
+  .deathImage {
+    width: 65px;
+    height: 65px;
+  }
+  .deathSaveText {
+    font-size: 1.2rem;
+    margin-right: 3rem;
+    white-space: nowrap;
+  }
+  .checkbox-label {
+    display: inline-block;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    margin: 10px;
+    background: #989898;
+    border: 2px solid #000;
+    line-height: 20px;
+    vertical-align: top;
+    position: relative;
+  }
+  .checkBoxesSuccess,
+  .checkBoxesFail {
+    display: flex;
+    flex-direction: row;
+  }
+  .custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: middle;
+    transition: all 0.3s;
+    overflow: hidden;
+  }
+
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .checkbox-label .input-success:checked + .custom-checkbox::before {
+    font-size: 1.5rem;
+  }
+  .checkbox-label .input-fail:checked + .custom-checkbox::before {
+    font-size: 1.3rem;
+  }
+}

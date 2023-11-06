@@ -1,0 +1,35 @@
+.armor {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 2.5%;
+}
+
+h1.armor_heading {
+  font-size: 24px;
+  color: black;
+}
+.armor_name_input {
+  margin-top: 1rem;
+  width: 96%;
+}
+
+.armor_class_strenght {
+  display: flex;
+  margin-top: 1rem;
+}
+.armor_class_input {
+  width: 85%;
+}
+
+.armor_strenght_input {
+  width: 90%;
+}
+
+.armor_disadvantages {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.armor_disadvantage_input {
+  width: 96%;
+}

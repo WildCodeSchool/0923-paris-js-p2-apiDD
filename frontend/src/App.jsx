@@ -1,41 +1,57 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
+import React from "react";
+import "./resetStyle.css";
 import "./App.css";
+import CaracSeg from "./components/CaracSeg/CaracSeg";
+// import Weaponz from "./components/Weapons/weaponz";
+import AttackNinc from "./components/Attacks&Inc/AttackNinc";
 
 function App() {
+  // const caracs = [
+  //   {
+  //     name: "STR",
+  //     value: "10",
+  //     bonus: "+0",
+  //     save: "+0",
+  //   },
+  //   {
+  //     name: "DEX",
+  //     value: "10",
+  //     bonus: "+0",
+  //     save: "+0",
+  //   },
+  //   {
+  //     name: "WIS",
+  //     value: "10",
+  //     bonus: "+0",
+  //     save: "+0",
+  //   },
+  //   {
+  //     name: "INT",
+  //     value: "10",
+  //     bonus: "+0",
+  //     save: "+0",
+  //   },
+  //   {
+  //     name: "CHAR",
+  //     value: "10",
+  //     bonus: "+0",
+  //     save: "+0",
+  //   },
+  //   {
+  //     name: "CONST",
+  //     value: "10",
+  //     bonus: "+0",
+  //     save: "+0",
+  //   },
+  // ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <div> </div>
+      <CaracSeg />
+      <AttackNinc />
+      {/* <Weaponz /> */}
+    </>
   );
 }
 

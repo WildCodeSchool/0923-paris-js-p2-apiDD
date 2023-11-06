@@ -1,0 +1,13 @@
+.heading {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+}
+.bonus_combat_fr {
+  display: flex;
+}
+.bonus_combat_sec {
+  display: flex;
+}
+.bonus_combat_third {
+  display: flex;
+}

@@ -106,3 +106,34 @@
   color: var(--main-font-color);
   text-align: center;
 }
+.purse_money_line_DeskT {
+  display: none;
+}
+
+/* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
+@media (min-width: 1024px) {
+  .purse {
+    border: none;
+  }
+  #purse_value_content_SmartPh {
+    display: none;
+  }
+  .money_btn_SmartPh {
+    display: none;
+  }
+  .purse_money_line_DeskT {
+    display: flex;
+    align-items: flex-end;
+  }
+  .money_btn_DeskT {
+    margin-bottom: -12px;
+  }
+
+  .purse_title {
+    line-height: 30px;
+  }
+
+  .purse_exchange {
+    display: none;
+  }
+}

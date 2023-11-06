@@ -26,7 +26,7 @@
 
 #stuff_area {
   width: 87.778%;
-  height: 12rem;
+  height: 16.375rem;
   border: solid 1px black;
   background: var(--input-bg-color);
   margin-bottom: 20px;
@@ -46,7 +46,7 @@
 .stuff_item {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  line-height: 20px;
+  line-height: 24px;
   padding-left: 10px;
 }
 
@@ -60,13 +60,24 @@
 }
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
+  #equipment_bloc {
+    /* width: 43.81%; */
+    width: 41.688rem;
+  }
   #equipment_ico {
     display: none;
+  }
+  #stuff_area {
+    height: 13.375rem;
+  }
+  .stuff_item {
+    line-height: 27px;
+    padding-left: 30px;
   }
   .purse_exchange {
     display: none;
   }
-  #equipment_bloc {
-    width: 43.81%;
+  #money_aera {
+    flex-wrap: nowrap;
   }
 }

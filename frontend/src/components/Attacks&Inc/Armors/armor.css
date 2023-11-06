@@ -12,6 +12,9 @@ h1.armor_heading {
 .armor_name_input {
   margin-top: 1rem;
   width: 96%;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.4rem;
 }
 
 .armor_class_strenght {
@@ -20,10 +23,18 @@ h1.armor_heading {
 }
 .armor_class_input {
   width: 85%;
+  margin-top: 0.5rem;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.4rem;
 }
 
 .armor_strenght_input {
   width: 90%;
+  margin-top: 00.5rem;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.4rem;
 }
 
 .armor_disadvantages {
@@ -32,4 +43,16 @@ h1.armor_heading {
 }
 .armor_disadvantage_input {
   width: 96%;
+  margin-top: 00.5rem;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.1rem;
+}
+.armor_sub_heading {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+}
+.armor_name_heading {
+  color: black;
 }

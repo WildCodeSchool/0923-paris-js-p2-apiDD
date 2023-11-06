@@ -14,30 +14,30 @@ function Weapon() {
   return (
     <div className="weapons">
       <div className="weapon_fr">
-        <div>
-          <h1>Name</h1>
+        <div className="weapon_name_input">
+          <h1 className="weapon_name_heading">Name</h1>
           <input
-            className="name"
+            className="name_input"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
 
-        <div className="bonus_combat_fr">
+        <div className="bonus_combat">
           <div>
-            <h1>ATK Bonus</h1>
+            <h1 className="weapon_sub_heading">ATK Bonus</h1>
             <input
-              className="bonus"
+              className="bonus_input"
               type="text"
               value={bonus}
               onChange={(e) => setBonus(e.target.value)}
             />
           </div>
           <div>
-            <h1>Combat/ Type</h1>
+            <h1 className="weapon_sub_heading">Combat/ Type</h1>
             <input
-              className="combat"
+              className="combat_input"
               type="text"
               value={combat}
               onChange={(e) => setCombat(e.target.value)}
@@ -46,30 +46,30 @@ function Weapon() {
         </div>
       </div>
       <div className="weapon_sec">
-        <div>
-          <h1>Name</h1>
+        <div className="weapon_name_input">
+          <h1 className="weapon_name_heading">Name</h1>
           <input
-            className="name"
+            className="name_input"
             type="text"
             value={nameSec}
             onChange={(e) => setNameSec(e.target.value)}
           />
         </div>
 
-        <div className="bonus_combat_sec">
+        <div className="bonus_combat">
           <div>
-            <h1>ATK Bonus</h1>
+            <h1 className="weapon_sub_heading">ATK Bonus</h1>
             <input
-              className="bonus"
+              className="bonus_input"
               type="text"
               value={bonusSec}
               onChange={(e) => setBonusSec(e.target.value)}
             />
           </div>
           <div>
-            <h1>Combat/ Type</h1>
+            <h1 className="weapon_sub_heading">Combat/ Type</h1>
             <input
-              className="combat"
+              className="combat_input"
               type="text"
               value={combatSec}
               onChange={(e) => setCombatSec(e.target.value)}
@@ -78,30 +78,30 @@ function Weapon() {
         </div>
       </div>
       <div className="weapon_third">
-        <div>
-          <h1>Name</h1>
+        <div className="weapon_name_input">
+          <h1 className="weapon_name_heading">Name</h1>
           <input
-            className="name"
+            className="name_input"
             type="text"
             value={nameThird}
             onChange={(e) => setNameThird(e.target.value)}
           />
         </div>
 
-        <div className="bonus_combat_third">
+        <div className="bonus_combat">
           <div>
-            <h1>ATK Bonus</h1>
+            <h1 className="weapon_sub_heading">ATK Bonus</h1>
             <input
-              className="bonus"
+              className="bonus_input"
               type="text"
               value={bonusThird}
               onChange={(e) => setBonusThird(e.target.value)}
             />
           </div>
           <div>
-            <h1>Combat/ Type</h1>
+            <h1 className="weapon_sub_heading">Combat/ Type</h1>
             <input
-              className="combat"
+              className="combat_input"
               type="text"
               value={combatThird}
               onChange={(e) => setCombatThird(e.target.value)}

@@ -21,7 +21,7 @@ function Armor() {
       </div>
       <div className="armor_class_strenght">
         <div className="armor_class">
-          <h1>AC</h1>
+          <h1 className="armor_sub_heading">AC</h1>
           <input
             className="armor_class_input"
             type="text"
@@ -31,7 +31,7 @@ function Armor() {
           />
         </div>
         <div className="armor_strenght">
-          <h1>Strenght</h1>
+          <h1 className="armor_sub_heading">Strenght</h1>
           <input
             className="armor_strenght_input"
             type="text"
@@ -42,7 +42,7 @@ function Armor() {
         </div>
       </div>
       <div className="armor_disadvantages">
-        <h1>Disadvantages</h1>
+        <h1 className="armor_sub_heading">Disadvantages</h1>
         <input
           className="armor_disadvantage_input"
           type="text"

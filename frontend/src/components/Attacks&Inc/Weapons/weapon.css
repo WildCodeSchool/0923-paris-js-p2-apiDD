@@ -1,13 +1,57 @@
+body {
+}
+
 .heading {
   font-family: "Eagle Lake", serif;
   font-weight: 400;
 }
-.bonus_combat_fr {
+.bonus_combat {
+  display: flex;
+  margin-left: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+.name_input {
+  width: 78%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.4rem;
+}
+
+.bonus_input {
+  width: 70%;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.4rem;
+}
+
+.combat_input {
+  width: 95%;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 1.4rem;
+}
+
+.weapon_sub_heading {
+  text-align: center;
+  color: black;
+  font-size: 14px;
   display: flex;
 }
-.bonus_combat_sec {
-  display: flex;
+.weapon_name_heading {
+  color: black;
+  margin-bottom: 4%;
+  font-size: 16px;
 }
-.bonus_combat_third {
+.weapon_name_input {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

@@ -1,6 +1,7 @@
 import Armor from "./Armors/Armor";
 import Weapon from "./Weapons/Weapon";
 import "./attackninc.css";
+import "../../assets/dnd_ico/sword.png";
 
 function AttackNinc() {
   return (

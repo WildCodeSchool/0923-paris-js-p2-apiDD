@@ -7,37 +7,37 @@ function CaracBloc() {
   const caracs = [
     {
       caracName: "STR",
-      caracValue: "10",
+      caracValue: 13,
       caracBonus: "+0",
       caracSave: "+0",
     },
     {
       caracName: "DEX",
-      caracValue: "11",
+      caracValue: 18,
       caracBonus: "+0",
       caracSave: "+0",
     },
     {
       caracName: "CONST",
-      caracValue: "15",
+      caracValue: 15,
       caracBonus: "+0",
       caracSave: "+0",
     },
     {
       caracName: "WIS",
-      caracValue: "12",
+      caracValue: 12,
       caracBonus: "+0",
       caracSave: "+0",
     },
     {
       caracName: "INT",
-      caracValue: "13",
+      caracValue: 11,
       caracBonus: "+0",
       caracSave: "+0",
     },
     {
       caracName: "CHAR",
-      caracValue: "14",
+      caracValue: 14,
       caracBonus: "+0",
       caracSave: "+0",
     },
@@ -142,12 +142,15 @@ function CaracBloc() {
   return (
     <>
       <section id="caracs_skills_section_screen">
+        {/* smartphone */}
         <div id="carac_MQ_smartPh">
+          {/* smartphone CARACS */}
           <div className="carac_Bloc">
             {caracs.map((carac) => (
               <CaracSeg
                 key={carac.caracName}
                 id={carac.caracName}
+                caraClass={carac.caracName}
                 name={carac.caracName}
                 value={carac.caracValue}
                 bonus={carac.caracBonus}
@@ -156,13 +159,16 @@ function CaracBloc() {
             ))}
           </div>
         </div>
+        {/* desktop */}
         <div id="carac_MQ_deskT">
+          {/* desktop CARACS */}
           <div id="carac_MQ_deskT_position">
             <div className="carac_Bloc">
               {caracs.slice(0, 3).map((carac) => (
                 <CaracSeg
                   key={carac.caracName}
                   id={carac.caracName}
+                  caraClass={carac.caracName}
                   name={carac.caracName}
                   value={carac.caracValue}
                   bonus={carac.caracBonus}
@@ -180,6 +186,7 @@ function CaracBloc() {
                 <CaracSeg
                   key={carac.caracName}
                   id={carac.caracName}
+                  caraClass={carac.caracName}
                   name={carac.caracName}
                   value={carac.caracValue}
                   bonus={carac.caracBonus}
@@ -188,6 +195,7 @@ function CaracBloc() {
               ))}
             </div>
           </div>
+          {/* SKILLS popup smartphone et desktop */}
           <div className="skills_bloc">
             {SkillsBlocs.map((skill) => (
               <SkillsBloc
@@ -204,12 +212,14 @@ function CaracBloc() {
           </div>
         </div>
       </section>
+      {/* print version */}
       <section id="caracs_skills_section_Print">
         <div className="carac_Bloc_Print">
           {caracs.slice(0).map((carac) => (
             <CaracSeg
               key={carac.caracName}
               id={carac.caracName}
+              caraClass={carac.caracName}
               name={carac.caracName}
               value={carac.caracValue}
               bonus={carac.caracBonus}

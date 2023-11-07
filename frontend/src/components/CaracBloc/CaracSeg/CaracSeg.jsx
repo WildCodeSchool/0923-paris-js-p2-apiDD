@@ -4,9 +4,14 @@ import FlagBtn from "./FlagBtn";
 import ArrowLine2 from "../../../assets/dnd_ico/ArrowLine_2.png";
 
 function CaracSeg(props) {
-  const { name, value, bonus, save, id } = props;
+  const { name, value, save, id, caraClass } = props;
   const isFlagBtnHidden = id === "CONST";
   const showArrowLine = id !== "CHAR";
+
+  function strBonus() {
+    const bonus = Math.floor((value - 10) / 2);
+    return `+${bonus.toString()}`;
+  }
 
   return (
     <>
@@ -19,7 +24,7 @@ function CaracSeg(props) {
         <div className="carac_main_content">
           <p className="carac_title">{name}</p>
           <div className="carac_bonus_content">
-            <p className="carac_bonus">{bonus}</p>
+            <p className={`carac_bonus ${caraClass}`}>{strBonus()}</p>
           </div>
         </div>
         {/* // bottom // */}

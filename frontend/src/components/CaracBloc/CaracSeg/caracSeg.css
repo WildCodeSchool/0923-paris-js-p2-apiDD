@@ -68,6 +68,7 @@
 }
 
 /* --- [BOTTOM] ------------------------------------------- */
+
 .bonus_save_content {
   background-image: url(../../../assets/dnd_ico/losange.png);
   background-size: contain;
@@ -112,6 +113,12 @@
 /*/////////////////////
 // MEDIAS-QUIERIES ///
 ///////////////////*/
+/* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
+@media (min-width: 1024px) {
+  .carac_segment {
+    margin: 0;
+  }
+}
 
 /* MEDIA-QUIERIES PRINT ------------------------- */
 @media print {

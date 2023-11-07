@@ -109,7 +109,9 @@
 .purse_money_line_DeskT {
   display: none;
 }
-
+#purse_img_print {
+  display: none;
+}
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
   .purse {
@@ -135,5 +137,48 @@
 
   .purse_exchange {
     display: none;
+  }
+}
+/* MEDIA-QUERIES PRINT */
+@media print {
+  #money_btn_down {
+    display: none;
+  }
+  #money_btn_up {
+    display: none;
+  }
+  .purse {
+    margin: 0;
+    width: 20%;
+    border: none;
+  }
+  .purse_change {
+    width: 30px;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+  }
+  #purse_img_print {
+    display: block;
+    width: 30px;
+  }
+  .purse_value_content {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    position: relative;
+    top: -18px;
+  }
+  .purse_title {
+    font-size: 8px;
+    line-height: 0px;
+  }
+  .purse_value {
+    display: none;
+  }
+  .purse_title_line {
+    position: relative;
+    top: -10;    margin-top: 3px;    margin-top: 3px;px;
   }
 }

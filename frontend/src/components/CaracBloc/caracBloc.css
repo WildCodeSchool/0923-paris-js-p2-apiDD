@@ -20,23 +20,26 @@
 @media (min-width: 1024px) {
   #caracs_skills_section_screen {
     width: 40.75%;
-  }
-
-  .carac_Bloc {
-    margin: 2.3%;
-  }
-
-  #caracs_arrow_line {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
+  .carac_Bloc {
+    margin: 2.3%;
+  }
   #carac_MQ_smartPh {
     display: none;
   }
   #carac_MQ_deskT {
     display: initial;
+  }
+  #caracs_arrow_line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #caracs_arrow_line > img {
+    width: 93%;
   }
 }
 

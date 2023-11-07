@@ -63,6 +63,16 @@ function EquipmentBloc() {
           </div>
         </div>
       </div>
+      <div id="money_aera_print">
+        {purses.map((purse) => (
+          <MoneySeg
+            key={purse.purseName}
+            id={purse.purseName}
+            name={purse.purseName}
+            value={purse.PurseValue}
+          />
+        ))}
+      </div>
     </div>
   );
 }

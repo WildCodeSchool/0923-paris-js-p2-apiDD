@@ -36,7 +36,7 @@
 @media (min-width: 1024px) {
   .skill_bloc {
     display: flex;
-    width: 585px;
+    width: 24rem;
     height: 600px;
     align-items: center;
     justify-content: center;
@@ -44,6 +44,7 @@
   }
   #strength {
     top: 21px;
+    left: 2.625rem; /* a ajuster a l'assemblage*/
   }
   #dexterity {
     top: 21px;
@@ -73,30 +74,30 @@
   }
   #strength {
     display: block;
-    top: 57px;
-    left: 91px;
+    top: 37px;
+    left: 70px;
   }
   #dexterity {
     display: block;
-    top: 175px;
-    left: 91px;
+    top: 153px;
+    left: 70px;
   }
 
   #intelligence {
     display: block;
-    top: 575px;
-    left: 91px;
+    top: 560px;
+    left: 70px;
   }
 
   #wisdom {
     display: block;
-    top: 437px;
-    left: 91px;
+    top: 422px;
+    left: 70px;
   }
 
   #charisma {
     display: block;
-    top: 720px;
-    left: 91px;
+    top: 701px;
+    left: 70px;
   }
 }

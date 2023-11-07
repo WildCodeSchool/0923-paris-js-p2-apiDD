@@ -2,3 +2,10 @@
 body {
   padding: 4%;
 }
+
+/* MEDIA-QUERIES PRINT */
+@media print {
+  body {
+    padding: 0;
+  }
+}

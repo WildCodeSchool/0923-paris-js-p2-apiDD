@@ -14,7 +14,7 @@ body {
 
 .name_input {
   width: 78%;
-  margin-top: 1rem;
+  margin-top: 1.7rem;
   margin-bottom: 1.5rem;
   background-color: #e8e8e8;
   border: 1px solid black;
@@ -54,4 +54,67 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.arrowline {
+  width: 90%;
+  margin-left: 5%;
+}
+@media (min-width: 1024px) {
+  .arrowline {
+    display: none;
+  }
+
+  .weapon_fr {
+    display: flex;
+  }
+
+  .weapon_sec {
+    display: flex;
+  }
+  .weapon_third {
+    display: flex;
+  }
+  .name_input {
+    width: 100%;
+    height: 3rem;
+  }
+  .bonus_input {
+    width: 85%;
+    height: 3rem;
+  }
+  .combat_input {
+    width: 100%;
+    height: 3rem;
+  }
+  .weapon_name_input {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  .div_bonus {
+    width: 60%;
+  }
+  .div_combat {
+    width: 100%;
+  }
+  div.bonus_combat {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .bonus_combat {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 4%;
+  }
+
+  .div_bonus,
+  .div_combat {
+    margin: 0 10px; /* Adjust the margin as needed for spacing */
+  }
+  .weapon_name_heading {
+    margin-bottom: -6%;
+  }
 }

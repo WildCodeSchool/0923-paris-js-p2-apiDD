@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./weapon.css";
+import Arrowline2 from "../../../assets/dnd_ico/ArrowLine_1.png";
 
 function Weapon() {
   const [name, setName] = useState("");
@@ -25,7 +26,7 @@ function Weapon() {
         </div>
 
         <div className="bonus_combat">
-          <div>
+          <div className="div_bonus">
             <h1 className="weapon_sub_heading">ATK Bonus</h1>
             <input
               className="bonus_input"
@@ -34,7 +35,7 @@ function Weapon() {
               onChange={(e) => setBonus(e.target.value)}
             />
           </div>
-          <div>
+          <div className="div_combat">
             <h1 className="weapon_sub_heading">Combat/ Type</h1>
             <input
               className="combat_input"
@@ -45,6 +46,9 @@ function Weapon() {
           </div>
         </div>
       </div>
+
+      <img className="arrowline" src={Arrowline2} alt="" />
+
       <div className="weapon_sec">
         <div className="weapon_name_input">
           <h1 className="weapon_name_heading">Name</h1>
@@ -57,7 +61,7 @@ function Weapon() {
         </div>
 
         <div className="bonus_combat">
-          <div>
+          <div className="div_bonus">
             <h1 className="weapon_sub_heading">ATK Bonus</h1>
             <input
               className="bonus_input"
@@ -66,7 +70,7 @@ function Weapon() {
               onChange={(e) => setBonusSec(e.target.value)}
             />
           </div>
-          <div>
+          <div className="div_combat">
             <h1 className="weapon_sub_heading">Combat/ Type</h1>
             <input
               className="combat_input"
@@ -77,6 +81,9 @@ function Weapon() {
           </div>
         </div>
       </div>
+
+      <img className="arrowline" src={Arrowline2} alt="" />
+
       <div className="weapon_third">
         <div className="weapon_name_input">
           <h1 className="weapon_name_heading">Name</h1>
@@ -89,7 +96,7 @@ function Weapon() {
         </div>
 
         <div className="bonus_combat">
-          <div>
+          <div className="div_bonus">
             <h1 className="weapon_sub_heading">ATK Bonus</h1>
             <input
               className="bonus_input"
@@ -98,7 +105,7 @@ function Weapon() {
               onChange={(e) => setBonusThird(e.target.value)}
             />
           </div>
-          <div>
+          <div className="div_combat">
             <h1 className="weapon_sub_heading">Combat/ Type</h1>
             <input
               className="combat_input"
@@ -109,6 +116,8 @@ function Weapon() {
           </div>
         </div>
       </div>
+
+      <img className="arrowline" src={Arrowline2} alt="" />
     </div>
   );
 }

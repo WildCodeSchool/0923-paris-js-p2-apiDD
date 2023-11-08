@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./armor.css";
+import fleche from "../../../assets/dnd_ico/fleches.png";
 
 function Armor() {
   const [name, setName] = useState("");
@@ -9,7 +10,11 @@ function Armor() {
 
   return (
     <div className="armor">
-      <h1 className="armor_heading">Armor</h1>
+      <div className="fleche_armor">
+        <img className="fleche" src={fleche} alt="Arrow" />
+        <h1 className="armor_heading">Armor</h1>
+      </div>
+
       <div className="armor_name">
         <input
           className="armor_name_input"

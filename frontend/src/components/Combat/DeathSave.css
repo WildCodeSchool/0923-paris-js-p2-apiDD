@@ -124,7 +124,14 @@
   font-size: 1.875rem;
   color: #fff;
 }
-
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .skullImage {
+    display: none;
+  }
+  .deathImage {
+    display: none;
+  }
+}
 @media (min-width: 1023px) {
   .combatComponent .knightLogo {
     display: none;
@@ -134,9 +141,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    width: 60%;
   }
   .deathSaveRoll {
-    width: 27rem;
+    width: 100%;
     height: 7.8rem;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -158,14 +166,6 @@
     margin-right: 0.5rem;
   }
 
-  .skullImage {
-    width: 60px;
-    height: 60px;
-  }
-  .deathImage {
-    width: 65px;
-    height: 65px;
-  }
   .deathSaveText {
     font-size: 1.2rem;
     margin-right: 3rem;

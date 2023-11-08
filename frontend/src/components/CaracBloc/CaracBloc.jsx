@@ -7,7 +7,7 @@ function CaracBloc() {
   const caracs = [
     {
       caracName: "STR",
-      caracValue: 13,
+      caracValue: 18,
       caracBonus: "+0",
       caracSave: "+0",
     },
@@ -42,7 +42,8 @@ function CaracBloc() {
       caracSave: "+0",
     },
   ];
-
+  console.info("debut tableau", caracs.slice(0, 3));
+  console.info("fin tableau", caracs.slice(3, caracs.length));
   const SkillsBlocs = [
     {
       skillBlocTitle: "STRENGTH BASED SKILLS",
@@ -70,26 +71,18 @@ function CaracBloc() {
       },
     },
     {
-      skillBlocTitle: "INTELLIGENCE BASED SKILLS",
-      skillId: "intelligence",
+      skillBlocTitle: "DEXTERITY BASED SKILLS",
+      skillId: "dexterity",
       skills1: {
-        name: "Arcane",
+        name: "Acrobatics",
         value: "+x",
       },
       skills2: {
-        name: "History",
+        name: "Sleight of Hand",
         value: "+x",
       },
       skills3: {
-        name: "Investigation",
-        value: "+x",
-      },
-      skills4: {
-        name: "Nature",
-        value: "+x",
-      },
-      skills5: {
-        name: "Religion",
+        name: "Stealth ",
         value: "+x",
       },
     },
@@ -117,6 +110,31 @@ function CaracBloc() {
         value: "+x",
       },
     },
+    {
+      skillBlocTitle: "INTELLIGENCE BASED SKILLS",
+      skillId: "intelligence",
+      skills1: {
+        name: "Arcane",
+        value: "+x",
+      },
+      skills2: {
+        name: "History",
+        value: "+x",
+      },
+      skills3: {
+        name: "Investigation",
+        value: "+x",
+      },
+      skills4: {
+        name: "Nature",
+        value: "+x",
+      },
+      skills5: {
+        name: "Religion",
+        value: "+x",
+      },
+    },
+
     {
       skillBlocTitle: "CHARISMA BASED SKILLS",
       skillId: "charisma",
@@ -146,10 +164,11 @@ function CaracBloc() {
         <div id="carac_MQ_smartPh">
           {/* smartphone CARACS */}
           <div className="carac_Bloc">
-            {caracs.map((carac) => (
+            {caracs.map((carac, index) => (
               <CaracSeg
                 key={carac.caracName}
                 id={carac.caracName}
+                skills={SkillsBlocs[index]}
                 caraClass={carac.caracName}
                 name={carac.caracName}
                 value={carac.caracValue}
@@ -164,51 +183,26 @@ function CaracBloc() {
           {/* desktop CARACS */}
           <div id="carac_MQ_deskT_position">
             <div className="carac_Bloc">
-              {caracs.slice(0, 3).map((carac) => (
-                <CaracSeg
-                  key={carac.caracName}
-                  id={carac.caracName}
-                  caraClass={carac.caracName}
-                  name={carac.caracName}
-                  value={carac.caracValue}
-                  bonus={carac.caracBonus}
-                  save={carac.caracSave}
-                />
+              {caracs.map((carac, index) => (
+                <>
+                  <CaracSeg
+                    key={carac.caracName}
+                    id={carac.caracName}
+                    skills={SkillsBlocs[index]}
+                    caraClass={carac.caracName}
+                    name={carac.caracName}
+                    value={carac.caracValue}
+                    bonus={carac.caracBonus}
+                    save={carac.caracSave}
+                  />
+                  {index === 2 && (
+                    <div id="caracs_arrow_line">
+                      <img src={ArrowLine} alt="-" />
+                    </div>
+                  )}
+                </>
               ))}
             </div>
-
-            <div id="caracs_arrow_line">
-              <img src={ArrowLine} alt="-" />
-            </div>
-
-            <div className="carac_Bloc">
-              {caracs.slice(3).map((carac) => (
-                <CaracSeg
-                  key={carac.caracName}
-                  id={carac.caracName}
-                  caraClass={carac.caracName}
-                  name={carac.caracName}
-                  value={carac.caracValue}
-                  bonus={carac.caracBonus}
-                  save={carac.caracSave}
-                />
-              ))}
-            </div>
-          </div>
-          {/* SKILLS popup smartphone et desktop */}
-          <div className="skills_bloc">
-            {SkillsBlocs.map((skill) => (
-              <SkillsBloc
-                key={skill.skillBlocTitle}
-                skillTitle={skill.skillBlocTitle}
-                skillsId={skill.skillId}
-                skill1={skill.skills1}
-                skill2={skill.skills2}
-                skill3={skill.skills3}
-                skill4={skill.skills4}
-                skill5={skill.skills5}
-              />
-            ))}
           </div>
         </div>
       </section>

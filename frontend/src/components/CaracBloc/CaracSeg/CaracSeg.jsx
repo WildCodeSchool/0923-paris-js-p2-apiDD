@@ -1,24 +1,43 @@
+import React, { useState } from "react";
 import "../../../assets/variables.css";
 import "./caracSeg.css";
 import FlagBtn from "./FlagBtn";
 import ArrowLine2 from "../../../assets/dnd_ico/ArrowLine_2.png";
 
 function CaracSeg(props) {
-  const { name, value, save, id, caraClass } = props;
+  const { name, id, caraClass, skills } = props;
   const isFlagBtnHidden = id === "CONST";
   const showArrowLine = id !== "CHAR";
 
+  const [caracNum, setCaracNum] = useState(8);
+  const handleCaracNumChange = (e) => {
+    setCaracNum(e.target.value);
+  };
+
+  // eslint-disable-next-line consistent-return
   function strBonus() {
-    const bonus = Math.floor((value - 10) / 2);
-    return `+${bonus.toString()}`;
+    const bonus = Math.floor((caracNum - 10) / 2);
+    if (bonus < 0 || bonus === 0) {
+      return `${bonus.toString()}`;
+    }
+    if (bonus > 0) {
+      return `+${bonus.toString()}`;
+    }
   }
+
+  const saveBonus = strBonus;
 
   return (
     <>
       <div className="carac_segment" id={id}>
         {/* // top // */}
         <div className="carac_num_container">
-          <p className="carac_num">{value}</p>
+          <input
+            type="text"
+            className="carac_num_container carac_num"
+            value={caracNum}
+            onChange={handleCaracNumChange}
+          />
         </div>
         {/* // main // */}
         <div className="carac_main_content">
@@ -30,9 +49,9 @@ function CaracSeg(props) {
         {/* // bottom // */}
         <div className="bonus_save_content">
           <p className="bonus_save">save</p>
-          <p className="bonus_save_num">{save}</p>
+          <p className="bonus_save_num">{saveBonus()}</p>
         </div>
-        {!isFlagBtnHidden && <FlagBtn />}
+        {!isFlagBtnHidden && <FlagBtn id="goPopUp" skills={skills} />}
       </div>
       {showArrowLine && (
         <div id="caracs_arrow_line_2">

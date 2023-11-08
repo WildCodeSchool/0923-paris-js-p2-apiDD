@@ -109,7 +109,14 @@
 #caracs_arrow_line_2 {
   display: none;
 }
-
+/* POP UP POSITION*/
+.skill_popup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*/////////////////////
 // MEDIAS-QUIERIES ///
 ///////////////////*/

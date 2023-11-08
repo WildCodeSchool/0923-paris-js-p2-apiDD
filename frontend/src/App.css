@@ -1,3 +1,11 @@
+/* temp Julius Workzone */
 body {
-  padding: 20px;
+  padding: 4%;
+}
+
+/* MEDIA-QUERIES PRINT */
+@media print {
+  body {
+    padding: 0;
+  }
 }

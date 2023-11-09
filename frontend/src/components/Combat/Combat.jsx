@@ -9,6 +9,7 @@ import skullImg from "../../assets/dnd_ico/skull.png";
 import deathImg from "../../assets/dnd_ico/tombal.png";
 import HealthDice from "./HealthDice";
 import DeathSave from "./DeathSave";
+// import useCharacter from "../../context/CharacterContext";
 
 function Combat() {
   const [initStat, setInitStat] = useState(0);
@@ -21,7 +22,7 @@ function Combat() {
   const [fail1, setFail1] = useState(false);
   const [fail2, setFail2] = useState(false);
   const [fail3, setFail3] = useState(false);
-  // const [healthDiceVisible, setHealthDiceVisible] = useState(false);
+  // const { character } = useCharacter();
 
   const isMobile = window.innerWidth < 1024;
   const isAlive = hpStat > 0;
@@ -81,120 +82,412 @@ function Combat() {
       }
     }
   };
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth >= 1024) {
-  //       setHealthDiceVisible(true);
-  //     } else {
-  //       setHealthDiceVisible(false);
-  //     }
-  //   };
 
-  //   window.addEventListener("resize", handleResize);
-
-  //   if (window.innerWidth >= 1024) {
-  //     setHealthDiceVisible(true);
-  //   } else {
-  //     setHealthDiceVisible(false);
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
-  return isAlive ? (
-    <div className="combatComponent">
-      <img src={knightImg} alt="knight logo" className="knightLogo" />
-      <div className="combatStats">
-        <div className="combatStatsNo_HS_DS">
-          <div className="combatStatsNoHP">
-            <div className="combatInit">
-              <div className="starContainer">
-                <img src={initImg} alt="Initiative stats with a star form" />
-                {/* Add the variable Init in alt like: ${initStat} */}
-                <input
-                  type="text"
-                  value={initStat}
-                  onChange={initChange}
-                  onInput={(e) => {
-                    const inputValue = e.target.value;
-                    if (!/^[0-9+-]*$/.test(inputValue)) {
-                      e.target.value = inputValue.replace(/[^0-9+-]/g, "");
-                    }
-                  }}
-                  className="initInput"
-                />
+  if (!isMobile) {
+    return (
+      <>
+        <div className="printDesktop">
+          <div className="printCombatComponent">
+            <img src={knightImg} alt="knight logo" className="knightLogo" />
+            <div className="combatStats">
+              <div className="combatStatsNo_HS_DS">
+                <div className="combatStatsNoHP">
+                  <div className="combatInit">
+                    <div className="starContainer">
+                      <img
+                        src={initImg}
+                        alt="Initiative stats with a star form"
+                      />
+                      {/* Add the variable Init in alt like: ${initStat} */}
+                      <input
+                        type="text"
+                        value={initStat}
+                        onChange={initChange}
+                        onInput={(e) => {
+                          const inputValue = e.target.value;
+                          if (!/^[0-9+-]*$/.test(inputValue)) {
+                            e.target.value = inputValue.replace(
+                              /[^0-9+-]/g,
+                              ""
+                            );
+                          }
+                        }}
+                        className="initInput"
+                      />
+                    </div>
+                    <p>Init</p>
+                  </div>
+                  <div className="combatAC">
+                    <div className="acContainer">
+                      <img src={acImg} alt="AC stats with a shield form" />
+                      {/* Add the variable AC in alt like: ${acStat} */}
+                      <input
+                        type="text"
+                        value={acStat}
+                        onChange={acChange}
+                        onInput={(e) => {
+                          const inputValue = e.target.value;
+                          if (!/^[0-9]*$/.test(inputValue)) {
+                            e.target.value = inputValue.replace(/[^0-9]/g, "");
+                          }
+                        }}
+                        className="acInput"
+                      />
+                    </div>
+                    <p>A.C</p>
+                  </div>
+                  <div className="combatSpeed">
+                    <div className="speedContainer">
+                      <img src={speedImg} alt="Speed stats with a boot form" />
+                      {/* Add the variable speed in alt like: ${speedStat} */}
+                      <input
+                        type="text"
+                        value={speedStat}
+                        onChange={speedChange}
+                        onInput={(e) => {
+                          const inputValue = e.target.value;
+                          if (!/^[0-9]*$/.test(inputValue)) {
+                            e.target.value = inputValue.replace(/[^0-9]/g, "");
+                          }
+                        }}
+                        className="speedInput"
+                      />
+                    </div>
+                    <p>Speed</p>
+                  </div>
+                </div>
+                <div className="combatHP">
+                  <div className="combatHPButton">
+                    <button
+                      type="button"
+                      className="removeHP"
+                      onClick={decreaseHP}
+                    >
+                      -
+                    </button>
+                    <div className="hpContainer">
+                      <img src={hpImg} alt="aHP stats with a heart form" />
+                      {/* Add the variable HP in alt like: ${hpStat} */}
+                      <input
+                        type="text"
+                        value={hpStat}
+                        onChange={hpChange}
+                        className="hpInput"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      className="addHP"
+                      onClick={increaseHP}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className="hpText">Current HP</p>
+                </div>
               </div>
-              <p>Init</p>
-            </div>
-            <div className="combatAC">
-              <div className="acContainer">
-                <img src={acImg} alt="AC stats with a shield form" />
-                {/* Add the variable AC in alt like: ${acStat} */}
-                <input
-                  type="text"
-                  value={acStat}
-                  onChange={acChange}
-                  onInput={(e) => {
-                    const inputValue = e.target.value;
-                    if (!/^[0-9]*$/.test(inputValue)) {
-                      e.target.value = inputValue.replace(/[^0-9]/g, "");
-                    }
-                  }}
-                  className="acInput"
-                />
+              <div className="HD_DS_1024">
+                {!isMobile && <HealthDice />}
+                {!isMobile && <DeathSave />}
               </div>
-              <p>A.C</p>
             </div>
-            <div className="combatSpeed">
-              <div className="speedContainer">
-                <img src={speedImg} alt="Speed stats with a boot form" />
-                {/* Add the variable speed in alt like: ${speedStat} */}
-                <input
-                  type="text"
-                  value={speedStat}
-                  onChange={speedChange}
-                  onInput={(e) => {
-                    const inputValue = e.target.value;
-                    if (!/^[0-9]*$/.test(inputValue)) {
-                      e.target.value = inputValue.replace(/[^0-9]/g, "");
-                    }
-                  }}
-                  className="speedInput"
-                />
-              </div>
-              <p>Speed</p>
-            </div>
-          </div>
-          <div className="combatHP">
-            <div className="combatHPButton">
-              <button type="button" className="removeHP" onClick={decreaseHP}>
-                -
-              </button>
-              <div className="hpContainer">
-                <img src={hpImg} alt="aHP stats with a heart form" />
-                {/* Add the variable HP in alt like: ${hpStat} */}
-                <input
-                  type="text"
-                  value={hpStat}
-                  onChange={hpChange}
-                  className="hpInput"
-                />
-              </div>
-              <button type="button" className="addHP" onClick={increaseHP}>
-                +
-              </button>
-            </div>
-            <p className="hpText">Current HP</p>
           </div>
         </div>
-        <div className="HD_DS_1024">
-          {!isMobile && <HealthDice />}
-          {!isMobile && <DeathSave />}
+        <div className="combatComponent">
+          <img src={knightImg} alt="knight logo" className="knightLogo" />
+          <div className="combatStats">
+            <div className="combatStatsNo_HS_DS">
+              <div className="combatStatsNoHP">
+                <div className="combatInit">
+                  <div className="starContainer">
+                    <img
+                      src={initImg}
+                      alt="Initiative stats with a star form"
+                    />
+                    {/* Add the variable Init in alt like: ${initStat} */}
+                    <input
+                      type="text"
+                      value={initStat}
+                      onChange={initChange}
+                      onInput={(e) => {
+                        const inputValue = e.target.value;
+                        if (!/^[0-9+-]*$/.test(inputValue)) {
+                          e.target.value = inputValue.replace(/[^0-9+-]/g, "");
+                        }
+                      }}
+                      className="initInput"
+                    />
+                  </div>
+                  <p>Init</p>
+                </div>
+                <div className="combatAC">
+                  <div className="acContainer">
+                    <img src={acImg} alt="AC stats with a shield form" />
+                    {/* Add the variable AC in alt like: ${acStat} */}
+                    <input
+                      type="text"
+                      value={acStat}
+                      onChange={acChange}
+                      onInput={(e) => {
+                        const inputValue = e.target.value;
+                        if (!/^[0-9]*$/.test(inputValue)) {
+                          e.target.value = inputValue.replace(/[^0-9]/g, "");
+                        }
+                      }}
+                      className="acInput"
+                    />
+                  </div>
+                  <p>A.C</p>
+                </div>
+                <div className="combatSpeed">
+                  <div className="speedContainer">
+                    <img src={speedImg} alt="Speed stats with a boot form" />
+                    {/* Add the variable speed in alt like: ${speedStat} */}
+                    <input
+                      type="text"
+                      value={speedStat}
+                      onChange={speedChange}
+                      onInput={(e) => {
+                        const inputValue = e.target.value;
+                        if (!/^[0-9]*$/.test(inputValue)) {
+                          e.target.value = inputValue.replace(/[^0-9]/g, "");
+                        }
+                      }}
+                      className="speedInput"
+                    />
+                  </div>
+                  <p>Speed</p>
+                </div>
+              </div>
+              <div className="combatHP">
+                <div className="combatHPButton">
+                  <button
+                    type="button"
+                    className="removeHP"
+                    onClick={decreaseHP}
+                  >
+                    -
+                  </button>
+                  <div className="hpContainer">
+                    <img src={hpImg} alt="aHP stats with a heart form" />
+                    {/* Add the variable HP in alt like: ${hpStat} */}
+                    <input
+                      type="text"
+                      value={hpStat}
+                      onChange={hpChange}
+                      className="hpInput"
+                    />
+                  </div>
+                  <button type="button" className="addHP" onClick={increaseHP}>
+                    +
+                  </button>
+                </div>
+                <p className="hpText">Current HP</p>
+              </div>
+            </div>
+            <div className="HD_DS_1024">
+              {!isMobile && <HealthDice />}
+              {!isMobile && <DeathSave />}
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+  return isAlive ? (
+    <>
+      <div className="printDesktop">
+        <div className="printCombatComponent">
+          <img src={knightImg} alt="knight logo" className="knightLogo" />
+          <div className="combatStats">
+            <div className="combatStatsNo_HS_DS">
+              <div className="combatStatsNoHP">
+                <div className="combatInit">
+                  <div className="starContainer">
+                    <img
+                      src={initImg}
+                      alt="Initiative stats with a star form"
+                    />
+                    {/* Add the variable Init in alt like: ${initStat} */}
+                    <input
+                      type="text"
+                      value={initStat}
+                      onChange={initChange}
+                      onInput={(e) => {
+                        const inputValue = e.target.value;
+                        if (!/^[0-9+-]*$/.test(inputValue)) {
+                          e.target.value = inputValue.replace(/[^0-9+-]/g, "");
+                        }
+                      }}
+                      className="initInput"
+                    />
+                  </div>
+                  <p>Init</p>
+                </div>
+                <div className="combatAC">
+                  <div className="acContainer">
+                    <img src={acImg} alt="AC stats with a shield form" />
+                    {/* Add the variable AC in alt like: ${acStat} */}
+                    <input
+                      type="text"
+                      value={acStat}
+                      onChange={acChange}
+                      onInput={(e) => {
+                        const inputValue = e.target.value;
+                        if (!/^[0-9]*$/.test(inputValue)) {
+                          e.target.value = inputValue.replace(/[^0-9]/g, "");
+                        }
+                      }}
+                      className="acInput"
+                    />
+                  </div>
+                  <p>A.C</p>
+                </div>
+                <div className="combatSpeed">
+                  <div className="speedContainer">
+                    <img src={speedImg} alt="Speed stats with a boot form" />
+                    {/* Add the variable speed in alt like: ${speedStat} */}
+                    <input
+                      type="text"
+                      value={speedStat}
+                      onChange={speedChange}
+                      onInput={(e) => {
+                        const inputValue = e.target.value;
+                        if (!/^[0-9]*$/.test(inputValue)) {
+                          e.target.value = inputValue.replace(/[^0-9]/g, "");
+                        }
+                      }}
+                      className="speedInput"
+                    />
+                  </div>
+                  <p>Speed</p>
+                </div>
+              </div>
+              <div className="combatHP">
+                <div className="combatHPButton">
+                  <button
+                    type="button"
+                    className="removeHP"
+                    onClick={decreaseHP}
+                  >
+                    -
+                  </button>
+                  <div className="hpContainer">
+                    <img src={hpImg} alt="aHP stats with a heart form" />
+                    {/* Add the variable HP in alt like: ${hpStat} */}
+                    <input
+                      type="text"
+                      value={hpStat}
+                      onChange={hpChange}
+                      className="hpInput"
+                    />
+                  </div>
+                  <button type="button" className="addHP" onClick={increaseHP}>
+                    +
+                  </button>
+                </div>
+                <p className="hpText">Current HP</p>
+              </div>
+            </div>
+            <div className="HD_DS_1024">
+              {!isMobile && <HealthDice />}
+              {!isMobile && <DeathSave />}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="combatComponent">
+        <img src={knightImg} alt="knight logo" className="knightLogo" />
+        <div className="combatStats">
+          <div className="combatStatsNo_HS_DS">
+            <div className="combatStatsNoHP">
+              <div className="combatInit">
+                <div className="starContainer">
+                  <img src={initImg} alt="Initiative stats with a star form" />
+                  {/* Add the variable Init in alt like: ${initStat} */}
+                  <input
+                    type="text"
+                    value={initStat}
+                    onChange={initChange}
+                    onInput={(e) => {
+                      const inputValue = e.target.value;
+                      if (!/^[0-9+-]*$/.test(inputValue)) {
+                        e.target.value = inputValue.replace(/[^0-9+-]/g, "");
+                      }
+                    }}
+                    className="initInput"
+                  />
+                </div>
+                <p>Init</p>
+              </div>
+              <div className="combatAC">
+                <div className="acContainer">
+                  <img src={acImg} alt="AC stats with a shield form" />
+                  {/* Add the variable AC in alt like: ${acStat} */}
+                  <input
+                    type="text"
+                    value={acStat}
+                    onChange={acChange}
+                    onInput={(e) => {
+                      const inputValue = e.target.value;
+                      if (!/^[0-9]*$/.test(inputValue)) {
+                        e.target.value = inputValue.replace(/[^0-9]/g, "");
+                      }
+                    }}
+                    className="acInput"
+                  />
+                </div>
+                <p>A.C</p>
+              </div>
+              <div className="combatSpeed">
+                <div className="speedContainer">
+                  <img src={speedImg} alt="Speed stats with a boot form" />
+                  {/* Add the variable speed in alt like: ${speedStat} */}
+                  <input
+                    type="text"
+                    value={speedStat}
+                    onChange={speedChange}
+                    onInput={(e) => {
+                      const inputValue = e.target.value;
+                      if (!/^[0-9]*$/.test(inputValue)) {
+                        e.target.value = inputValue.replace(/[^0-9]/g, "");
+                      }
+                    }}
+                    className="speedInput"
+                  />
+                </div>
+                <p>Speed</p>
+              </div>
+            </div>
+            <div className="combatHP">
+              <div className="combatHPButton">
+                <button type="button" className="removeHP" onClick={decreaseHP}>
+                  -
+                </button>
+                <div className="hpContainer">
+                  <img src={hpImg} alt="aHP stats with a heart form" />
+                  {/* Add the variable HP in alt like: ${hpStat} */}
+                  <input
+                    type="text"
+                    value={hpStat}
+                    onChange={hpChange}
+                    className="hpInput"
+                  />
+                </div>
+                <button type="button" className="addHP" onClick={increaseHP}>
+                  +
+                </button>
+              </div>
+              <p className="hpText">Current HP</p>
+            </div>
+          </div>
+          <div className="HD_DS_1024">
+            {!isMobile && <HealthDice />}
+            {!isMobile && <DeathSave />}
+          </div>
+        </div>
+      </div>
+    </>
   ) : (
     <div className="deathSaveComponent">
       <img src={knightImg} alt="knight logo" className="knightLogo" />
@@ -268,7 +561,6 @@ function Combat() {
                   onChange={() => setFail3(!fail3)}
                   className="input-fail"
                 />
-
                 <span className="custom-checkbox" />
               </label>
             </div>

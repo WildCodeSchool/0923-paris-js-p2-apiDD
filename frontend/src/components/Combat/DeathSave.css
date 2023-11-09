@@ -124,14 +124,7 @@
   font-size: 1.875rem;
   color: #fff;
 }
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .skullImage {
-    display: none;
-  }
-  .deathImage {
-    display: none;
-  }
-}
+
 @media (min-width: 1023px) {
   .combatComponent .knightLogo {
     display: none;
@@ -218,3 +211,13 @@
     font-size: 1.3rem;
   }
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .skullImage {
+    display: none;
+  }
+  .deathImage {
+    display: none;
+  }
+  .deathSaveText {
+    margin-right: 0;
+}}

@@ -5,7 +5,7 @@ import "./skillsbloc_position.css";
 function SkillsBloc(props) {
   const { skillTitle, skillsId, skill1, skill2, skill3, skill4, skill5 } =
     props;
-
+  // toto
   return (
     <div className="skill_bloc" id={skillsId}>
       <div className="skill_bloc_bkg">

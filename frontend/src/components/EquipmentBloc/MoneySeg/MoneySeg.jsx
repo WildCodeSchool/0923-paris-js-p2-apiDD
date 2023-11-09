@@ -1,10 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import "../../../assets/variables.css";
 import "./moneySeg.css";
 import PurseImg from "../../../assets/dnd_ico/bourse.png";
 
 function MoneySeg(props) {
   const { id, name, value } = props;
+
+  const [purseValue, setPurseValue] = useState(0);
+
+  const btnUp = () => {
+    setPurseValue(parseInt(purseValue, 10) + 1);
+  };
+
+  const btnDown = () => {
+    if (purseValue > 0) {
+      setPurseValue(parseInt(purseValue, 10) - 1);
+    }
+  };
+
   return (
     <div className="purse" id={id}>
       <div className="purse_change">
@@ -14,13 +27,25 @@ function MoneySeg(props) {
         </div>
         <div className="purse_money_line_DeskT">
           <div className="money_btn money_btn_DeskT" id="money_btn_down">
-            <p className="money_btn_content">-</p>
+            <p
+              className="money_btn_content"
+              onClick={btnDown}
+              style={{ cursor: "pointer" }}
+            >
+              -
+            </p>
           </div>
           <div className="purse_value_content">
-            <p className="purse_value">{value}</p>
+            <p className="purse_value">{purseValue}</p>
           </div>
           <div className="money_btn money_btn_DeskT" id="money_btn_up">
-            <p className="money_btn_content">+</p>
+            <p
+              className="money_btn_content"
+              onClick={btnUp}
+              style={{ cursor: "pointer" }}
+            >
+              +
+            </p>
           </div>
         </div>
       </div>

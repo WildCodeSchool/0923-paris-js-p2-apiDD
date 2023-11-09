@@ -45,7 +45,7 @@ div.armor_name {
 
 .armor_strenght {
   margin-top: 1.5rem;
-  width: 46%;
+  width: 48%;
 }
 
 .armor_strenght_input {
@@ -88,38 +88,25 @@ div.armor_name {
   margin-top: -10%;
 }
 
-@media screen and (min-width: 1024px) {
-  .name_class {
-    display: flex;
-    align-items: flex-end;
-    gap: 7%;
-  }
-  .strenght_disadvantage {
-    display: flex;
-    align-items: baseline;
-    gap: 10%;
-  }
+@media (min-width: 1024px) {
   .armor {
     display: flex;
-    gap: 7%;
+    flex-direction: column;
   }
-  .armor_class_strenght {
+  .armor_bloc_contents {
+    justify-content: space-between;
+  }
+  .armor_name_input {
     width: 45%;
+    height: 3rem;
   }
 
-  .armor_name {
-    width: 46%;
-  }
-  div.armor_class {
-    width: 100%;
-  }
   div.armor_strenght {
     width: 85%;
   }
 
-  .armor_name_input {
-    width: 90%;
-    height: 3rem;
+  div.armor_strenght {
+    width: 45%;
   }
 
   .armor_strenght_input {
@@ -127,29 +114,20 @@ div.armor_name {
     height: 3rem;
   }
 
-  div.armor_strenght {
-    width: 42%;
-    margin-top: 2rem;
-  }
   div.armor_class {
-    width: 100%;
+    width: 45%;
+    margin-top: -0.4rem;
   }
   .armor_class_input {
     width: 100%;
     height: 3rem;
   }
+
+  div.armor_disadvantages {
+    width: 46%;
+  }
   .armor_disadvantage_input {
     width: 100%;
     height: 3rem;
-  }
-
-  .armor_disadvantages {
-  }
-  .strenght_disadvantages {
-    width: 47%;
-  }
-
-  .armor_heading {
-    padding-right: 85%;
   }
 }

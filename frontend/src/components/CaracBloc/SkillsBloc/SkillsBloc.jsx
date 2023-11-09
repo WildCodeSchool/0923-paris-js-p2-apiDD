@@ -6,6 +6,7 @@ function SkillsBloc(props) {
   const { skillTitle, skillsId, skill1, skill2, skill3, skill4, skill5 } =
     props;
   // toto
+
   return (
     <div className="skill_bloc" id={skillsId}>
       <div className="skill_bloc_bkg">
@@ -18,8 +19,8 @@ function SkillsBloc(props) {
           {/* SKILL LINE */}
           <div className="skill_lines">
             <div className="skill_line">
-              <label className="checkbox_label">
-                <input type="checkbox" />
+              <label className="checkbox_label" htmlFor={skill1.name}>
+                <input name={skill1.name} type="checkbox" />
                 <span className="custom_checkbox" />
               </label>
               <div className="value_imput">
@@ -29,7 +30,7 @@ function SkillsBloc(props) {
             </div>
             {skill2 && (
               <div className="skill_line">
-                <label className="checkbox_label">
+                <label className="checkbox_label" htmlFor={skill2.name}>
                   <input type="checkbox" />
                   <span className="custom_checkbox" />
                 </label>
@@ -41,8 +42,8 @@ function SkillsBloc(props) {
             )}
             {skill3 && (
               <div className="skill_line">
-                <label className="checkbox_label">
-                  <input type="checkbox" />
+                <label className="checkbox_label" htmlFor={skill3.name}>
+                  <input name={skill3.name} type="checkbox" />
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">
@@ -53,8 +54,8 @@ function SkillsBloc(props) {
             )}
             {skill4 && (
               <div className="skill_line">
-                <label className="checkbox_label">
-                  <input type="checkbox" />
+                <label className="checkbox_label" htmlFor={skill4.name}>
+                  <input name={skill4.name} type="checkbox" />
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">
@@ -65,8 +66,8 @@ function SkillsBloc(props) {
             )}
             {skill5 && (
               <div className="skill_line">
-                <label className="checkbox_label">
-                  <input type="checkbox" />
+                <label className="checkbox_label" htmlFor={skill5.name}>
+                  <input name={skill5.name} type="checkbox" />
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">

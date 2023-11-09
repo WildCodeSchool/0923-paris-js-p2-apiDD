@@ -14,7 +14,6 @@ function CaracSeg(props) {
     setCaracNum(e.target.value);
   };
 
-  // eslint-disable-next-line consistent-return
   function strBonus() {
     const bonus = Math.floor((caracNum - 10) / 2);
     if (bonus < 0 || bonus === 0) {
@@ -23,6 +22,7 @@ function CaracSeg(props) {
     if (bonus > 0) {
       return `+${bonus.toString()}`;
     }
+    return null;
   }
 
   const saveBonus = strBonus;

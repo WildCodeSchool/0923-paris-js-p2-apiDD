@@ -43,7 +43,7 @@
 }
 /* --- [SKILL LINE] ------------------------------------------- */
 .skill_lines {
-  padding-left: 12px;
+  padding-left: 18px;
   margin-top: 10px;
 }
 .skill_line {
@@ -51,14 +51,24 @@
   justify-content: flex-start;
   align-items: center;
 }
-.radio_btn {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000509;
-  margin-right: 10px;
-  cursor: pointer;
+.checkbox_label {
+  position: relative;
+  display: inline-block;
+  width: 30px;
 }
-.radio_btn:checked {
+.custom_checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+input[type="checkbox"]:checked + .custom_checkbox {
+  background-color: black;
+  border: 2px solid black;
 }
 .value_imput {
   width: 45px;

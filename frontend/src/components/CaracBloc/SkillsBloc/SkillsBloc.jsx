@@ -18,8 +18,10 @@ function SkillsBloc(props) {
           {/* SKILL LINE */}
           <div className="skill_lines">
             <div className="skill_line">
-              {/* <div className="radio_btn"> </div> */}
-              <input type="radio" className="radio_btn" />
+              <label className="checkbox_label">
+                <input type="checkbox" />
+                <span className="custom_checkbox" />
+              </label>
               <div className="value_imput">
                 <p className="skill_value">{skill1.value}</p>
               </div>
@@ -27,7 +29,10 @@ function SkillsBloc(props) {
             </div>
             {skill2 && (
               <div className="skill_line">
-                <input type="radio" className="radio_btn" />
+                <label className="checkbox_label">
+                  <input type="checkbox" />
+                  <span className="custom_checkbox" />
+                </label>
                 <div className="value_imput">
                   <p className="skill_value">{skill2.value}</p>
                 </div>
@@ -36,7 +41,10 @@ function SkillsBloc(props) {
             )}
             {skill3 && (
               <div className="skill_line">
-                <input type="radio" className="radio_btn" />
+                <label className="checkbox_label">
+                  <input type="checkbox" />
+                  <span className="custom_checkbox" />
+                </label>
                 <div className="value_imput">
                   <p className="skill_value">{skill3.value}</p>
                 </div>
@@ -45,7 +53,10 @@ function SkillsBloc(props) {
             )}
             {skill4 && (
               <div className="skill_line">
-                <input type="radio" className="radio_btn" />
+                <label className="checkbox_label">
+                  <input type="checkbox" />
+                  <span className="custom_checkbox" />
+                </label>
                 <div className="value_imput">
                   <p className="skill_value">{skill4.value}</p>
                 </div>
@@ -54,7 +65,10 @@ function SkillsBloc(props) {
             )}
             {skill5 && (
               <div className="skill_line">
-                <input type="radio" className="radio_btn" />
+                <label className="checkbox_label">
+                  <input type="checkbox" />
+                  <span className="custom_checkbox" />
+                </label>
                 <div className="value_imput">
                   <p className="skill_value">{skill5.value}</p>
                 </div>

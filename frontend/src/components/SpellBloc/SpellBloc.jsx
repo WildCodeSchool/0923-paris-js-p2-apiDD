@@ -53,6 +53,9 @@ function SpellBloc() {
             />
           ))}
         </div>
+        <div id="wizard_ico_print_">
+          <img id="wizard_ico_print" src={Wizard} alt="wizard icone" />
+        </div>
       </div>
     </section>
   );

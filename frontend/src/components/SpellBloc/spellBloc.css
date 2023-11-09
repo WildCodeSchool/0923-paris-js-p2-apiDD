@@ -5,6 +5,9 @@
   margin-left: 77%;
   margin-bottom: -0.3rem;
 }
+#wizard_ico_print {
+  display: none;
+}
 .spells_bloc {
   width: 94%;
   height: auto;
@@ -75,4 +78,40 @@
   line-height: 24px;
   padding-left: 10px;
   color: var(--main-font-color);
+}
+
+/* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
+@media (min-width: 1024px) {
+  #wizard_ico {
+    display: none;
+  }
+
+  .spells_bloc {
+    width: 40.75%;
+  }
+}
+/* MEDIA-QUERIES PRINT */
+
+@media print {
+  #wizard_ico_print {
+    display: block;
+    width: 58px;
+    height: 58px;
+  }
+  .spells_bloc {
+    width: 151px;
+    padding-top: 10px;
+  }
+  .spells_bloc_title {
+    display: none;
+  }
+  .spell_bloc_top_line {
+    justify-content: center;
+  }
+  .spell_lvl_title {
+    font-size: 9px;
+  }
+  .arrow_btn_open {
+    display: none;
+  }
 }

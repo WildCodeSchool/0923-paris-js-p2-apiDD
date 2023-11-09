@@ -42,8 +42,6 @@ function CaracBloc() {
       caracSave: "+0",
     },
   ];
-  console.info("debut tableau", caracs.slice(0, 3));
-  console.info("fin tableau", caracs.slice(3, caracs.length));
   const SkillsBlocs = [
     {
       skillBlocTitle: "STRENGTH BASED SKILLS",

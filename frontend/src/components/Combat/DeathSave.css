@@ -225,7 +225,7 @@
   .deathSaveComponent .knightLogo {
     display: none;
   }
-  .combatStats .HD_DS_1024{
+  .combatStats .HD_DS_1024 {
     display: flex;
     flex-direction: row;
     justify-content: initial;
@@ -238,11 +238,11 @@
   .allCheckbox {
     width: 40px;
     height: 33px;
-    gap:30px;
+    gap: 30px;
   }
   .deathSaveRoll {
     width: 100%;
-    height: 100%;  
+    height: 100%;
   }
   .checkBoxesSuccess,
   .checkBoxesFail {
@@ -250,17 +250,18 @@
     gap: 2px;
   }
 
-  .successBloc, .failBloc {
-display: flex;
-flex-direction: column;
-gap: 3px;
+  .successBloc,
+  .failBloc {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
   .checkbox-label {
     margin: 0;
     width: 11px;
     height: 11px;
     margin: 0;
-    gap:1px;
+    gap: 1px;
     line-height: 10px;
     vertical-align: top;
     display: flex;

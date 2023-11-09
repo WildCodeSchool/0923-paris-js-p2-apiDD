@@ -107,12 +107,11 @@
 }
 
 @media print {
-
   .healthDiceBlock img {
     width: 36.69px;
     height: 33.71px;
   }
-  .Dice{
+  .Dice {
     margin-top: 7.5px;
   }
   .healthDiceNumber button {
@@ -121,22 +120,23 @@
   .healthDiceBlock {
     width: 175px;
     height: 35px;
-    padding: 5px
-}
-.healthDiceNumberInput, .healthDiceInput {
-  height: 21px;
-}
+    padding: 5px;
+  }
+  .healthDiceNumberInput,
+  .healthDiceInput {
+    height: 21px;
+  }
   .healthDiceNumber input,
   .healthDiceNumber p,
   .healthDice input,
   .healthDice p {
     font-size: 9px;
   }
-  .healthDiceNumber{
+  .healthDiceNumber {
     gap: 5px;
     margin-bottom: 5px;
   }
-  .healthDice{
+  .healthDice {
     gap: 5px;
     margin-bottom: 5px;
   }

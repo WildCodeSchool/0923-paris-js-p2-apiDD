@@ -1,0 +1,62 @@
+.spells_bloc {
+  width: 94%;
+  height: auto;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spells_bloc_title {
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 39px;
+  text-align: center;
+  color: var(--main-font-color);
+  margin: 0.5rem;
+}
+.spell_bloc {
+  width: 86.4%;
+  border: solid 1px black;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+.spell_bloc_top_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.spell_lvl_title {
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 39px;
+  text-align: center;
+  color: var(--main-font-color);
+}
+.arrow_btn_closed {
+  width: 25px;
+  height: 45px;
+  transform: rotate(-90deg);
+}
+.spells_list {
+  display: flex;
+  justify-content: center;
+}
+.spell_container {
+  background: var(--input-bg-color);
+  border: solid 1px black;
+  width: 100%;
+  margin: 0 11px;
+}
+.spell_item {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 24px;
+  padding-left: 10px;
+  color: var(--main-font-color);
+}

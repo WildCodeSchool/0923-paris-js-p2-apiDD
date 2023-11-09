@@ -8,9 +8,8 @@ function SkillsBloc(props) {
 
   return (
     <div className="skill_bloc" id={skillsId}>
+      {/* TOP */}
       <div className="skill_bloc_bkg">
-        {/* TOP */}
-
         {/* CONTENT */}
         <div className="skills_content">
           {/* CARAC SKILLS TITLE */}

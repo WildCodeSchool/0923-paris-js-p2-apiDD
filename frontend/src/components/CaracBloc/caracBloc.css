@@ -32,14 +32,17 @@
   }
   #carac_MQ_deskT {
     display: initial;
+    width: 100%;
   }
   #caracs_arrow_line {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   #caracs_arrow_line > img {
     width: 93%;
+    padding: 1rem 0 1rem 0;
   }
 }
 

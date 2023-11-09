@@ -1,27 +1,60 @@
 import React from "react";
 import "./spellBloc.css";
-import LittleArrow from "../../assets/dnd_ico/fleches.png";
+import LevelSpellBloc from "./LevelSpellBloc";
+import Wizard from "../../assets/dnd_ico/wizard.png";
+
+const SpellsList = [
+  {
+    spellLvlTitle: "SPELLS - LVL 0",
+    spell1: {
+      name: "lvl/0 - spell 1",
+    },
+    spell2: {
+      name: "lvl/0 - spell 2",
+    },
+    spell3: {
+      name: "lvl/0 - spell 3",
+    },
+  },
+  {
+    spellLvlTitle: "SPELLS - LVL 1",
+    spell1: {
+      name: "lvl/1 - spell 1",
+    },
+    spell2: {
+      name: "lvl/1 - spell 2",
+    },
+  },
+  {
+    spellLvlTitle: "SPELLS - LVL 2",
+    spell1: {
+      name: "lvl/2 - spell 1",
+    },
+  },
+];
 
 function SpellBloc() {
   return (
-    <div className="spells_bloc">
-      <h1 className="spells_bloc_title">SPELLS</h1>
-      <div className="spell_bloc">
-        <div className="spell_bloc_top_line">
-          <h2 className="spell_lvl_title">SPELLS - LVL 0 </h2>
-          <img
-            className="arrow_btn_closed"
-            src={LittleArrow}
-            alt="arrow toggle btn closed"
-          />
-        </div>
-        <div className="spells_list">
-          <div className="spell_container">
-            <p className="spell_item">spell</p>
-          </div>
+    <section className="SPELLS">
+      <div id="wizard_ico_">
+        <img id="wizard_ico" src={Wizard} alt="wizard icone" />
+      </div>
+      <div className="spells_bloc">
+        <h1 className="spells_bloc_title">SPELLS</h1>
+        <div className="spell_area">
+          {SpellsList.map((spells) => (
+            <LevelSpellBloc
+              key={spells.spellLvlTitle}
+              id={spells.spellLvlTitle}
+              title={spells.spellLvlTitle}
+              spell1={spells.spell1}
+              spell2={spells.spell2}
+              spell3={spells.spell3}
+            />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

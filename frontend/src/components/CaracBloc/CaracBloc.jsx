@@ -42,8 +42,7 @@ function CaracBloc() {
       caracSave: "+0",
     },
   ];
-  console.info("debut tableau", caracs.slice(0, 3));
-  console.info("fin tableau", caracs.slice(3, caracs.length));
+
   const SkillsBlocs = [
     {
       skillBlocTitle: "STRENGTH BASED SKILLS",
@@ -159,7 +158,7 @@ function CaracBloc() {
 
   return (
     <>
-      <section id="caracs_skills_section_screen">
+      <section id="CARACS_screen">
         {/* smartphone */}
         <div id="carac_MQ_smartPh">
           {/* smartphone CARACS */}
@@ -207,7 +206,7 @@ function CaracBloc() {
         </div>
       </section>
       {/* print version */}
-      <section id="caracs_skills_section_Print">
+      <section id="CARACS_Print">
         <div className="carac_Bloc_Print">
           {caracs.slice(0).map((carac) => (
             <CaracSeg

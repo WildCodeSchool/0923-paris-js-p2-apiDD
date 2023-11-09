@@ -1,4 +1,4 @@
-#caracs_skills_section_screen {
+#CARACS_screen {
   border: solid 1px black;
 }
 
@@ -12,13 +12,13 @@
   display: none;
 }
 
-#caracs_skills_section_Print {
+#CARACS_Print {
   display: none;
 }
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
-  #caracs_skills_section_screen {
+  #CARACS_screen {
     width: 40.75%;
     display: flex;
     justify-content: center;
@@ -48,11 +48,11 @@
 
 /* MEDIA-QUERIES PRINT */
 @media print {
-  #caracs_skills_section_screen {
+  #CARACS_screen {
     display: none;
   }
 
-  #caracs_skills_section_Print {
+  #CARACS_Print {
     display: block;
     width: 216px;
     height: 677px;

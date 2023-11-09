@@ -4,24 +4,36 @@
   margin-top: 1.5rem;
   padding: 2.5%;
 }
+.armor_bloc_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.armor_bloc_contents {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 h1.armor_heading {
   font-size: 24px;
   color: black;
-  margin-top: 2%;
+  margin-bottom: 7%;
+}
+div.armor_name {
+  width: 97%;
 }
 .armor_name_input {
   margin-top: 1rem;
-  width: 96%;
+  width: 100%;
   background-color: #e8e8e8;
   border: 1px solid black;
   height: 1.4rem;
 }
 
-.armor_class_strenght {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-between;
+.armor_class {
+  margin-top: 1.5rem;
 }
 .armor_class_input {
   width: 90%;
@@ -31,8 +43,13 @@ h1.armor_heading {
   height: 1.4rem;
 }
 
+.armor_strenght {
+  margin-top: 1.5rem;
+  width: 46%;
+}
+
 .armor_strenght_input {
-  width: 90%;
+  width: 100%;
   margin-top: 00.5rem;
   background-color: #e8e8e8;
   border: 1px solid black;
@@ -40,8 +57,9 @@ h1.armor_heading {
 }
 
 .armor_disadvantages {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .armor_disadvantage_input {
   width: 96%;
@@ -60,55 +78,77 @@ h1.armor_heading {
 }
 .fleche {
   width: 12%;
-  /* margin-left:90% ; */
   transform: rotate(180deg);
+  height: 2.5rem;
 }
-.fleche_armor {
+.heading_name {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -10%;
 }
 
 @media screen and (min-width: 1024px) {
+  .name_class {
+    display: flex;
+    align-items: flex-end;
+    gap: 7%;
+  }
+  .strenght_disadvantage {
+    display: flex;
+    align-items: baseline;
+    gap: 10%;
+  }
   .armor {
     display: flex;
-    flex-wrap: wrap;
+    gap: 7%;
   }
+  .armor_class_strenght {
+    width: 45%;
+  }
+
   .armor_name {
-    width: 43%;
+    width: 46%;
   }
   div.armor_class {
-    width: 85%;
+    width: 100%;
   }
   div.armor_strenght {
     width: 85%;
   }
 
   .armor_name_input {
-    width: 100%;
+    width: 90%;
     height: 3rem;
   }
 
   .armor_strenght_input {
     width: 100%;
+    height: 3rem;
   }
 
   div.armor_strenght {
-    width: 40%;
+    width: 42%;
+    margin-top: 2rem;
   }
   div.armor_class {
-    width: 40%;
+    width: 100%;
   }
   .armor_class_input {
     width: 100%;
+    height: 3rem;
   }
   .armor_disadvantage_input {
-    width: 40%;
+    width: 100%;
+    height: 3rem;
   }
 
-  img.fleche {
-    display: none;
+  .armor_disadvantages {
   }
+  .strenght_disadvantages {
+    width: 47%;
+  }
+
   .armor_heading {
     padding-right: 85%;
   }

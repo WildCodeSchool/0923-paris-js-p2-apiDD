@@ -1,7 +1,11 @@
+/* temp Julius Workzone */
 body {
   margin: 3%;
 }
-@media (min-width: 1023px) {
-  .result_s {
+
+/* MEDIA-QUERIES PRINT */
+@media print {
+  body {
+    margin: 0;
   }
 }

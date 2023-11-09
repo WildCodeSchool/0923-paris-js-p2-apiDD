@@ -29,7 +29,7 @@
     "vite": "^4.4.7"
   },
   "lint-staged": {
-    "*.{html,scss,css}": "prettier --check",
+    "*.{html,scss,css, js, jsx}": "prettier --check",
     "*.jsx": "eslint"
   }
 }

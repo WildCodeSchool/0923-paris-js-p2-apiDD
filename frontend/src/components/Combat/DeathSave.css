@@ -58,9 +58,7 @@
 .failBloc p {
   text-align: center;
 }
-
-/*
-  .checkbox-label input {
+/*.checkbox-label input {
     width: 40px;
     height: 40px;
     margin: 10px;
@@ -220,4 +218,5 @@
   }
   .deathSaveText {
     margin-right: 0;
-}}
+  }
+}

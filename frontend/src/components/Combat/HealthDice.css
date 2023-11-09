@@ -56,7 +56,7 @@
 .addRemoveDiceNumber {
   display: flex;
   flex-direction: row;
-  position: relative; /* Utilisez position: relative */
+  position: relative;
 }
 
 .addRemoveDiceNumber button {
@@ -103,5 +103,44 @@
   .healthDiceBlock img {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media print {
+
+  .healthDiceBlock img {
+    width: 36.69px;
+    height: 33.71px;
+  }
+  .Dice{
+    margin-top: 7.5px;
+  }
+  .healthDiceNumber button {
+    display: none;
+  }
+  .healthDiceBlock {
+    width: 175px;
+    height: 35px;
+    padding: 5px
+}
+.healthDiceNumberInput, .healthDiceInput {
+  height: 21px;
+}
+  .healthDiceNumber input,
+  .healthDiceNumber p,
+  .healthDice input,
+  .healthDice p {
+    font-size: 9px;
+  }
+  .healthDiceNumber{
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  .healthDice{
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  .HD_DS_1024 {
+    display: block;
   }
 }

@@ -1,66 +1,6 @@
-#strength {
-  position: absolute;
-  top: 273px;
-  display: none;
-}
-
-#dexterity {
-  position: absolute;
-  top: 273px;
-  display: none;
-}
-
-#intelligence {
-  position: absolute;
-  top: 390px;
-  display: none;
-}
-
-#wisdom {
-  position: absolute;
-  top: 114px;
-  display: none;
-}
-
-#charisma {
-  position: absolute;
-  top: 390px;
-  display: none;
-}
-
 /*/////////////////////
 // MEDIAS-QUIERIES ///
 ///////////////////*/
-
-/* MEDIA SCREEN MIN-WIDTH 1024px ------------------------- */
-@media (min-width: 1024px) {
-  .skill_bloc {
-    display: flex;
-    width: 585px;
-    height: 600px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.95);
-  }
-  #strength {
-    top: 21px;
-  }
-  #dexterity {
-    top: 21px;
-  }
-
-  #intelligence {
-    top: 21px;
-  }
-
-  #wisdom {
-    top: 21px;
-  }
-
-  #charisma {
-    top: 21px;
-  }
-}
 
 /* MEDIA-QUIERIES PRINT ------------------------- */
 @media print {
@@ -73,30 +13,30 @@
   }
   #strength {
     display: block;
-    top: 57px;
-    left: 91px;
+    top: 37px;
+    left: 70px;
   }
   #dexterity {
     display: block;
-    top: 175px;
-    left: 91px;
+    top: 153px;
+    left: 70px;
   }
 
   #intelligence {
     display: block;
-    top: 575px;
-    left: 91px;
+    top: 560px;
+    left: 70px;
   }
 
   #wisdom {
     display: block;
-    top: 437px;
-    left: 91px;
+    top: 422px;
+    left: 70px;
   }
 
   #charisma {
     display: block;
-    top: 720px;
-    left: 91px;
+    top: 701px;
+    left: 70px;
   }
 }

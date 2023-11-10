@@ -7,6 +7,7 @@ import DeathSave from "./components/Combat/DeathSave";
 import CaracBloc from "./components/CaracBloc/CaracBloc";
 import SpellBloc from "./components/SpellBloc/SpellBloc";
 import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
+import BonusPerceptionBloc from "./components/BonusPerceptionBloc/BonusPerceptionBloc";
 import { CharacterProvider } from "./context/CharacterContext";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <CharacterProvider>
       <div className="result">
         <CaracBloc />
+        <BonusPerceptionBloc />
         <Combat />
         <DeathSave />
         {window.innerWidth < 1024 && <HealthDice />}

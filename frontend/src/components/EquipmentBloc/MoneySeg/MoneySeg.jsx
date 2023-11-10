@@ -52,13 +52,28 @@ function MoneySeg(props) {
 
       <div className="purse_title_line">
         <div className="money_btn money_btn_SmartPh" id="money_btn_down">
-          <p className="money_btn_content">-</p>
+          <p
+            className="money_btn_content"
+            onClick={btnDown}
+            style={{ cursor: "pointer" }}
+          >
+            -
+          </p>
         </div>
         <div className="purse_title_container">
           <p className="purse_title">{name}</p>
         </div>
+        {/* <div className="purse_value_content">
+          <p className="purse_value">{purseValue}</p>
+        </div> */}
         <div className="money_btn money_btn_SmartPh" id="money_btn_up">
-          <p className="money_btn_content">+</p>
+          <p
+            className="money_btn_content"
+            onClick={btnUp}
+            style={{ cursor: "pointer" }}
+          >
+            +
+          </p>
         </div>
       </div>
     </div>

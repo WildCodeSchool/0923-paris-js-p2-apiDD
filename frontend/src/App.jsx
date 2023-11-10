@@ -1,10 +1,12 @@
 import React from "react";
 import "./resetStyle.css";
 import "./App.css";
-
 import Combat from "./components/Combat/Combat";
 import HealthDice from "./components/Combat/HealthDice";
+import DeathSave from "./components/Combat/DeathSave";
 import CaracBloc from "./components/CaracBloc/CaracBloc";
+import SpellBloc from "./components/SpellBloc/SpellBloc";
+import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
 import { CharacterProvider } from "./context/CharacterContext";
 
 function App() {
@@ -13,11 +15,14 @@ function App() {
       <div className="result">
         <CaracBloc />
         <Combat />
-        {/* <DeathSave /> */}
+        <DeathSave />
         {window.innerWidth < 1024 && <HealthDice />}
-        {/* <HealthDice /> */}
+        <HealthDice />
+        <SpellBloc />
+        <EquipmentBloc />
       </div>
     </CharacterProvider>
+  );
 }
 
 export default App;

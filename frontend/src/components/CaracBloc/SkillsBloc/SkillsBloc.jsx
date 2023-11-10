@@ -7,10 +7,9 @@ function SkillsBloc(props) {
     props;
 
   return (
-    <div className="skill_bloc" id={skillsId}>
+    <section className="skill_bloc" id={skillsId}>
+      {/* TOP */}
       <div className="skill_bloc_bkg">
-        {/* TOP */}
-
         {/* CONTENT */}
         <div className="skills_content">
           {/* CARAC SKILLS TITLE */}
@@ -78,7 +77,7 @@ function SkillsBloc(props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

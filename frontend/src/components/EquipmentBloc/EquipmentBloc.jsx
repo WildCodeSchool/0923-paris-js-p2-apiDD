@@ -13,7 +13,7 @@ function EquipmentBloc() {
   ];
 
   return (
-    <div className="equipment_area">
+    <div className="EQUIPMENT">
       <div id="equipment_ico_">
         <img id="equipment_ico" src={Equipment} alt="equipment icone" />
       </div>

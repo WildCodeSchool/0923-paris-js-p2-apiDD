@@ -1,18 +1,23 @@
 import React from "react";
 import "./resetStyle.css";
 import "./App.css";
-// import CaracBloc from "./components/CaracBloc/CaracBloc";
-import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
+
+import Combat from "./components/Combat/Combat";
+import HealthDice from "./components/Combat/HealthDice";
+import CaracBloc from "./components/CaracBloc/CaracBloc";
+import { CharacterProvider } from "./context/CharacterContext";
 
 function App() {
   return (
-    <>
-      <EquipmentBloc />
-      {/* <CaracBloc /> */}
-
-      <div> </div>
-    </>
-  );
+    <CharacterProvider>
+      <div className="result">
+        <CaracBloc />
+        <Combat />
+        {/* <DeathSave /> */}
+        {window.innerWidth < 1024 && <HealthDice />}
+        {/* <HealthDice /> */}
+      </div>
+    </CharacterProvider>
 }
 
 export default App;

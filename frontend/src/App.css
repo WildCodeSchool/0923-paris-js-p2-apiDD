@@ -5,7 +5,10 @@ body {
 /* MEDIA-QUERIES PRINT */
 @media print {
   body {
-    padding: 0;
+    margin: 0;
+  }
+  .attackNinc {
+    margin-top: 200px;
   }
 }
 @media (min-width: 1023px) {

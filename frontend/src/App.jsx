@@ -1,7 +1,6 @@
 import React from "react";
 import "./resetStyle.css";
 import "./App.css";
-
 import Combat from "./components/Combat/Combat";
 import HealthDice from "./components/Combat/HealthDice";
 import DeathSave from "./components/Combat/DeathSave";
@@ -16,12 +15,11 @@ function App() {
     <CharacterProvider>
       <div className="result">
         <CaracBloc />
-        
         <Combat />
         <DeathSave />
         {window.innerWidth < 1024 && <HealthDice />}
         <HealthDice />
-         <AttackNinc />
+        <AttackNinc />
         <SpellBloc />
         <EquipmentBloc />
       </div>

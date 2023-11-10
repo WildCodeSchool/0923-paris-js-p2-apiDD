@@ -16,13 +16,15 @@ function Armor() {
       </div>
 
       <div className="armor_bloc_contents">
-        <input
-          className="armor_name_input"
-          type="text"
-          id="nameInput"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className="armor_name">
+          <input
+            className="armor_name_input"
+            type="text"
+            id="nameInput"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
 
         <div className="armor_class">
           <h1 className="armor_sub_heading">AC</h1>

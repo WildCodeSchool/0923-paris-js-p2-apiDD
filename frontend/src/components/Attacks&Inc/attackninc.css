@@ -38,3 +38,17 @@ h1.heading {
     display: none;
   }
 }
+
+@media print {
+  .attackNinc {
+    width: 314px;
+    height: 231px;
+  }
+  h1.heading {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .imgesword {
+    display: none;
+  }
+}

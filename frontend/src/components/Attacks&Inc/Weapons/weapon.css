@@ -1,6 +1,3 @@
-body {
-}
-
 .heading {
   font-family: "Eagle Lake", serif;
   font-weight: 400;
@@ -116,5 +113,44 @@ body {
   }
   .weapon_name_heading {
     margin-bottom: -6%;
+  }
+}
+
+@media print {
+  .name_input {
+    width: 115.09px;
+    height: 16px;
+  }
+  .weapon_name_heading {
+    font-size: 9px;
+    margin-bottom: -20px;
+  }
+  .bonus_input {
+    width: 52.65px;
+    height: 16px;
+  }
+  .combat_input {
+    width: 115.09px;
+    height: 16px;
+  }
+  .weapon_sub_heading {
+    font-size: 9px;
+  }
+  .arrow_line {
+    display: none;
+  }
+  .title_print {
+    display: none;
+  }
+  div.weapon_fr {
+    margin-left: -20px;
+  }
+  div.weapon_sec {
+    margin-top: -45px;
+    margin-left: -20px;
+  }
+  div.weapon_third {
+    margin-top: -45px;
+    margin-left: -20px;
   }
 }

@@ -16,7 +16,7 @@ function Weapon() {
     <div className="weapons">
       <div className="weapon_fr">
         <div className="weapon_name_input">
-          <h1 className="weapon_name_heading">Name</h1>
+          <h1 className="weapon_name_heading ">Name</h1>
           <input
             className="name_input"
             type="text"
@@ -51,7 +51,7 @@ function Weapon() {
 
       <div className="weapon_sec">
         <div className="weapon_name_input">
-          <h1 className="weapon_name_heading">Name</h1>
+          <h1 className="weapon_name_heading title_print">Name</h1>
           <input
             className="name_input"
             type="text"
@@ -62,7 +62,7 @@ function Weapon() {
 
         <div className="bonus_combat">
           <div className="div_bonus">
-            <h1 className="weapon_sub_heading">ATK Bonus</h1>
+            <h1 className="weapon_sub_heading title_print">ATK Bonus</h1>
             <input
               className="bonus_input"
               type="text"
@@ -71,7 +71,7 @@ function Weapon() {
             />
           </div>
           <div className="div_combat">
-            <h1 className="weapon_sub_heading">Combat/ Type</h1>
+            <h1 className="weapon_sub_heading title_print">Combat/ Type</h1>
             <input
               className="combat_input"
               type="text"
@@ -86,7 +86,7 @@ function Weapon() {
 
       <div className="weapon_third">
         <div className="weapon_name_input">
-          <h1 className="weapon_name_heading">Name</h1>
+          <h1 className="weapon_name_heading title_print">Name</h1>
           <input
             className="name_input"
             type="text"
@@ -97,7 +97,7 @@ function Weapon() {
 
         <div className="bonus_combat">
           <div className="div_bonus">
-            <h1 className="weapon_sub_heading">ATK Bonus</h1>
+            <h1 className="weapon_sub_heading title_print">ATK Bonus</h1>
             <input
               className="bonus_input"
               type="text"
@@ -106,7 +106,7 @@ function Weapon() {
             />
           </div>
           <div className="div_combat">
-            <h1 className="weapon_sub_heading">Combat/ Type</h1>
+            <h1 className="weapon_sub_heading title_print">Combat/ Type</h1>
             <input
               className="combat_input"
               type="text"

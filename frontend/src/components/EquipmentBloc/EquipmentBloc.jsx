@@ -1,4 +1,3 @@
-import React from "react";
 import "../../assets/variables.css";
 import "./equipmentBloc.css";
 import MoneySeg from "./MoneySeg/MoneySeg";
@@ -12,6 +11,7 @@ function EquipmentBloc() {
     { purseName: "SP", PurseValue: "0" },
     { purseName: "CP", PurseValue: "0" },
   ];
+
   return (
     <div className="EQUIPMENT">
       <div id="equipment_ico_">

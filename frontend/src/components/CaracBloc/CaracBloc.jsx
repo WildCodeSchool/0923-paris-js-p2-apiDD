@@ -42,7 +42,6 @@ function CaracBloc() {
       caracSave: "+0",
     },
   ];
-
   const SkillsBlocs = [
     {
       skillBlocTitle: "STRENGTH BASED SKILLS",

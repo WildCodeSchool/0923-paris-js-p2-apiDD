@@ -20,6 +20,13 @@
 @media (min-width: 1024px) {
   #CARACS_screen {
     width: 40.75%;
+  }
+
+  .carac_Bloc {
+    margin: 2.3%;
+  }
+
+  #caracs_arrow_line {
     display: flex;
     justify-content: center;
     align-items: center;

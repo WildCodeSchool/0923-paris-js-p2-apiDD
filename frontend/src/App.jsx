@@ -1,6 +1,8 @@
 import React from "react";
 import "./resetStyle.css";
 import "./App.css";
+
+import CharacterInfo from "./components/Characterinfo/CharacterInfo";
 import Combat from "./components/Combat/Combat";
 import HealthDice from "./components/Combat/HealthDice";
 import DeathSave from "./components/Combat/DeathSave";
@@ -13,6 +15,7 @@ function App() {
   return (
     <CharacterProvider>
       <div className="result">
+        <CharacterInfo />
         <CaracBloc />
         <Combat />
         <DeathSave />

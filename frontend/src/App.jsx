@@ -1,49 +1,31 @@
 import React from "react";
 import "./resetStyle.css";
 import "./App.css";
+
 import CharacterInfo from "./components/Characterinfo/CharacterInfo";
+import Combat from "./components/Combat/Combat";
+import HealthDice from "./components/Combat/HealthDice";
+import DeathSave from "./components/Combat/DeathSave";
+import CaracBloc from "./components/CaracBloc/CaracBloc";
+import SpellBloc from "./components/SpellBloc/SpellBloc";
+import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
+import { CharacterProvider } from "./context/CharacterContext";
 
 function App() {
-  // const caracs = [
-  //   {
-  //     name: "STR",
-  //     value: "10",
-  //     bonus: "+0",
-  //     save: "+0",
-  //   },
-  //   {
-  //     name: "DEX",
-  //     value: "10",
-  //     bonus: "+0",
-  //     save: "+0",
-  //   },
-  //   {
-  //     name: "WIS",
-  //     value: "10",
-  //     bonus: "+0",
-  //     save: "+0",
-  //   },
-  //   {
-  //     name: "INT",
-  //     value: "10",
-  //     bonus: "+0",
-  //     save: "+0",
-  //   },
-  //   {
-  //     name: "CHAR",
-  //     value: "10",
-  //     bonus: "+0",
-  //     save: "+0",
-  //   },
-  //   {
-  //     name: "CONST",
-  //     value: "10",
-  //     bonus: "+0",
-  //     save: "+0",
-  //   },
-  // ];
-
-  return <CharacterInfo />;
+  return (
+    <CharacterProvider>
+      <div className="result">
+        <CharacterInfo />
+        <CaracBloc />
+        <Combat />
+        <DeathSave />
+        {window.innerWidth < 1024 && <HealthDice />}
+        <HealthDice />
+        <SpellBloc />
+        <EquipmentBloc />
+      </div>
+    </CharacterProvider>
+  );
 }
 
 export default App;

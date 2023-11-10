@@ -1,1 +1,16 @@
-
+/* temp Julius Workzone */
+body {
+  margin: 3%;
+}
+/* MEDIA-QUERIES PRINT */
+@media print {
+  body {
+    padding: 0;
+  }
+}
+@media (min-width: 1023px) {
+  .result {
+    display: flex;
+    gap: 0.49%;
+  }
+}

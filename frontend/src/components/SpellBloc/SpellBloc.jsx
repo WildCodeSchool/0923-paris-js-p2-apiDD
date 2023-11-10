@@ -41,7 +41,7 @@ function SpellBloc() {
       </div>
       <div className="spells_bloc">
         <h1 className="spells_bloc_title">SPELLS</h1>
-        <div className="spell_area">
+        <div id="spell_area_screen">
           {SpellsList.map((spells) => (
             <LevelSpellBloc
               key={spells.spellLvlTitle}
@@ -53,6 +53,7 @@ function SpellBloc() {
             />
           ))}
         </div>
+        <div id="spell_area_print"> </div>
         <div id="wizard_ico_print_">
           <img id="wizard_ico_print" src={Wizard} alt="wizard icone" />
         </div>

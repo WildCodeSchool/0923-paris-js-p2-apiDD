@@ -3,6 +3,7 @@
 }
 
 .carac_Bloc {
+  width: 94%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -18,10 +19,6 @@
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
-  #CARACS_screen {
-    width: 40.75%;
-  }
-
   .carac_Bloc {
     margin: 2.3%;
   }
@@ -32,6 +29,7 @@
     align-items: center;
   }
   .carac_Bloc {
+    width: 41.688rem;
     margin: 2.3%;
   }
   #carac_MQ_smartPh {

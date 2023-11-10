@@ -2,14 +2,13 @@
   width: 58px;
   height: 58px;
   position: static;
-  margin-left: 77%;
+  margin-left: 82%;
   margin-bottom: -0.3rem;
 }
 #wizard_ico_print {
   display: none;
 }
 .spells_bloc {
-  width: 94%;
   height: auto;
   border: solid 1px black;
   display: flex;
@@ -26,13 +25,16 @@
   color: var(--main-font-color);
   margin: 0.5rem;
 }
-.spell_area {
+#spell_area_screen {
   display: flex;
   width: 86.4%;
   padding-bottom: 0.8rem;
   margin-bottom: 1rem;
   gap: 1rem;
   flex-direction: column;
+}
+#spell_area_print {
+  display: none;
 }
 .spells_lvls {
   border: solid 1px black;
@@ -87,12 +89,15 @@
   }
 
   .spells_bloc {
-    width: 40.75%;
+    width: 36.688rem;
   }
 }
 /* MEDIA-QUERIES PRINT */
 
 @media print {
+  #wizard_ico {
+    display: none;
+  }
   #wizard_ico_print {
     display: block;
     width: 58px;
@@ -100,18 +105,28 @@
   }
   .spells_bloc {
     width: 151px;
-    padding-top: 10px;
-  }
-  .spells_bloc_title {
-    display: none;
+    height: 253px;
   }
   .spell_bloc_top_line {
     justify-content: center;
   }
-  .spell_lvl_title {
+  .spells_bloc_title {
     font-size: 9px;
+    line-height: 0px;
+    margin: 15px 0 15px 0;
   }
   .arrow_btn_open {
     display: none;
+  }
+  #spell_area_screen {
+    display: none;
+  }
+  #spell_area_print {
+    display: flex;
+    width: 140px;
+    height: 172px;
+    border: solid 1px black;
+    background: var(--input-bg-color);
+    margin-bottom: 10px;
   }
 }

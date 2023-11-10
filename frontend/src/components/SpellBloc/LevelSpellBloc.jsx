@@ -5,10 +5,8 @@ import LittleArrow from "../../assets/dnd_ico/fleches.png";
 function LevelSpellBloc(props) {
   const { title, id, spell1, spell2, spell3 } = props;
 
-  // Utilisez un état local pour suivre l'état de visibilité de la liste de sorts
   const [isSpellListVisible, setSpellListVisible] = useState(false);
 
-  // Fonction pour basculer l'état de visibilité
   const toggleSpellList = () => {
     setSpellListVisible(!isSpellListVisible);
   };

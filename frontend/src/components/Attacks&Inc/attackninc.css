@@ -43,10 +43,13 @@ h1.heading {
   .attackNinc {
     width: 314px;
     height: 231px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
   h1.heading {
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 2px;
   }
   .imgesword {
     display: none;

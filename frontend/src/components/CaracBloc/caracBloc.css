@@ -1,8 +1,9 @@
-#caracs_skills_section_screen {
+#CARACS_screen {
   border: solid 1px black;
 }
 
 .carac_Bloc {
+  width: 94%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -12,19 +13,23 @@
   display: none;
 }
 
-#caracs_skills_section_Print {
+#CARACS_Print {
   display: none;
 }
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
-  #caracs_skills_section_screen {
-    width: 40.75%;
+  .carac_Bloc {
+    margin: 2.3%;
+  }
+
+  #caracs_arrow_line {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .carac_Bloc {
+    width: 41.688rem;
     margin: 2.3%;
   }
   #carac_MQ_smartPh {
@@ -32,24 +37,27 @@
   }
   #carac_MQ_deskT {
     display: initial;
+    width: 100%;
   }
   #caracs_arrow_line {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   #caracs_arrow_line > img {
     width: 93%;
+    padding: 1rem 0 1rem 0;
   }
 }
 
 /* MEDIA-QUERIES PRINT */
 @media print {
-  #caracs_skills_section_screen {
+  #CARACS_screen {
     display: none;
   }
 
-  #caracs_skills_section_Print {
+  #CARACS_Print {
     display: block;
     width: 216px;
     height: 677px;

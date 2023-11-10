@@ -179,7 +179,6 @@
   }
   .purse_title_line {
     position: relative;
-    top: -10;
-    margin-top: 3px;
+    top: -10px;
   }
 }

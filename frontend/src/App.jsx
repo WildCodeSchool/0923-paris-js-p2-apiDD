@@ -1,7 +1,7 @@
 import React from "react";
 import "./resetStyle.css";
 import "./App.css";
-import CaracSeg from "./components/CaracSeg/CaracSeg";
+import CharacterInfo from "./components/Characterinfo/CharacterInfo";
 
 function App() {
   // const caracs = [
@@ -43,12 +43,7 @@ function App() {
   //   },
   // ];
 
-  return (
-    <>
-      <div> </div>
-      <CaracSeg />
-    </>
-  );
+  return <CharacterInfo />;
 }
 
 export default App;

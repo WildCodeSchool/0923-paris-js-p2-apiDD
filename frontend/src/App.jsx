@@ -18,8 +18,8 @@ function App() {
     <CharacterProvider>
       <div className="result">
         <CharacterInfo />
-        <CaracBloc />
         <BonusPerceptionBloc />
+        <CaracBloc />
         <Combat />
         <DeathSave />
         {window.innerWidth < 1024 && <HealthDice />}

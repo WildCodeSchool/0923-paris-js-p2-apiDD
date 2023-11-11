@@ -13,9 +13,11 @@ function CharacterInfo() {
   const isMobile = window.innerWidth < 1024;
   return (
     <form className="newCharacter_form">
-      <img src={reddragon} className="reddragon" alt="reddragon-input" />
-      <div className="characterName_container">
-        <CharacterName />
+      <div id="CharacName_top_line">
+        <img src={reddragon} className="reddragon" alt="reddragon-input" />
+        <div className="characterName_container">
+          <CharacterName />
+        </div>
       </div>
       <div className="form_container">
         <div className="form_inner">

@@ -1,8 +1,10 @@
 .characterName {
-  position:relative;
-  width:79.72%;
-  display:flex;
+  position: relative;
+  width: 100%;
+  display: flex;
   flex-direction: column;
+  left: -23px;
+  bottom: 3px;
 }
 
 .characterName input {

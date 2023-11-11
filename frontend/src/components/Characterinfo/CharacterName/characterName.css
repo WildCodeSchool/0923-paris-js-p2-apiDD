@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   left: -23px;
-  bottom: 3px;
+  bottom: 6px;
 }
 
 #Character_name {
@@ -14,6 +14,7 @@
 
 .characterName input {
   padding: 10px;
+  border-radius: 50px 0px 0 50px;
 }
 
 /* MEDIA-QUERIES SCREEN MAX-WIDTH 347px */

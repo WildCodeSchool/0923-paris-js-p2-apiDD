@@ -10,7 +10,9 @@ function CharacterName() {
 
   return (
     <div className="characterName">
-      <label htmlFor="characterName">CHARACTER NAME</label>
+      <label htmlFor="characterName" id="Character_name">
+        CHARACTER NAME
+      </label>
       <input
         type="text"
         name="characterName"

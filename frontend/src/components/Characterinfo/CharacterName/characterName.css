@@ -7,6 +7,18 @@
   bottom: 3px;
 }
 
+#Character_name {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
 .characterName input {
   padding: 10px;
+}
+
+/* MEDIA-QUERIES SCREEN MAX-WIDTH 347px */
+@media (max-width: 347px) {
+  #Character_name {
+    font-size: 0.8rem;
+  }
 }

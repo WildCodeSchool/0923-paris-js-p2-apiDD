@@ -1,3 +1,6 @@
+.SPELLS {
+  margin-bottom: 2rem;
+}
 #wizard_ico {
   width: 58px;
   height: 58px;
@@ -27,7 +30,7 @@
 }
 #spell_area_screen {
   display: flex;
-  width: 86.4%;
+  width: 94%;
   padding-bottom: 0.8rem;
   margin-bottom: 1rem;
   gap: 1rem;

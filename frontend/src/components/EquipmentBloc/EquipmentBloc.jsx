@@ -49,7 +49,6 @@ function EquipmentBloc() {
               key={purse.purseName}
               id={purse.purseName}
               name={purse.purseName}
-              value={purse.PurseValue}
             />
           ))}
           <div className="purse_exchange">

@@ -1,12 +1,16 @@
+#carac_MQ_smartPh {
+  display: flex;
+  justify-content: center;
+}
 #CARACS_screen {
   border: solid 1px black;
 }
 
 .carac_Bloc {
-  width: 94%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 1.5rem 0;
 }
 
 #carac_MQ_deskT {

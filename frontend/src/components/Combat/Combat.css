@@ -79,12 +79,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-250%, -50%);
+  background-color: white;
 }
 
 .combatHPButton .addHP {
   right: 50%;
   top: 50%;
   transform: translate(250%, -50%);
+  background-color: white;
 }
 
 .starContainer,

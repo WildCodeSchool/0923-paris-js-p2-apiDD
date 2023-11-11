@@ -6,7 +6,7 @@ import Arrowline2 from "../../assets/dnd_ico/ArrowLine_1.png";
 
 function AttackNinc() {
   return (
-    <div>
+    <div id="WEAPONS">
       <img className="imgesword" src={sword} alt="" />
       <div className="attackNinc">
         <h1 className="heading"> Attacks & Incantations</h1>

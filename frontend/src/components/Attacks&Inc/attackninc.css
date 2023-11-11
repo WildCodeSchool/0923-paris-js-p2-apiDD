@@ -18,8 +18,7 @@ h1.heading {
   margin-bottom: -0.3rem;
 }
 .arrow_line {
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .attackNinc {

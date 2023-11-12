@@ -23,6 +23,10 @@
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
+  #CARACS_screen {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 3;
+  }
   .carac_Bloc {
     margin: 2.3%;
   }

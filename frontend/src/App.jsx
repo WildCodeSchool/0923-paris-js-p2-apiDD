@@ -15,18 +15,16 @@ import { CharacterProvider } from "./context/CharacterContext";
 function App() {
   return (
     <CharacterProvider>
-      <section id="CHARACTERS_SHEET">
-        <div className="result">
-          <CharacterInfo />
-          <BonusPerceptionBloc />
-          <CaracBloc />
-          <Combat />
-          {window.innerWidth < 1024 && <HealthDice />}
-          <AttackNinc />
-          <SpellBloc />
-          <EquipmentBloc />
-        </div>
-      </section>
+      <div className="result" id="CHARACTERS_SHEET">
+        <CharacterInfo id="CompCharacterInfo" />
+        <BonusPerceptionBloc id="CompBonusPerceptionBloc" />
+        <CaracBloc id="CompCaracBloc" />
+        <Combat id="CompCombat" />
+        {window.innerWidth < 1024 && <HealthDice />}
+        <AttackNinc id="CompAttackNinc" />
+        <SpellBloc id="CompSpellBloc" />
+        <EquipmentBloc id="CompEquipmentBloc" />
+      </div>
     </CharacterProvider>
   );
 }

@@ -1,5 +1,7 @@
 #WEAPONS {
   margin-bottom: 2rem;
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 3;
 }
 .attackNinc {
   border: 1px solid black;

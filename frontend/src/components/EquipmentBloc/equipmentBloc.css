@@ -1,5 +1,7 @@
 #EQUIPMENT {
   margin-bottom: 2rem;
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 5;
 }
 #equipment_ico {
   width: 58px;

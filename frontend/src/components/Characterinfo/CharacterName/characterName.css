@@ -16,6 +16,9 @@
   padding: 10px;
   border-radius: 50px 0px 0 50px;
 }
+/* MEDIA-QUERIES SCREEN MAX-WIDTH 1024px */
+@media (min-width: 1024px) {
+}
 
 /* MEDIA-QUERIES SCREEN MAX-WIDTH 347px */
 @media (max-width: 347px) {

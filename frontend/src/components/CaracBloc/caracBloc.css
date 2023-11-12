@@ -24,21 +24,21 @@
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
   #CARACS_screen {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 3;
+    border: none;
+    grid-area: 3 / 1 / 4 / 2;
   }
   .carac_Bloc {
+    border: solid 1px black;
     margin: 2.3%;
   }
-
+  #carac_MQ_deskT_position {
+    display: flex;
+    justify-content: center;
+  }
   #caracs_arrow_line {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .carac_Bloc {
-    width: 41.688rem;
-    margin: 2.3%;
   }
   #carac_MQ_smartPh {
     display: none;
@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 1rem 0 1rem 0;
   }
   #caracs_arrow_line > img {
     width: 93%;

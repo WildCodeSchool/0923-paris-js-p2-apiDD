@@ -1,8 +1,7 @@
 #WEAPONS {
-  margin-bottom: 2rem;
-  grid-column: 2 / span 2;
-  grid-row: 3 / span 3;
+  margin-bottom: 2.5rem;
 }
+
 .attackNinc {
   border: 1px solid black;
   font-family: "Eagle Lake", serif;
@@ -26,9 +25,13 @@ h1.heading {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
+  #WEAPONS {
+    grid-area: 3 / 2 / 4 / 3;
+    margin: 2.3%;
+  }
   .attackNinc {
     border: 1px solid black;
-    width: 65%;
+    width: auto;
   }
   h1.heading {
     font-size: 1.7rem;

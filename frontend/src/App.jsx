@@ -10,20 +10,24 @@ import SpellBloc from "./components/SpellBloc/SpellBloc";
 import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
 import BonusPerceptionBloc from "./components/BonusPerceptionBloc/BonusPerceptionBloc";
 import AttackNinc from "./components/Attacks&Inc/AttackNinc";
+import SnakeDragon from "./assets/dnd_ico/snake-dragon.png";
 import { CharacterProvider } from "./context/CharacterContext";
 
 function App() {
   return (
     <CharacterProvider>
       <div className="result" id="CHARACTERS_SHEET">
-        <CharacterInfo id="CompCharacterInfo" />
-        <BonusPerceptionBloc id="CompBonusPerceptionBloc" />
-        <CaracBloc id="CompCaracBloc" />
-        <Combat id="CompCombat" />
+        <CharacterInfo />
+        <BonusPerceptionBloc />
+        <CaracBloc />
+        <Combat />
         {window.innerWidth < 1024 && <HealthDice />}
-        <AttackNinc id="CompAttackNinc" />
-        <SpellBloc id="CompSpellBloc" />
-        <EquipmentBloc id="CompEquipmentBloc" />
+        <AttackNinc />
+        <SpellBloc />
+        <EquipmentBloc />
+        <div className="PositionSnakeDragon">
+          <img src={SnakeDragon} alt="snake dragon" id="snakeDragon" />
+        </div>
       </div>
     </CharacterProvider>
   );

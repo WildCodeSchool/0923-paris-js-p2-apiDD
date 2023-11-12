@@ -95,14 +95,14 @@
   color: black;
 }
 .fleche_closed {
-  width: 12%;
+  width: 25px;
+  height: 45px;
   transform: rotate(180deg);
-  height: 2.5rem;
 }
 .fleche_open {
-  width: 12%;
+  width: 25px;
+  height: 45px;
   transform: rotate(-90deg);
-  height: 2.5rem;
 }
 .armor_print {
   display: none;
@@ -116,6 +116,12 @@
     display: flex;
     flex-direction: column;
   }
+  .armor_desktop {
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    padding: 2.29%;
+  }
   .fleche {
     width: 9%;
   }
@@ -123,9 +129,7 @@
     max-height: 1.5rem;
   }
 
-  .armor_bloc_contents {
-    justify-content: space-between;
-    align-items: center;
+  .armor_bloc_contents_desktop {
   }
   .armor_name {
     width: 45%;

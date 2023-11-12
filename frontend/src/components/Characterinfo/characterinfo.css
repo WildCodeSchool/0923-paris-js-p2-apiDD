@@ -106,8 +106,7 @@ img.reddragon {
     align-items: center;
   }
   .newCharacter_form {
-    grid-column: span 2;
-    grid-row: 1 / span 1;
+    grid-area: 1 / 1 / 2 / 3;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -121,6 +120,7 @@ img.reddragon {
     flex-wrap: wrap;
     align-items: center;
     padding: 0%;
+    margin-top: 0;
   }
 
   .form_container {

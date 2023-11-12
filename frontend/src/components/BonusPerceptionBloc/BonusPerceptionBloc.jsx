@@ -1,6 +1,7 @@
 import React from "react";
 import "./bonusPerceptionBloc.css";
 import joust from "../../assets/dnd_ico/joust.png";
+import knife from "../../assets/dnd_ico/epee.png";
 
 function BonusPerceptionBloc() {
   return (
@@ -12,7 +13,10 @@ function BonusPerceptionBloc() {
           <p className="BP_item"> Proficiency bonus</p>
         </div>
       </div>
-      <div className="BP" id="Passive perception">
+      <div className="knife_position">
+        <img className="knife_Ico" src={knife} alt="knife" />
+      </div>
+      <div className="BP" id="Passive_perception">
         <div className="BP_container">
           <p className="BP_item"> Passive perception</p>
         </div>

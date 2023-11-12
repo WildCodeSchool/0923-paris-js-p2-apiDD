@@ -1,7 +1,5 @@
 #EQUIPMENT {
   margin-bottom: 2rem;
-  grid-column: 2 / span 2;
-  grid-row: 5 / span 5;
 }
 #equipment_ico {
   width: 58px;
@@ -68,10 +66,14 @@
 }
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
-  #equipment_bloc {
-    /* width: 43.81%; */
-    width: 41.688rem;
+  #EQUIPMENT {
+    grid-area: 4/ 2 / 5 / 3;
+    margin: 2.3%;
   }
+  /* #equipment_bloc {
+    width: 43.81%;
+    width: 41.688rem;
+  } */
   #equipment_ico {
     display: none;
   }

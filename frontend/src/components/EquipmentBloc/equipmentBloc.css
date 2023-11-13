@@ -67,13 +67,8 @@
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
   #EQUIPMENT {
-    grid-area: 4/ 2 / 5 / 3;
     margin: 2.3%;
   }
-  /* #equipment_bloc {
-    width: 43.81%;
-    width: 41.688rem;
-  } */
   #equipment_ico {
     display: none;
   }

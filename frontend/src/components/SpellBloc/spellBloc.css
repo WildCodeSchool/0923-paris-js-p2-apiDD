@@ -88,7 +88,6 @@
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
   #SPELLS {
-    grid-area: 4 / 1 / 5 / 2;
     margin: 2.3%;
   }
   #wizard_ico {

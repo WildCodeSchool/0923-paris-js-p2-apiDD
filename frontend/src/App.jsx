@@ -16,7 +16,7 @@ import { CharacterProvider } from "./context/CharacterContext";
 function App() {
   return (
     <CharacterProvider>
-      <div className="result" id="CHARACTERS_SHEET">
+      <div className="result Sheet_smartphone" id="CHARACTERS_SHEET">
         <CharacterInfo />
         <BonusPerceptionBloc />
         <CaracBloc />
@@ -27,6 +27,27 @@ function App() {
         <EquipmentBloc />
         <div className="PositionSnakeDragon">
           <img src={SnakeDragon} alt="snake dragon" id="snakeDragon" />
+        </div>
+      </div>
+      <div className="result Sheet_desktop" id="CHARACTERS_SHEET">
+        <div id="DesktopTopLine">
+          <CharacterInfo />
+        </div>
+        <div className="Desktop_columns_content">
+          <div id="DesktopLeftColumn">
+            <BonusPerceptionBloc />
+            <CaracBloc />
+            <SpellBloc />
+            <div className="PositionSnakeDragon">
+              <img src={SnakeDragon} alt="snake dragon" id="snakeDragon" />
+            </div>
+          </div>
+          <div id="DesktopRightColumn">
+            <Combat />
+            {window.innerWidth < 1024 && <HealthDice />}
+            <AttackNinc />
+            <EquipmentBloc />
+          </div>
         </div>
       </div>
     </CharacterProvider>

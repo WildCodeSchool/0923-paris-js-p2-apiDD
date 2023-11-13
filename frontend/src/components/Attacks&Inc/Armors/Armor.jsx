@@ -85,6 +85,62 @@ function Armor() {
           </div>
         )}
       </div>
+
+      <div className="armor_desktop">
+        <div className="armor_bloc_top_desktop">
+          <h1 className="armor_heading">Armor</h1>
+          <div className="armor_bloc_contents_desktop">
+            <div>
+              <div className="armor_Line1">
+                <div className="armor_name_desktop">
+                  <input
+                    className="armor_name_input_desktop"
+                    type="text"
+                    id="armor_name_input"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div className="armor_class_desktop">
+                  <h1 className="armor_sub_heading">AC</h1>
+                  <input
+                    className="armor_class_input_desktop"
+                    type="text"
+                    id="armor_class_input"
+                    value={armorclass}
+                    onChange={(e) => setArmorclass(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="armor_Line2">
+                <div className="armor_disadvantages_desktop">
+                  <h1 className="armor_sub_heading">Disadvantages</h1>
+                  <input
+                    className="armor_disadvantage_input_desktop"
+                    type="text"
+                    id="armor_disadvantage_input"
+                    value={disadvantage}
+                    onChange={(e) => setDisadvantage(e.target.value)}
+                  />
+                </div>
+
+                <div className="armor_strenght_desktop">
+                  <h1 className="armor_sub_heading">Strenght</h1>
+                  <input
+                    className="armor_strenght_input_desktop"
+                    type="text"
+                    id="armor_strenght_input"
+                    value={strenght}
+                    onChange={(e) => setStrenght(e.target.value)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="armor_print">
         <div className="armor_bloc_one">
           <h1 className="armor_heading">Armor</h1>

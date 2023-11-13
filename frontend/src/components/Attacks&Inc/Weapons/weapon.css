@@ -72,14 +72,23 @@
   .name_input {
     width: 100%;
     height: 1.5rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
   .bonus_input {
     width: 85%;
     height: 1.5rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
   .combat_input {
     width: 100%;
     height: 1.5rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
   .weapon_name_input {
     display: flex;

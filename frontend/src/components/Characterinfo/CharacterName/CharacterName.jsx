@@ -18,7 +18,7 @@ function CharacterName() {
         name="characterName"
         value={name}
         onChange={changeName}
-        placeholder="Chose your name..."
+        placeholder="Choose your name..."
       />
     </div>
   );

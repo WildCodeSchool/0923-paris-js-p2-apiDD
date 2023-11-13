@@ -97,6 +97,12 @@
   .spells_bloc {
     width: 100%;
   }
+  .spell_item {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+  }
 }
 /* MEDIA-QUERIES PRINT */
 

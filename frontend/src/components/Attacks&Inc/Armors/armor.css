@@ -129,9 +129,7 @@
   .fleche {
     width: 9%;
   }
-  .armor_bloc_top {
-    max-height: 1.5rem;
-  }
+
   .armor_name_desktop {
   }
   .armor_bloc_contents_desktop {
@@ -152,6 +150,9 @@
   .armor_name_input_desktop {
     height: 1.5rem;
     margin-top: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
   .armor_class_desktop {
     width: 50%;
@@ -159,6 +160,9 @@
   .armor_class_input_desktop {
     height: 1.5rem;
     margin-top: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
 
   .armor_disadvantages_desktop {
@@ -168,6 +172,9 @@
   .armor_disadvantage_input_desktop {
     height: 1.5rem;
     margin-top: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
   .armor_strenght_desktop {
     width: 50%;
@@ -176,6 +183,9 @@
   .armor_strenght_input_desktop {
     height: 1.5rem;
     margin-top: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: medium;
   }
 }
 

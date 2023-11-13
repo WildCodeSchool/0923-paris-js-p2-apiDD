@@ -165,8 +165,19 @@ img.reddragon {
   }
 
   div.inputBox-px input {
-    width: 85%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
   }
+  select {
+    padding: 10px;
+    width: 100%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: larger;
+  }
+
   .characterName_container {
     width: 100%;
     display: flex;
@@ -178,6 +189,9 @@ img.reddragon {
   .characterName input {
     border-radius: 25px 0px 0px 50px;
     height: 3rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: larger;
   }
 
   .characterName {

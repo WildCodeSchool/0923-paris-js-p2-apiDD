@@ -77,12 +77,19 @@
   width: 100%;
   margin: 0 11px 10px 11px;
 }
+.spells_list {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
 .spell_item {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  line-height: 24px;
+  font-size: medium;
   padding-left: 10px;
   color: var(--main-font-color);
+  width: 94%;
+  margin-bottom: 1rem;
 }
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */

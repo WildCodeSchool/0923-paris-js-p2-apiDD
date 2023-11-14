@@ -6,14 +6,15 @@ const CharacterContext = createContext();
 export function CharacterProvider({ children }) {
   // STATS
   const [character, setCharacter] = useState(new CharacterData());
+  const [playerClass, setPlayerClass] = useState(null);
   // HEALTH
   // COMBAT
   // EQUIPEMENT
   // DEATHSAVE
 
   const value = useMemo(
-    () => ({ character, setCharacter }),
-    [character, setCharacter]
+    () => ({ character, setCharacter, playerClass, setPlayerClass }),
+    [character, playerClass]
   );
 
   return (

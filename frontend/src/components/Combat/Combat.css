@@ -1,6 +1,10 @@
 .printDesktop {
   display: none;
 }
+.combatComponent {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
 
 .combatComponent .knightLogo {
   width: 72px;
@@ -75,12 +79,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-250%, -50%);
+  background-color: white;
 }
 
 .combatHPButton .addHP {
   right: 50%;
   top: 50%;
   transform: translate(250%, -50%);
+  background-color: white;
 }
 
 .starContainer,
@@ -101,52 +107,68 @@
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: 22px;
   border: 1px solid #000000;
   text-align: center;
   font-size: 1rem;
   border-radius: 50%;
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: var(--main-font-color);
 }
 
 .acInput {
   position: absolute;
-  top: 43%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   border: 1px solid #000000;
   text-align: center;
   font-size: 1rem;
   border-radius: 50%;
-}
-.speedInput {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 1px solid #000000;
-  text-align: center;
-  font-size: 1rem;
-  border-radius: 50%;
-}
-.hpInput {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2.7rem;
-  height: 1.7rem;
-  border: none;
-  text-align: center;
-  font-size: 1.5rem;
-
   font-family: "Eagle Lake", serif;
   font-style: normal;
   font-weight: 400;
+  text-align: center;
+  color: var(--main-font-color);
+}
+.speedInput {
+  position: absolute;
+  top: 49%;
+  left: -3%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000000;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 50%;
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: var(--main-font-color);
+}
+.hpInput {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Eagle Lake", serif;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 100%;
+  background-color: white;
 }
 
 .combatInit img {
@@ -170,19 +192,21 @@
 }
 
 @media (min-width: 1023px) {
+  #COMBAT_COMPONENT {
+    margin: 2.3%;
+  }
+  .combatComponent {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .combatComponent .knightLogo {
     display: none;
   }
   .combatStats {
     border: 1px solid #000000;
-    /* display: block; */
-    /* padding: 1.5%;
-    height: 25.875rem; */
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: flex-start; */
     flex-wrap: wrap;
   }
   .combatStatsNo_HS_DS {

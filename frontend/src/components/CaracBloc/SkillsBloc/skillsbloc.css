@@ -53,22 +53,20 @@
 }
 .checkbox_label {
   position: relative;
-  display: inline-block;
-  width: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "Eagle lake", serif;
+  font-size: 16px;
+  color: #333;
 }
+
 .custom_checkbox {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #333;
+  margin-right: 10px;
 }
-input[type="checkbox"]:checked + .custom_checkbox {
-  background-color: black;
-  border: 2px solid black;
+
+input[type="checkbox"] {
+  margin-right: 5px;
 }
 .value_imput {
   width: 45px;

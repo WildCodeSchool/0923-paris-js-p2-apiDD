@@ -85,7 +85,7 @@ function Combat() {
 
   if (!isMobile) {
     return (
-      <>
+      <section id="COMBAT_COMPONENT">
         <div className="printDesktop">
           <div className="printCombatComponent">
             <img src={knightImg} alt="knight logo" className="knightLogo" />
@@ -291,11 +291,11 @@ function Combat() {
             </div>
           </div>
         </div>
-      </>
+      </section>
     );
   }
   return isAlive ? (
-    <>
+    <section id="COMBAT_COMPONENT2">
       <div className="printDesktop">
         <div className="printCombatComponent">
           <img src={knightImg} alt="knight logo" className="knightLogo" />
@@ -487,7 +487,7 @@ function Combat() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   ) : (
     <div className="deathSaveComponent">
       <img src={knightImg} alt="knight logo" className="knightLogo" />

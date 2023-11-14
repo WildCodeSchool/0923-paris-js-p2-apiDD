@@ -1,3 +1,6 @@
+#SPELLS {
+  margin-bottom: 2rem;
+}
 #wizard_ico {
   width: 58px;
   height: 58px;
@@ -27,7 +30,7 @@
 }
 #spell_area_screen {
   display: flex;
-  width: 86.4%;
+  width: 94%;
   padding-bottom: 0.8rem;
   margin-bottom: 1rem;
   gap: 1rem;
@@ -84,12 +87,21 @@
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */
 @media (min-width: 1024px) {
+  #SPELLS {
+    margin: 2.3%;
+  }
   #wizard_ico {
     display: none;
   }
 
   .spells_bloc {
-    width: 36.688rem;
+    width: 100%;
+  }
+  .spell_item {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: larger;
   }
 }
 /* MEDIA-QUERIES PRINT */

@@ -1,28 +1,130 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./weapon.css";
 import Arrowline2 from "../../../assets/dnd_ico/ArrowLine_1.png";
 
 function Weapon() {
-  const [name, setName] = useState("");
-  const [bonus, setBonus] = useState();
-  const [combat, setCombat] = useState("");
-  const [nameSec, setNameSec] = useState("");
-  const [bonusSec, setBonusSec] = useState();
-  const [combatSec, setCombatSec] = useState("");
-  const [nameThird, setNameThird] = useState("");
-  const [bonusThird, setBonusThird] = useState();
-  const [combatThird, setCombatThird] = useState("");
+  const [nameMainWeapon, setNameMainWeapon] = useState("");
+  const [mainWeaponBonus, setMainWeaponBonus] = useState("");
+  const [mainWeaponDamageType, setMainWeaponDamageType] = useState("");
+  const [nameOffHandWeapon, setNameOffHandWeapon] = useState("");
+  const [offHandWeaponBonus, setOffHandWeaponBonus] = useState("");
+  const [offHandDamageType, setOffHandDamageType] = useState("");
+  const [nameRangeWeapon, setNameRangeWeapon] = useState("");
+  const [rangeWeaponBonus, setRangeWeaponBonus] = useState("");
+  const [rangeWeaponType, setRangeWeaponType] = useState("");
+
+  const [weaponList, setWeaponList] = useState([]);
+  const [weaponListTwo, setWeaponListTwo] = useState([]);
+  const [rangeWeaponList, setRangeWeaponList] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://www.dnd5eapi.co/api/equipment-categories/weapon")
+      .then((response) => {
+        const weaponsData = response.data.equipment;
+        const weaponNames = weaponsData.map((weapon) => weapon.name);
+        setWeaponList(weaponNames);
+      })
+      .catch((error) => {
+        console.error(
+          "Erreur lors de la récupération des armes depuis l'API :",
+          error
+        );
+      });
+  }, []);
+  useEffect(() => {
+    axios
+      .get("https://www.dnd5eapi.co/api/equipment-categories/weapon")
+      .then((response) => {
+        const weaponsDataTwo = response.data.equipment;
+        const weaponNamesTwo = weaponsDataTwo.map(
+          (weaponTwo) => weaponTwo.name
+        );
+        setWeaponListTwo(weaponNamesTwo);
+      })
+      .catch((error) => {
+        console.error(
+          "Erreur lors de la récupération des armes depuis l'API :",
+          error
+        );
+      });
+  }, []);
+  useEffect(() => {
+    axios
+      .get("https://www.dnd5eapi.co/api/equipment-categories/ranged-weapons")
+      .then((response) => {
+        const rangesWeaponsData = response.data.equipment;
+        const rangesWeaponNames = rangesWeaponsData.map(
+          (weapon) => weapon.name
+        );
+        setRangeWeaponList(rangesWeaponNames);
+      })
+      .catch((error) => {
+        console.error(
+          "Erreur lors de la récupération des armes depuis l'API :",
+          error
+        );
+      });
+  }, []);
+  function OnMainWeaponChoice(e) {
+    setNameMainWeapon(e.target.value);
+    axios
+      .get(
+        `https://www.dnd5eapi.co/api/equipment/${e.target.value.toLowerCase()}`
+      )
+      .then((response) => {
+        const damagesData = response.data.damage;
+        const damageDices = damagesData.damage_dice;
+        setMainWeaponBonus(damageDices);
+        const damageTypes = damagesData.damage_type.name;
+        setMainWeaponDamageType(damageTypes);
+      });
+  }
+  function OnOffHandWeaponChoice(e) {
+    setNameOffHandWeapon(e.target.value);
+    axios
+      .get(
+        `https://www.dnd5eapi.co/api/equipment/${e.target.value.toLowerCase()}`
+      )
+      .then((response) => {
+        const damagesDataSec = response.data.damage;
+        const damageDicesSec = damagesDataSec.damage_dice;
+        setOffHandWeaponBonus(damageDicesSec);
+        const damageTypesSec = damagesDataSec.damage_type.name;
+        setOffHandDamageType(damageTypesSec);
+      });
+  }
+  function OnRangeWeaponChoice(e) {
+    setNameRangeWeapon(e.target.value);
+    axios
+      .get(
+        `https://www.dnd5eapi.co/api/equipment/${e.target.value.toLowerCase()}`
+      )
+      .then((response) => {
+        const damagesDataThird = response.data.damage;
+        const damageDicesThird = damagesDataThird.damage_dice;
+        setRangeWeaponBonus(damageDicesThird);
+        const damageTypesThird = damagesDataThird.damage_type.name;
+        setRangeWeaponType(damageTypesThird);
+      });
+  }
   return (
     <div className="weapons">
       <div className="weapon_fr">
         <div className="weapon_name_input">
-          <h1 className="weapon_name_heading ">Name</h1>
-          <input
+          <h1 className="weapon_name_heading">Name</h1>
+          <select
             className="name_input"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+            value={nameMainWeapon}
+            onChange={OnMainWeaponChoice}
+          >
+            <option value="">Select a Main Weapon</option>
+            {weaponList.map((weaponName) => (
+              <option key={weaponName} value={weaponName}>
+                {weaponName}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="bonus_combat">
@@ -31,8 +133,8 @@ function Weapon() {
             <input
               className="bonus_input"
               type="text"
-              value={bonus}
-              onChange={(e) => setBonus(e.target.value)}
+              value={mainWeaponBonus}
+              onChange={(e) => setMainWeaponBonus(e.target.value)}
             />
           </div>
           <div className="div_combat">
@@ -40,8 +142,8 @@ function Weapon() {
             <input
               className="combat_input"
               type="text"
-              value={combat}
-              onChange={(e) => setCombat(e.target.value)}
+              value={mainWeaponDamageType}
+              onChange={(e) => setMainWeaponDamageType(e.target.value)}
             />
           </div>
         </div>
@@ -52,12 +154,18 @@ function Weapon() {
       <div className="weapon_sec">
         <div className="weapon_name_input">
           <h1 className="weapon_name_heading title_print">Name</h1>
-          <input
+          <select
             className="name_input"
-            type="text"
-            value={nameSec}
-            onChange={(e) => setNameSec(e.target.value)}
-          />
+            value={nameOffHandWeapon}
+            onChange={OnOffHandWeaponChoice}
+          >
+            <option value="">Select an Offhand Weapon</option>
+            {weaponListTwo.map((weaponNameTwo) => (
+              <option key={weaponNameTwo} value={weaponNameTwo}>
+                {weaponNameTwo}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="bonus_combat">
@@ -66,8 +174,8 @@ function Weapon() {
             <input
               className="bonus_input"
               type="text"
-              value={bonusSec}
-              onChange={(e) => setBonusSec(e.target.value)}
+              value={offHandWeaponBonus}
+              onChange={(e) => setOffHandWeaponBonus(e.target.value)}
             />
           </div>
           <div className="div_combat">
@@ -75,8 +183,8 @@ function Weapon() {
             <input
               className="combat_input"
               type="text"
-              value={combatSec}
-              onChange={(e) => setCombatSec(e.target.value)}
+              value={offHandDamageType}
+              onChange={(e) => setOffHandDamageType(e.target.value)}
             />
           </div>
         </div>
@@ -87,12 +195,18 @@ function Weapon() {
       <div className="weapon_third">
         <div className="weapon_name_input">
           <h1 className="weapon_name_heading title_print">Name</h1>
-          <input
+          <select
             className="name_input"
-            type="text"
-            value={nameThird}
-            onChange={(e) => setNameThird(e.target.value)}
-          />
+            value={nameRangeWeapon}
+            onChange={OnRangeWeaponChoice}
+          >
+            <option value="">Select a Range Weapon</option>
+            {rangeWeaponList.map((rangesWeaponName) => (
+              <option key={rangesWeaponName} value={rangesWeaponName}>
+                {rangesWeaponName}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="bonus_combat">
@@ -101,8 +215,8 @@ function Weapon() {
             <input
               className="bonus_input"
               type="text"
-              value={bonusThird}
-              onChange={(e) => setBonusThird(e.target.value)}
+              value={rangeWeaponBonus}
+              onChange={(e) => setRangeWeaponBonus(e.target.value)}
             />
           </div>
           <div className="div_combat">
@@ -110,8 +224,8 @@ function Weapon() {
             <input
               className="combat_input"
               type="text"
-              value={combatThird}
-              onChange={(e) => setCombatThird(e.target.value)}
+              value={rangeWeaponType}
+              onChange={(e) => setRangeWeaponType(e.target.value)}
             />
           </div>
         </div>

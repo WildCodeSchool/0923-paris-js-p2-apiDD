@@ -22,4 +22,28 @@ function CharacterClass() {
   );
 }
 
+// const CharacterClass = () => {
+//    const [classes, setClasses] = useState([]);
+
+//    useEffect(() => {
+//      axios
+//        .get("https://www.dnd5eapi.co/api/classes")
+//        .then((response) => setClasses(response.data.results))
+//        .catch((error) => console.error("Error fetching classes:", error));
+//    }, []);
+
+//    return (
+//      <div className="inputBox-class">
+//        <label htmlFor="characterClass">Class</label>
+//        <select name="class" id="class-select">
+//          {classes.map((class, index) => (
+//            <option key={index} value={class.index}>
+//              {class.name}
+//            </option>
+//          ))}
+//        </select>
+//      </div>
+//    );
+//  };
+
 export default CharacterClass;

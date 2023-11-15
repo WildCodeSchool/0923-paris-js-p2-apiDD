@@ -2,46 +2,10 @@ import "./caracBloc.css";
 import CaracSeg from "./CaracSeg/CaracSeg";
 import SkillsBloc from "./SkillsBloc/SkillsBloc";
 import ArrowLine from "../../assets/dnd_ico/ArrowLine_1_b.png";
+import useCharacter from "../../context/CharacterContext";
 
 function CaracBloc() {
-  const caracs = [
-    {
-      caracName: "STR",
-      caracValue: 18,
-      caracBonus: "+0",
-      caracSave: "+0",
-    },
-    {
-      caracName: "DEX",
-      caracValue: 18,
-      caracBonus: "+0",
-      caracSave: "+0",
-    },
-    {
-      caracName: "CONST",
-      caracValue: 15,
-      caracBonus: "+0",
-      caracSave: "+0",
-    },
-    {
-      caracName: "WIS",
-      caracValue: 12,
-      caracBonus: "+0",
-      caracSave: "+0",
-    },
-    {
-      caracName: "INT",
-      caracValue: 11,
-      caracBonus: "+0",
-      caracSave: "+0",
-    },
-    {
-      caracName: "CHAR",
-      caracValue: 14,
-      caracBonus: "+0",
-      caracSave: "+0",
-    },
-  ];
+  const { caracs } = useCharacter();
   const SkillsBlocs = [
     {
       skillBlocTitle: "STRENGTH BASED SKILLS",

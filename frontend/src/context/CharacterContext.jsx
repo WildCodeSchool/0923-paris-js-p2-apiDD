@@ -4,6 +4,8 @@ import { createContext, useContext, useState, useMemo } from "react";
 const CharacterContext = createContext();
 
 export function CharacterProvider({ children }) {
+  // const [character, setCharacter] = useState(new CharacterData());
+
   // STATS
   const [str, setStr] = useState(10);
   const [dex, setDex] = useState(10);
@@ -16,6 +18,7 @@ export function CharacterProvider({ children }) {
   const [playerClass, setPlayerClass] = useState(null);
   const [playerRace, setPlayerRace] = useState(null);
   // console.log(playerClass);
+
   // HEALTH
   // COMBAT
   // EQUIPEMENT
@@ -46,6 +49,7 @@ export function CharacterProvider({ children }) {
     }),
     [playerClass, playerRace, str, dex, int, wis, char, con, color]
   );
+
 
   return (
     <CharacterContext.Provider value={value}>

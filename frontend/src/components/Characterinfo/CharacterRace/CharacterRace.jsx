@@ -1,4 +1,5 @@
 import "./characterRace.css";
+import useCharacter from "../../../context/CharacterContext";
 
 function CharacterRace() {
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -13,11 +14,15 @@ function CharacterRace() {
   //   setSelectedOption(option);
   //   setIsDropdownOpen(false);
   // };
-
+  const { setPlayerRace } = useCharacter();
   return (
     <div className="inputBox-race">
       <label htmlFor="characterRace">Race</label>
-      <select name="race" id="race-select">
+      <select
+        name="race"
+        id="race-select"
+        onChange={(e) => setPlayerRace(e.target.value)}
+      >
         {" "}
         <option value="human">Human</option>{" "}
         <option value="dwarf">Dwarf</option> <option value="elf">Elf</option>{" "}

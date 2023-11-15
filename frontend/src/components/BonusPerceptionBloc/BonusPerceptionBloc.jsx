@@ -19,7 +19,7 @@ function BonusPerceptionBloc() {
           <div className="BP_container">
             <p className="BP_item"> Passive perception</p>
           </div>
-          <input type="text" className="inputBP" id="inputPP" />
+          <input type="text" className="inputBP" id="inputPP" value={0} />
         </div>
         <div className="BP" id="inspiration">
           <input type="text" className="inputBP" id="inputInsp" />

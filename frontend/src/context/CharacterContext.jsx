@@ -50,7 +50,6 @@ export function CharacterProvider({ children }) {
     [playerClass, playerRace, str, dex, int, wis, char, con, color]
   );
 
-
   return (
     <CharacterContext.Provider value={value}>
       {children}

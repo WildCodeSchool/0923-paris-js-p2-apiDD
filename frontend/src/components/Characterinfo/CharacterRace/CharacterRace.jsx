@@ -1,20 +1,19 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./characterRace.css";
 import useCharacter from "../../../context/CharacterContext";
 
 function CharacterRace() {
-  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // const [selectedOption, setSelectedOption] = useState("");
-  // const options = ["Option 1", "Option 2", "Option 3"];
-
-  // const toggleDropdown = () => {
-  //   setIsDropdownOpen(!isDropdownOpen);
-  // };
-
-  // const handleOptionSelect = (option) => {
-  //   setSelectedOption(option);
-  //   setIsDropdownOpen(false);
-  // };
+  const [races, setRaces] = useState([]);
   const { setPlayerRace } = useCharacter();
+
+  useEffect(() => {
+    axios
+      .get("https://www.dnd5eapi.co/api/races")
+      .then((response) => setRaces(response.data.results))
+      .catch((error) => console.error("Error fetching races:", error));
+  }, []);
+
   return (
     <div className="inputBox-race">
       <label htmlFor="characterRace">Race</label>
@@ -23,33 +22,13 @@ function CharacterRace() {
         id="race-select"
         onChange={(e) => setPlayerRace(e.target.value)}
       >
-        {" "}
-        <option value="human">Human</option>{" "}
-        <option value="dwarf">Dwarf</option> <option value="elf">Elf</option>{" "}
-        <option value="gnome">Gnome</option>{" "}
-        <option value="half-elf">Half-elf</option>{" "}
-        <option value="half-orc">Half-orc</option>{" "}
-        <option value="halfling">Halfling</option>{" "}
-        <option value="dragonborn">Dragonborn</option>{" "}
-        <option value="eladrin">Eladrin</option>{" "}
-        <option value="tiefling">Tiefling</option>{" "}
+        {races.map((race) => (
+          <option key={race.name} value={race.index}>
+            {race.name}
+          </option>
+        ))}
       </select>
     </div>
-
-    // <div className="editable-block">
-    //   <div className="textarea-content" onClick={toggleDropdown}>
-    //     {selectedOption || "Select an option"}
-    //   </div>
-    //   {isDropdownOpen && (
-    //     <ul className="dropdown-options">
-    //       {options.map((option, index) => (
-    //         <li key={index} onClick={() => handleOptionSelect(option)}>
-    //           {option}
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   )}
-    // </div>
   );
 }
 

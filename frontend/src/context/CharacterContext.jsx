@@ -4,15 +4,47 @@ import { createContext, useContext, useState, useMemo } from "react";
 const CharacterContext = createContext();
 
 export function CharacterProvider({ children }) {
+  // STATS
+  const [caracs, setCaracs] = useState([
+    {
+      caracName: "STR",
+      caracValue: 8,
+      caracBonus: "+0",
+      caracSave: "+0",
+    },
+    {
+      caracName: "DEX",
+      caracValue: 8,
+      caracBonus: "+0",
+      caracSave: "+0",
+    },
+    {
+      caracName: "CONST",
+      caracValue: 8,
+      caracBonus: "+0",
+      caracSave: "+0",
+    },
+    {
+      caracName: "WIS",
+      caracValue: 8,
+      caracBonus: "+0",
+      caracSave: "+0",
+    },
+    {
+      caracName: "INT",
+      caracValue: 8,
+      caracBonus: "+0",
+      caracSave: "+0",
+    },
+    {
+      caracName: "CHAR",
+      caracValue: 8,
+      caracBonus: "+0",
+      caracSave: "+0",
+    },
+  ]);
   // const [character, setCharacter] = useState(new CharacterData());
 
-  // STATS
-  const [str, setStr] = useState(10);
-  const [dex, setDex] = useState(10);
-  const [con, setCon] = useState(10);
-  const [int, setInt] = useState(10);
-  const [wis, setWis] = useState(10);
-  const [char, setChar] = useState(10);
   // CHAR INFOS
   // const [character, setCharacter] = useState(new CharacterData());
   const [playerClass, setPlayerClass] = useState(null);
@@ -28,26 +60,16 @@ export function CharacterProvider({ children }) {
 
   const value = useMemo(
     () => ({
-      str,
-      setStr,
-      dex,
-      setDex,
-      con,
-      setCon,
-      int,
-      setInt,
-      wis,
-      setWis,
-      char,
-      setChar,
       playerClass,
       setPlayerClass,
       playerRace,
       setPlayerRace,
       color,
       setColor,
+      caracs,
+      setCaracs,
     }),
-    [playerClass, playerRace, str, dex, int, wis, char, con, color]
+    [playerClass, playerRace, color, caracs]
   );
 
   return (

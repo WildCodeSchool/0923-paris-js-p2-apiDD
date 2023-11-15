@@ -5,12 +5,12 @@ const CharacterContext = createContext();
 
 export function CharacterProvider({ children }) {
   // STATS
-  const [str, setStr] = useState(18);
-  const [dex, setDex] = useState(18);
-  const [con, setCon] = useState(15);
-  const [int, setInt] = useState(11);
-  const [wis, setWis] = useState(12);
-  const [char, setChar] = useState(14);
+  const [str, setStr] = useState(10);
+  const [dex, setDex] = useState(10);
+  const [con, setCon] = useState(10);
+  const [int, setInt] = useState(10);
+  const [wis, setWis] = useState(10);
+  const [char, setChar] = useState(10);
   // CHAR INFOS
   // const [character, setCharacter] = useState(new CharacterData());
   const [playerClass, setPlayerClass] = useState(null);

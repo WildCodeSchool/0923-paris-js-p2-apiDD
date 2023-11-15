@@ -38,7 +38,9 @@ function CaracSeg(props) {
   // };
 
   const handleCaracNumChange = (e) => {
-    setCaracNum(e.target.value);
+    if (/^\d{0,2}$/.test(e.target.value)) {
+      setCaracNum(e.target.value);
+    }
   };
 
   function strBonus() {

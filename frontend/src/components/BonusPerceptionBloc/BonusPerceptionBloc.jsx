@@ -56,7 +56,7 @@ function BonusPerceptionBloc() {
             id="Dragon_left"
           />
           <div className="BP" id="inspiration">
-            <input type="text" className="inputBP" id="inputInsp" />
+            <input type="text" className="inputBP" id="inputInsp" value={0} />
             <div className="BP_container">
               <p className="BP_item"> Inspiration</p>
             </div>

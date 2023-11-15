@@ -81,6 +81,7 @@
   display: flex;
   justify-content: center;
   margin-top: 0.5rem;
+  column-gap: 4px;
 }
 .spell_item {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -90,6 +91,7 @@
   color: var(--main-font-color);
   width: 94%;
   margin-bottom: 1rem;
+  width: 87%;
 }
 
 /* MEDIA-QUERIES SCREEN MIN-WIDTH 1024px */

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./spellBloc.css";
 import LittleArrow from "../../assets/dnd_ico/fleches.png";
+// import SpellPopUp from "./SpellPopUp/SpellPopUp";
 
 function LevelSpellBloc(props) {
   const { title, id } = props;
@@ -66,33 +67,35 @@ function LevelSpellBloc(props) {
         <div className="spells_list">
           <label htmlFor="Spells_Level_0"> </label>
           <select name="spell0" className="spell_item">
-            {spells0.map((spell0) => (
-              <option key={spell0.index} value={spell0.index}>
-                {spell0.name}
+            {spells0.map((spell) => (
+              <option key={spell.index} value={spell.index}>
+                {spell.name}
               </option>
             ))}
           </select>
         </div>
       )}
+
       {title === "SPELLS - LVL 1" && isSpellListVisible && (
         <div className="spells_list">
           <label htmlFor="Spells_Level_1"> </label>
           <select name="spell1" className="spell_item">
-            {spells1.map((spell1) => (
-              <option key={spell1.index} value={spell1.index}>
-                {spell1.name}
+            {spells1.map((spell) => (
+              <option key={spell.index} value={spell.index}>
+                {spell.name}
               </option>
             ))}
           </select>
         </div>
       )}
+
       {title === "SPELLS - LVL 2" && isSpellListVisible && (
         <div className="spells_list">
           <label htmlFor="Spells_Level_2"> </label>
           <select name="spell2" className="spell_item">
-            {spells2.map((spell2) => (
-              <option key={spell2.index} value={spell2.index}>
-                {spell2.name}
+            {spells2.map((spell) => (
+              <option key={spell.index} value={spell.index}>
+                {spell.name}
               </option>
             ))}
           </select>

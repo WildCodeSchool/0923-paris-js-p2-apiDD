@@ -1,10 +1,16 @@
 import "./characterClass.css";
+import useCharacter from "../../../context/CharacterContext";
 
 function CharacterClass() {
+  const { setPlayerClass } = useCharacter();
   return (
     <div className="inputBox-class">
       <label htmlFor="characterClass">Class</label>
-      <select name="classes" id="classes-select">
+      <select
+        name="classes"
+        id="classes-select"
+        onChange={(e) => setPlayerClass(e.target.value)}
+      >
         {" "}
         <option value="barbarian">Barbarian</option>
         <option value="cleric">Cleric</option>{" "}

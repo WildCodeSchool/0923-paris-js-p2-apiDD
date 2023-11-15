@@ -15,10 +15,13 @@ export function CharacterProvider({ children }) {
   // const [character, setCharacter] = useState(new CharacterData());
   const [playerClass, setPlayerClass] = useState(null);
   const [playerRace, setPlayerRace] = useState(null);
+  // console.log(playerClass);
   // HEALTH
   // COMBAT
   // EQUIPEMENT
   // DEATHSAVE
+  // Theme
+  const [color, setColor] = useState("red");
 
   const value = useMemo(
     () => ({
@@ -38,8 +41,10 @@ export function CharacterProvider({ children }) {
       setPlayerClass,
       playerRace,
       setPlayerRace,
+      color,
+      setColor,
     }),
-    [playerClass, playerRace, str, dex, int, wis, char, con]
+    [playerClass, playerRace, str, dex, int, wis, char, con, color]
   );
 
   return (

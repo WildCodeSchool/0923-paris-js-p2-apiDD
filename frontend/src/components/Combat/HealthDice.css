@@ -55,7 +55,7 @@
   font-family: "Eagle Lake", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .addRemoveDiceNumber {
@@ -100,7 +100,7 @@
   .healthDiceBlock {
     height: 7.2rem;
     width: 40%;
-    padding: 1%;
+    padding: 1% 5% 1% 1%;
     margin-bottom: -6px;
     margin-top: 0;
     border: 1px solid #000000;

@@ -1,32 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./characterRace.css";
-
-// function CharacterRace() {
-//   return (
-//     <div className="inputBox-race">
-//       <label htmlFor="characterRace">Race</label>
-//       <select name="race" id="race-select">
-//         {" "}
-//         <option value="human">Human</option>{" "}
-//         <option value="dwarf">Dwarf</option> <option value="elf">Elf</option>{" "}
-//         <option value="gnome">Gnome</option>{" "}
-//         <option value="half-elf">Half-elf</option>{" "}
-//         <option value="half-orc">Half-orc</option>{" "}
-//         <option value="halfling">Halfling</option>{" "}
-//         <option value="dragonborn">Dragonborn</option>{" "}
-//         <option value="eladrin">Eladrin</option>{" "}
-//         <option value="tiefling">Tiefling</option>{" "}
-//       </select>
-//     </div>
-
-//   );
-// }
-
-// CharacterForm.js
+import useCharacter from "../../../context/CharacterContext";
 
 function CharacterRace() {
   const [races, setRaces] = useState([]);
+  const { setPlayerRace } = useCharacter();
 
   useEffect(() => {
     axios
@@ -38,7 +17,11 @@ function CharacterRace() {
   return (
     <div className="inputBox-race">
       <label htmlFor="characterRace">Race</label>
-      <select name="race" id="race-select">
+      <select
+        name="race"
+        id="race-select"
+        onChange={(e) => setPlayerRace(e.target.value)}
+      >
         {races.map((race) => (
           <option key={race.name} value={race.index}>
             {race.name}

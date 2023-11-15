@@ -1,10 +1,16 @@
 import React from "react";
+import useCharacter from "../../../context/CharacterContext";
 
 function CharacterLevel() {
+  const { setPlayerLevel } = useCharacter();
   return (
     <div className="inputBox-level">
       <label htmlFor="characterLevel">Level</label>
-      <select name="level" id="level-select">
+      <select
+        name="level"
+        id="level-select"
+        onChange={(e) => setPlayerLevel(e.target.value)}
+      >
         {" "}
         <option value="1">1</option>
         <option value="2">2</option>

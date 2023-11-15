@@ -47,9 +47,9 @@ export function CharacterProvider({ children }) {
 
   // CHAR INFOS
   // const [character, setCharacter] = useState(new CharacterData());
-  const [playerClass, setPlayerClass] = useState(null);
-  const [playerRace, setPlayerRace] = useState(null);
-  // console.log(playerClass);
+  const [playerClass, setPlayerClass] = useState("barbarian");
+  const [playerRace, setPlayerRace] = useState("humain");
+  const [playerLevel, setPlayerLevel] = useState(1);
 
   // HEALTH
   // COMBAT
@@ -68,8 +68,10 @@ export function CharacterProvider({ children }) {
       setColor,
       caracs,
       setCaracs,
+      playerLevel,
+      setPlayerLevel,
     }),
-    [playerClass, playerRace, color, caracs]
+    [playerClass, playerRace, playerLevel, color, caracs]
   );
 
   return (

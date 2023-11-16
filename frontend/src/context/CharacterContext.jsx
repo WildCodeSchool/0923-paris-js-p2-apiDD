@@ -50,6 +50,119 @@ export function CharacterProvider({ children }) {
     },
   ]);
   // const [character, setCharacter] = useState(new CharacterData());
+  // SKILLS
+  const [skillsBlocs, setSkillsBlocs] = useState([
+    {
+      skillBlocTitle: "STRENGTH BASED SKILLS",
+      skillId: "strength",
+      skills1: {
+        name: "Athletics",
+        value: "0",
+      },
+      display: "none",
+    },
+    {
+      skillBlocTitle: "DEXTERITY BASED SKILLS",
+      skillId: "dexterity",
+      skills1: {
+        name: "Acrobatics",
+        value: "0",
+      },
+      skills2: {
+        name: "Sleight of Hand",
+        value: "0",
+      },
+      skills3: {
+        name: "Stealth ",
+        value: "0",
+      },
+    },
+    {
+      skillBlocTitle: "DEXTERITY BASED SKILLS",
+      skillId: "dexterity",
+      skills1: {
+        name: "Acrobatics",
+        value: "+x",
+      },
+      skills2: {
+        name: "Sleight of Hand",
+        value: "0",
+      },
+      skills3: {
+        name: "Stealth ",
+        value: "0",
+      },
+    },
+    {
+      skillBlocTitle: "WISDOM BASED SKILLS",
+      skillId: "wisdom",
+      skills1: {
+        name: "Animal Handling",
+        value: "0",
+      },
+      skills2: {
+        name: "Insight",
+        value: "0",
+      },
+      skills3: {
+        name: "Medicine",
+        value: "0",
+      },
+      skills4: {
+        name: "Perception",
+        value: "0",
+      },
+      skills5: {
+        name: "Survival",
+        value: "0",
+      },
+    },
+    {
+      skillBlocTitle: "INTELLIGENCE BASED SKILLS",
+      skillId: "intelligence",
+      skills1: {
+        name: "Arcane",
+        value: "0",
+      },
+      skills2: {
+        name: "History",
+        value: "0",
+      },
+      skills3: {
+        name: "Investigation",
+        value: "0",
+      },
+      skills4: {
+        name: "Nature",
+        value: "0",
+      },
+      skills5: {
+        name: "Religion",
+        value: "0",
+      },
+    },
+
+    {
+      skillBlocTitle: "CHARISMA BASED SKILLS",
+      skillId: "charisma",
+      skills1: {
+        name: "Deception",
+        value: "0",
+      },
+      skills2: {
+        name: "Intimidation",
+        value: "0",
+      },
+      skills3: {
+        name: "Persuasion",
+        value: "0",
+      },
+      skills4: {
+        name: "Performance",
+        value: "0",
+      },
+    },
+  ]);
   // HEALTH
   const [playerHealthDice, setPlayerHealthDice] = useState("");
   // COMBAT
@@ -72,8 +185,18 @@ export function CharacterProvider({ children }) {
       setPlayerLevel,
       playerHealthDice,
       setPlayerHealthDice,
+      skillsBlocs,
+      setSkillsBlocs,
     }),
-    [playerClass, playerRace, playerLevel, playerHealthDice, color, caracs]
+    [
+      playerClass,
+      playerRace,
+      playerLevel,
+      playerHealthDice,
+      skillsBlocs,
+      color,
+      caracs,
+    ]
   );
 
   return (

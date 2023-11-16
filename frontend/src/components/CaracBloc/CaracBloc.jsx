@@ -5,119 +5,14 @@ import ArrowLine from "../../assets/dnd_ico/ArrowLine_1_b.png";
 import useCharacter from "../../context/CharacterContext";
 
 function CaracBloc() {
-  const { caracs } = useCharacter();
-  const SkillsBlocs = [
-    {
-      skillBlocTitle: "STRENGTH BASED SKILLS",
-      skillId: "strength",
-      skills1: {
-        name: "Athletics",
-        value: "+x",
-      },
-      display: "none",
-    },
-    {
-      skillBlocTitle: "DEXTERITY BASED SKILLS",
-      skillId: "dexterity",
-      skills1: {
-        name: "Acrobatics",
-        value: "+x",
-      },
-      skills2: {
-        name: "Sleight of Hand",
-        value: "+x",
-      },
-      skills3: {
-        name: "Stealth ",
-        value: "+x",
-      },
-    },
-    {
-      skillBlocTitle: "DEXTERITY BASED SKILLS",
-      skillId: "dexterity",
-      skills1: {
-        name: "Acrobatics",
-        value: "+x",
-      },
-      skills2: {
-        name: "Sleight of Hand",
-        value: "+x",
-      },
-      skills3: {
-        name: "Stealth ",
-        value: "+x",
-      },
-    },
-    {
-      skillBlocTitle: "WISDOM BASED SKILLS",
-      skillId: "wisdom",
-      skills1: {
-        name: "Animal Handling",
-        value: "+x",
-      },
-      skills2: {
-        name: "Insight",
-        value: "+x",
-      },
-      skills3: {
-        name: "Medicine",
-        value: "+x",
-      },
-      skills4: {
-        name: "Perception",
-        value: "+x",
-      },
-      skills5: {
-        name: "Survival",
-        value: "+x",
-      },
-    },
-    {
-      skillBlocTitle: "INTELLIGENCE BASED SKILLS",
-      skillId: "intelligence",
-      skills1: {
-        name: "Arcane",
-        value: "+x",
-      },
-      skills2: {
-        name: "History",
-        value: "+x",
-      },
-      skills3: {
-        name: "Investigation",
-        value: "+x",
-      },
-      skills4: {
-        name: "Nature",
-        value: "+x",
-      },
-      skills5: {
-        name: "Religion",
-        value: "+x",
-      },
-    },
-
-    {
-      skillBlocTitle: "CHARISMA BASED SKILLS",
-      skillId: "charisma",
-      skills1: {
-        name: "Deception",
-        value: "+x",
-      },
-      skills2: {
-        name: "Intimidation",
-        value: "+x",
-      },
-      skills3: {
-        name: "Persuasion",
-        value: "+x",
-      },
-      skills4: {
-        name: "Performance",
-        value: "+x",
-      },
-    },
-  ];
+  const { caracs, skillsBlocs } = useCharacter();
+  // setSkillsBlocs(
+  //   skillsBlocs.map((skill) =>
+  //     skill.skillId === name
+  //       ? { ...skill, caracValue: +e.target.value }
+  //       : skill
+  //   )
+  // );
 
   return (
     <>
@@ -130,7 +25,7 @@ function CaracBloc() {
               <CaracSeg
                 key={carac.caracName}
                 id={carac.caracName}
-                skills={SkillsBlocs[index]}
+                skills={skillsBlocs[index]}
                 caraClass={carac.caracName}
                 name={carac.caracName}
                 value={carac.caracValue}
@@ -150,7 +45,7 @@ function CaracBloc() {
                   <CaracSeg
                     key={carac.caracName}
                     id={carac.caracName}
-                    skills={SkillsBlocs[index]}
+                    skills={skillsBlocs[index]}
                     caraClass={carac.caracName}
                     name={carac.caracName}
                     value={carac.caracValue}
@@ -184,7 +79,7 @@ function CaracBloc() {
           ))}
         </div>
         <div className="skills_bloc_Print">
-          {SkillsBlocs.slice(0).map((skill) => (
+          {skillsBlocs.slice(0).map((skill) => (
             <SkillsBloc
               key={skill.skillBlocTitle}
               skillTitle={skill.skillBlocTitle}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Combat.css";
 import initImg from "../../assets/dnd_ico/star.png";
 import acImg from "../../assets/dnd_ico/bouclier.png";
@@ -9,7 +9,7 @@ import skullImg from "../../assets/dnd_ico/skull.png";
 import deathImg from "../../assets/dnd_ico/tombal.png";
 import HealthDice from "./HealthDice";
 import DeathSave from "./DeathSave";
-// import useCharacter from "../../context/CharacterContext";
+import useCharacter from "../../context/CharacterContext";
 
 function Combat() {
   const [initStat, setInitStat] = useState(0);
@@ -22,7 +22,8 @@ function Combat() {
   const [fail1, setFail1] = useState(false);
   const [fail2, setFail2] = useState(false);
   const [fail3, setFail3] = useState(false);
-  // const { character } = useCharacter();
+
+  const { playerRace } = useCharacter();
 
   const isMobile = window.innerWidth < 1024;
   const isAlive = hpStat > 0;
@@ -39,6 +40,44 @@ function Combat() {
     const valueSpeed = e.target.value;
     setSpeedStat(valueSpeed);
   };
+
+  useEffect(() => {
+    switch (playerRace) {
+      case "human":
+        setSpeedStat(30);
+        break;
+      case "dwarf":
+        setSpeedStat(25);
+        break;
+      case "elf":
+        setSpeedStat(30);
+        break;
+      case "gnome":
+        setSpeedStat(25);
+        break;
+      case "half-elf":
+        setSpeedStat(30);
+        break;
+      case "half-orc":
+        setSpeedStat(30);
+        break;
+      case "halfling":
+        setSpeedStat(25);
+        break;
+      case "dragonborn":
+        setSpeedStat(30);
+        break;
+      case "eladrin":
+        setSpeedStat(30);
+        break;
+      case "tiefling":
+        setSpeedStat(30);
+        break;
+      default:
+        setSpeedStat(30);
+        break;
+    }
+  }, [playerRace]);
 
   const hpChange = (e) => {
     const valueHp = e.target.value;
@@ -85,7 +124,7 @@ function Combat() {
 
   if (!isMobile) {
     return (
-      <>
+      <section id="COMBAT_COMPONENT">
         <div className="printDesktop">
           <div className="printCombatComponent">
             <img src={knightImg} alt="knight logo" className="knightLogo" />
@@ -291,11 +330,11 @@ function Combat() {
             </div>
           </div>
         </div>
-      </>
+      </section>
     );
   }
   return isAlive ? (
-    <>
+    <section id="COMBAT_COMPONENT2">
       <div className="printDesktop">
         <div className="printCombatComponent">
           <img src={knightImg} alt="knight logo" className="knightLogo" />
@@ -487,7 +526,7 @@ function Combat() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   ) : (
     <div className="deathSaveComponent">
       <img src={knightImg} alt="knight logo" className="knightLogo" />

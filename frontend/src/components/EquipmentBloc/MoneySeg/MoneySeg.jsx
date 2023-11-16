@@ -4,7 +4,7 @@ import "./moneySeg.css";
 import PurseImg from "../../../assets/dnd_ico/bourse.png";
 
 function MoneySeg(props) {
-  const { id, name, value } = props;
+  const { id, name } = props;
 
   const [purseValue, setPurseValue] = useState(0);
 
@@ -23,7 +23,7 @@ function MoneySeg(props) {
       <div className="purse_change">
         <img src={PurseImg} alt="purse" id="purse_img_print" />
         <div className="purse_value_content" id="purse_value_content_SmartPh">
-          <p className="purse_value">{value}</p>
+          <p className="purse_value">{purseValue}</p>
         </div>
         <div className="purse_money_line_DeskT">
           <div className="money_btn money_btn_DeskT" id="money_btn_down">

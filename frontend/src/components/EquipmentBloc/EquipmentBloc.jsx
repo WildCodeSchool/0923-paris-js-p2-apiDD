@@ -13,7 +13,7 @@ function EquipmentBloc() {
   ];
 
   return (
-    <div className="EQUIPMENT">
+    <section id="EQUIPMENT">
       <div id="equipment_ico_">
         <img id="equipment_ico" src={Equipment} alt="equipment icone" />
       </div>
@@ -49,7 +49,6 @@ function EquipmentBloc() {
               key={purse.purseName}
               id={purse.purseName}
               name={purse.purseName}
-              value={purse.PurseValue}
             />
           ))}
           <div className="purse_exchange">
@@ -73,7 +72,7 @@ function EquipmentBloc() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

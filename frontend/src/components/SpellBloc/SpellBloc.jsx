@@ -35,7 +35,7 @@ const SpellsList = [
 
 function SpellBloc() {
   return (
-    <section className="SPELLS">
+    <section id="SPELLS">
       <div id="wizard_ico_">
         <img id="wizard_ico" src={Wizard} alt="wizard icone" />
       </div>

@@ -12,9 +12,10 @@
   align-items: center;
   border: 1px solid #000000;
   border-radius: 85%;
-  width: 45px;
-  height: 35px;
+  width: 35px;
+  height: 25px;
   background: var(--input-bg-color);
+  margin-bottom: 7px;
 }
 
 .carac_num {

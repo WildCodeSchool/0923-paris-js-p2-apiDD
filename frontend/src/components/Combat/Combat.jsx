@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Combat.css";
 import initImg from "../../assets/dnd_ico/star.png";
 import acImg from "../../assets/dnd_ico/bouclier.png";
@@ -9,10 +9,10 @@ import skullImg from "../../assets/dnd_ico/skull.png";
 import deathImg from "../../assets/dnd_ico/tombal.png";
 import HealthDice from "./HealthDice";
 import DeathSave from "./DeathSave";
-// import useCharacter from "../../context/CharacterContext";
+import useCharacter from "../../context/CharacterContext";
 
 function Combat() {
-  const [initStat, setInitStat] = useState(0);
+  // const [initStat, setInitStat] = useState(0);
   const [acStat, setAcStat] = useState(10);
   const [speedStat, setSpeedStat] = useState(30);
   const [hpStat, setHpStat] = useState(1);
@@ -22,15 +22,34 @@ function Combat() {
   const [fail1, setFail1] = useState(false);
   const [fail2, setFail2] = useState(false);
   const [fail3, setFail3] = useState(false);
-  // const { character } = useCharacter();
+
+  const { playerRace, caracs } = useCharacter();
 
   const isMobile = window.innerWidth < 1024;
   const isAlive = hpStat > 0;
 
-  const initChange = (e) => {
-    const valueInit = e.target.value;
-    setInitStat(valueInit);
-  };
+  const dexterityCarac = caracs.find((carac) => carac.caracName === "DEX");
+  const dexterityValue = dexterityCarac ? dexterityCarac.caracValue : 0;
+  // const dynamicInit = Math.floor((dexterityValue - 10) / 2);
+
+  function initBonus() {
+    if (dexterityValue === "") {
+      return 0;
+    }
+
+    const bonus = Math.floor((dexterityValue - 10) / 2);
+    if (bonus < 0 || bonus === 0) {
+      return `${bonus.toString()}`;
+    }
+    if (bonus > 0) {
+      return `+${bonus.toString()}`;
+    }
+    return null;
+  }
+  // const initChange = (e) => {
+  //   const valueInit = e.target.value;
+  //   setInitStat(valueInit);
+  // };
   const acChange = (e) => {
     const valueAC = e.target.value;
     setAcStat(valueAC);
@@ -39,6 +58,44 @@ function Combat() {
     const valueSpeed = e.target.value;
     setSpeedStat(valueSpeed);
   };
+
+  useEffect(() => {
+    switch (playerRace) {
+      case "human":
+        setSpeedStat(30);
+        break;
+      case "dwarf":
+        setSpeedStat(25);
+        break;
+      case "elf":
+        setSpeedStat(30);
+        break;
+      case "gnome":
+        setSpeedStat(25);
+        break;
+      case "half-elf":
+        setSpeedStat(30);
+        break;
+      case "half-orc":
+        setSpeedStat(30);
+        break;
+      case "halfling":
+        setSpeedStat(25);
+        break;
+      case "dragonborn":
+        setSpeedStat(30);
+        break;
+      case "eladrin":
+        setSpeedStat(30);
+        break;
+      case "tiefling":
+        setSpeedStat(30);
+        break;
+      default:
+        setSpeedStat(30);
+        break;
+    }
+  }, [playerRace]);
 
   const hpChange = (e) => {
     const valueHp = e.target.value;
@@ -101,8 +158,7 @@ function Combat() {
                       {/* Add the variable Init in alt like: ${initStat} */}
                       <input
                         type="text"
-                        value={initStat}
-                        onChange={initChange}
+                        value={initBonus()}
                         onInput={(e) => {
                           const inputValue = e.target.value;
                           if (!/^[0-9+-]*$/.test(inputValue)) {
@@ -207,8 +263,7 @@ function Combat() {
                     {/* Add the variable Init in alt like: ${initStat} */}
                     <input
                       type="text"
-                      value={initStat}
-                      onChange={initChange}
+                      value={initBonus()}
                       onInput={(e) => {
                         const inputValue = e.target.value;
                         if (!/^[0-9+-]*$/.test(inputValue)) {
@@ -311,8 +366,7 @@ function Combat() {
                     {/* Add the variable Init in alt like: ${initStat} */}
                     <input
                       type="text"
-                      value={initStat}
-                      onChange={initChange}
+                      value={initBonus()}
                       onInput={(e) => {
                         const inputValue = e.target.value;
                         if (!/^[0-9+-]*$/.test(inputValue)) {
@@ -407,8 +461,7 @@ function Combat() {
                   {/* Add the variable Init in alt like: ${initStat} */}
                   <input
                     type="text"
-                    value={initStat}
-                    onChange={initChange}
+                    value={initBonus()}
                     onInput={(e) => {
                       const inputValue = e.target.value;
                       if (!/^[0-9+-]*$/.test(inputValue)) {

@@ -1,22 +1,34 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./characterClass.css";
+import useCharacter from "../../../context/CharacterContext";
 
 function CharacterClass() {
+  const [classes, setClasses] = useState([]);
+  const { setPlayerClass } = useCharacter();
+
+  useEffect(() => {
+    axios
+      .get("https://www.dnd5eapi.co/api/classes")
+      .then((response) => setClasses(response.data.results))
+      .catch((error) => console.error("Error fetching classes:", error));
+  }, []);
+
   return (
     <div className="inputBox-class">
       <label htmlFor="characterClass">Class</label>
-      <select name="classes" id="classes-select">
+      <select
+        name="class"
+        id="class-select"
+        onChange={(e) => setPlayerClass(e.target.value)}
+      >
         {" "}
-        <option value="barbarian">Barbarian</option>
-        <option value="cleric">Cleric</option>{" "}
-        <option value="druid">Druid</option>{" "}
-        <option value="fighter">Fighter</option>{" "}
-        <option value="monk">Monk</option>{" "}
-        <option value="paladin">Paladin</option>{" "}
-        <option value="ranger">Ranger</option>{" "}
-        <option value="rogue">Rogue</option>{" "}
-        <option value="sorcerer">Sorcerer</option>{" "}
-        <option value="warlock">Warlock</option>{" "}
-        <option value="wizard">Wizard</option>{" "}
+        <option value="">Choose your Class...</option>
+        {classes.map((playerClass) => (
+          <option key={playerClass.name} value={playerClass.index}>
+            {playerClass.name}
+          </option>
+        ))}
       </select>
     </div>
   );

@@ -6,30 +6,12 @@ import Wizard from "../../assets/dnd_ico/wizard.png";
 const SpellsList = [
   {
     spellLvlTitle: "SPELLS - LVL 0",
-    spell1: {
-      name: "lvl/0 - spell 1",
-    },
-    spell2: {
-      name: "lvl/0 - spell 2",
-    },
-    spell3: {
-      name: "lvl/0 - spell 3",
-    },
   },
   {
     spellLvlTitle: "SPELLS - LVL 1",
-    spell1: {
-      name: "lvl/1 - spell 1",
-    },
-    spell2: {
-      name: "lvl/1 - spell 2",
-    },
   },
   {
     spellLvlTitle: "SPELLS - LVL 2",
-    spell1: {
-      name: "lvl/2 - spell 1",
-    },
   },
 ];
 
@@ -47,9 +29,6 @@ function SpellBloc() {
               key={spells.spellLvlTitle}
               id={spells.spellLvlTitle}
               title={spells.spellLvlTitle}
-              spell1={spells.spell1}
-              spell2={spells.spell2}
-              spell3={spells.spell3}
             />
           ))}
         </div>

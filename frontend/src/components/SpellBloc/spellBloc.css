@@ -41,6 +41,7 @@
 }
 .spells_lvls {
   border: solid 1px black;
+  padding-bottom: 1rem;
 }
 .spell_bloc_top_line {
   display: flex;
@@ -80,6 +81,7 @@
 .spells_list {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 0.5rem;
   column-gap: 4px;
 }
@@ -89,8 +91,6 @@
   font-size: medium;
   padding-left: 10px;
   color: var(--main-font-color);
-  width: 94%;
-  margin-bottom: 1rem;
   width: 87%;
 }
 
@@ -111,6 +111,12 @@
     display: flex;
     align-items: center;
     font-size: larger;
+    width: 91%;
+  }
+  .open_spell_popup {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
   }
 }
 /* MEDIA-QUERIES PRINT */

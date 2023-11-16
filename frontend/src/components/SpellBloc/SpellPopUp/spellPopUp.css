@@ -36,6 +36,13 @@
   line-height: 39px;
   color: var(--main-font-color);
 }
+.spell_item_italic {
+  font-style: italic;
+}
+.item_infos_damage {
+  padding-left: 10px;
+  font-style: italic;
+}
 
 .spell_item_desc {
   font-family: "Eagle Lake", serif;
@@ -76,6 +83,10 @@
 
 @media (min-width: 1024px) {
   .spell_pop_up_content {
-    padding: 4rem;
+    padding: 5rem;
+  }
+  .MagicWand_ico {
+    width: 10rem;
+    margin: 1.5rem 0;
   }
 }

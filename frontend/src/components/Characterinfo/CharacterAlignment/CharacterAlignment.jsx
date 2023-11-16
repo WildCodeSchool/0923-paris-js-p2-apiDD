@@ -16,6 +16,7 @@ function CharacterAlignment() {
     <div className="inputBox-alignment">
       <label htmlFor="characterAlignment">Alignment</label>
       <select name="alignment" id="alignment-select">
+        <option value="">Choose your Alignement...</option>
         {alignments.map((alignment) => (
           <option key={alignment.name} value={alignment.index}>
             {alignment.name}

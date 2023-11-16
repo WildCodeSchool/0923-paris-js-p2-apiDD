@@ -22,6 +22,7 @@ function CharacterRace() {
         id="race-select"
         onChange={(e) => setPlayerRace(e.target.value)}
       >
+        <option value="">Choose your Race...</option>
         {races.map((race) => (
           <option key={race.name} value={race.index}>
             {race.name}

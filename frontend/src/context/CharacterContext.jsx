@@ -4,6 +4,12 @@ import { createContext, useContext, useState, useMemo } from "react";
 const CharacterContext = createContext();
 
 export function CharacterProvider({ children }) {
+  // CHAR INFOS
+  // const [character, setCharacter] = useState(new CharacterData());
+  const [playerClass, setPlayerClass] = useState("");
+  const [playerRace, setPlayerRace] = useState("");
+  const [playerLevel, setPlayerLevel] = useState(0);
+
   // STATS
   const [caracs, setCaracs] = useState([
     {
@@ -44,14 +50,8 @@ export function CharacterProvider({ children }) {
     },
   ]);
   // const [character, setCharacter] = useState(new CharacterData());
-
-  // CHAR INFOS
-  // const [character, setCharacter] = useState(new CharacterData());
-  const [playerClass, setPlayerClass] = useState(null);
-  const [playerRace, setPlayerRace] = useState(null);
-  // console.log(playerClass);
-
   // HEALTH
+  const [playerHealthDice, setPlayerHealthDice] = useState("");
   // COMBAT
   // EQUIPEMENT
   // DEATHSAVE
@@ -68,8 +68,12 @@ export function CharacterProvider({ children }) {
       setColor,
       caracs,
       setCaracs,
+      playerLevel,
+      setPlayerLevel,
+      playerHealthDice,
+      setPlayerHealthDice,
     }),
-    [playerClass, playerRace, color, caracs]
+    [playerClass, playerRace, playerLevel, playerHealthDice, color, caracs]
   );
 
   return (

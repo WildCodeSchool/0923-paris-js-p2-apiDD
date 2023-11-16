@@ -1,10 +1,57 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./HealthDice.css";
 import diceImg from "../../assets/dnd_ico/d20.png";
+import useCharacter from "../../context/CharacterContext";
 
 function HealthDice() {
   const [healthDiceNumber, setHealthDiceNumber] = useState(0);
-  const [healthDice, setHealthDice] = useState("");
+  const [setHealthDice] = useState("");
+
+  const { playerHealthDice, setPlayerHealthDice, playerClass } = useCharacter();
+
+  useEffect(() => {
+    switch (playerClass) {
+      case "barbarian":
+        setPlayerHealthDice("D12");
+        break;
+      case "bard":
+        setPlayerHealthDice("D8");
+        break;
+      case "cleric":
+        setPlayerHealthDice("D8");
+        break;
+      case "druid":
+        setPlayerHealthDice("D8");
+        break;
+      case "fighter":
+        setPlayerHealthDice("D10");
+        break;
+      case "monk":
+        setPlayerHealthDice("D8");
+        break;
+      case "paladin":
+        setPlayerHealthDice("D10");
+        break;
+      case "ranger":
+        setPlayerHealthDice("D10");
+        break;
+      case "rogue":
+        setPlayerHealthDice("D8");
+        break;
+      case "sorcerer":
+        setPlayerHealthDice("D6");
+        break;
+      case "warlock":
+        setPlayerHealthDice("D8");
+        break;
+      case "wizard":
+        setPlayerHealthDice("D6");
+        break;
+      default:
+        setPlayerHealthDice("0");
+        break;
+    }
+  }, [playerClass]);
 
   const handleHealthDiceChange = (e) => {
     const { value } = e.target;
@@ -62,7 +109,7 @@ function HealthDice() {
         <p>HP Dice</p>
         <input
           type="text"
-          value={healthDice}
+          value={playerHealthDice}
           onChange={handleHealthDiceChange}
           className="healthDiceInput"
         />

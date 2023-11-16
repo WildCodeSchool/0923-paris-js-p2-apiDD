@@ -179,7 +179,7 @@ function BonusPerceptionBloc() {
         }
         break;
       default:
-        setProficiencyBonus("+2");
+        setProficiencyBonus("0");
         break;
     }
   }, [playerClass, playerLevel]);

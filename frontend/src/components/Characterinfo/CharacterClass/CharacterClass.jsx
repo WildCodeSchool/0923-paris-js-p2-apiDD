@@ -22,6 +22,8 @@ function CharacterClass() {
         id="class-select"
         onChange={(e) => setPlayerClass(e.target.value)}
       >
+        {" "}
+        <option value="">Choose your Class...</option>
         {classes.map((playerClass) => (
           <option key={playerClass.name} value={playerClass.index}>
             {playerClass.name}

@@ -118,7 +118,7 @@ function Weapon() {
             value={nameMainWeapon}
             onChange={OnMainWeaponChoice}
           >
-            <option value="">Select a Main Weapon</option>
+            <option value="">Select a Main Weapon...</option>
             {weaponList.map((weaponName) => (
               <option key={weaponName} value={weaponName}>
                 {weaponName}
@@ -159,7 +159,7 @@ function Weapon() {
             value={nameOffHandWeapon}
             onChange={OnOffHandWeaponChoice}
           >
-            <option value="">Select an Offhand Weapon</option>
+            <option value="">Select an Offhand Weapon...</option>
             {weaponListTwo.map((weaponNameTwo) => (
               <option key={weaponNameTwo} value={weaponNameTwo}>
                 {weaponNameTwo}
@@ -200,7 +200,7 @@ function Weapon() {
             value={nameRangeWeapon}
             onChange={OnRangeWeaponChoice}
           >
-            <option value="">Select a Range Weapon</option>
+            <option value="">Select a Range Weapon...</option>
             {rangeWeaponList.map((rangesWeaponName) => (
               <option key={rangesWeaponName} value={rangesWeaponName}>
                 {rangesWeaponName}

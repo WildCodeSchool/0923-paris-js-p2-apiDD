@@ -6,9 +6,9 @@ const CharacterContext = createContext();
 export function CharacterProvider({ children }) {
   // CHAR INFOS
   // const [character, setCharacter] = useState(new CharacterData());
-  const [playerClass, setPlayerClass] = useState("barbarian");
-  const [playerRace, setPlayerRace] = useState("humain");
-  const [playerLevel, setPlayerLevel] = useState(1);
+  const [playerClass, setPlayerClass] = useState("");
+  const [playerRace, setPlayerRace] = useState("");
+  const [playerLevel, setPlayerLevel] = useState(0);
 
   // STATS
   const [caracs, setCaracs] = useState([
@@ -50,8 +50,8 @@ export function CharacterProvider({ children }) {
     },
   ]);
   // const [character, setCharacter] = useState(new CharacterData());
-
   // HEALTH
+  const [playerHealthDice, setPlayerHealthDice] = useState("");
   // COMBAT
   // EQUIPEMENT
   // DEATHSAVE
@@ -70,8 +70,10 @@ export function CharacterProvider({ children }) {
       setCaracs,
       playerLevel,
       setPlayerLevel,
+      playerHealthDice,
+      setPlayerHealthDice,
     }),
-    [playerClass, playerRace, playerLevel, color, caracs]
+    [playerClass, playerRace, playerLevel, playerHealthDice, color, caracs]
   );
 
   return (

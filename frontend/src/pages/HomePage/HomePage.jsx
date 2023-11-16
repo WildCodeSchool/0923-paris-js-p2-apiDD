@@ -1,23 +1,24 @@
 import "./homepage.css";
 import Dragonred from "../../assets/dnd_ico/dragon_red.png";
 import DnD from "../../assets/dnd_ico/D&D.png";
-// import scrollpaper from "../../assets/dnd_ico/scroll_papyrus.png";
-import Navbar from "../Navbar/Navbar";
 
 function HomePage() {
   return (
-    <div className="homepage">
-      <Navbar />
-
-      <div className="character_sheet">
+    <section className="homepage">
+      <div className="entrance">
         <img className="dragon_icone" src={Dragonred} alt="dragonimage" />
-        <div className="text-with-lines">
-          <p className="title">DRAGON PAPER</p>
+        <div className="Main_title_div">
+          <div className="red-barre"> </div>
+          <h1 className="Main_title">DRAGON PAPER</h1>
+          <div className="red-barre"> </div>
         </div>
 
         <div className="scrollpaper_items">
-          <h1>CREATE YOUR</h1>
-          <h1>CHACTER SHEET</h1>
+          <a className="link_Home-Charac_sheet" href="./charactersheet">
+            <p className="home_Title">
+              CREATE YOUR <br /> CHACTER SHEET
+            </p>
+          </a>
           <img className="dnd_title" src={DnD} alt="DnD" />
         </div>
 
@@ -28,7 +29,7 @@ function HomePage() {
           engage in combat, and interact with the game's rich narrative.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 export default HomePage;

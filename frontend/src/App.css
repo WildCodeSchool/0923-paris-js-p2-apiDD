@@ -1,15 +1,14 @@
-/* temp Julius Workzone */
-body {
-  margin: 3%;
+#root {
+  overflow-x: hidden;
 }
 /* MEDIA-QUERIES PRINT */
 @media print {
-  body {
+  /* body {
     margin: 0;
   }
   .attackNinc {
     margin-top: 200px;
-  }
+  } */
 }
 @media (min-width: 1023px) {
   .result {

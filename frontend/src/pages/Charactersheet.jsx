@@ -1,7 +1,7 @@
 import React from "react";
 import "../resetStyle.css";
-import "../App";
-import "../assets/stylesheets/characterSheet_general.css";
+import "../App.css";
+import "./characterSheet_general.css";
 import CharacterInfo from "../components/Characterinfo/CharacterInfo";
 import Combat from "../components/Combat/Combat";
 import HealthDice from "../components/Combat/HealthDice";
@@ -13,7 +13,7 @@ import AttackNinc from "../components/Attacks&Inc/AttackNinc";
 import SnakeDragon from "../assets/dnd_ico/snake-dragon.png";
 import { CharacterProvider } from "../context/CharacterContext";
 
-function Charactersheet() {
+function CharacterSheet() {
   return (
     <CharacterProvider>
       <div className="result Sheet_smartphone" id="CHARACTERS_SHEET">
@@ -54,4 +54,4 @@ function Charactersheet() {
   );
 }
 
-export default Charactersheet;
+export default CharacterSheet;

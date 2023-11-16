@@ -82,6 +82,7 @@ function Armor() {
                   className="armor_name_input"
                   type="text"
                   id="armor_name_input"
+                  placeholder="None"
                   value={name}
                   onChange={(e) => setArmorName(e.target.value)}
                 /> */}
@@ -107,6 +108,7 @@ function Armor() {
                     className="armor_class_input"
                     type="text"
                     id="armor_class_input"
+                    placeholder="None"
                     value={armorclass}
                     onChange={(e) => setArmorclass(e.target.value)}
                   />
@@ -118,6 +120,7 @@ function Armor() {
                     className="armor_strenght_input"
                     type="text"
                     id="armor_strenght_input"
+                    placeholder="None"
                     value={strenght}
                     onChange={(e) => setStrenght(e.target.value)}
                   />
@@ -129,6 +132,7 @@ function Armor() {
                   className="armor_disadvantage_input"
                   type="text"
                   id="armor_disadvantage_input"
+                  placeholder="None"
                   value={disadvantage}
                   onChange={(e) => setDisadvantage(e.target.value)}
                 />
@@ -165,6 +169,7 @@ function Armor() {
                     className="armor_class_input_desktop"
                     type="text"
                     id="armor_class_input"
+                    placeholder="None"
                     value={armorclass}
                     onChange={(e) => setArmorclass(e.target.value)}
                   />
@@ -178,6 +183,7 @@ function Armor() {
                     className="armor_disadvantage_input_desktop"
                     type="text"
                     id="armor_disadvantage_input"
+                    placeholder="None"
                     value={disadvantage}
                     onChange={(e) => setDisadvantage(e.target.value)}
                   />
@@ -189,6 +195,7 @@ function Armor() {
                     className="armor_strenght_input_desktop"
                     type="text"
                     id="armor_strenght_input"
+                    placeholder="None"
                     value={strenght}
                     onChange={(e) => setStrenght(e.target.value)}
                   />
@@ -225,6 +232,7 @@ function Armor() {
                 className="armor_class_input"
                 type="text"
                 id="armor_class_input"
+                placeholder="None"
                 value={armorclass}
                 onChange={(e) => setArmorclass(e.target.value)}
               />
@@ -237,6 +245,7 @@ function Armor() {
                 className="armor_strenght_input"
                 type="text"
                 id="armor_strenght_input"
+                placeholder="None"
                 value={strenght}
                 onChange={(e) => setStrenght(e.target.value)}
               />
@@ -248,6 +257,7 @@ function Armor() {
                 className="armor_disadvantage_input"
                 type="text"
                 id="armor_disadvantage_input"
+                placeholder="None"
                 value={disadvantage}
                 onChange={(e) => setDisadvantage(e.target.value)}
               />

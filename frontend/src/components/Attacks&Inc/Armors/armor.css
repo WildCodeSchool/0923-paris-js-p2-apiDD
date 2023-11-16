@@ -33,7 +33,7 @@
 .armor_name_input {
   background-color: #e8e8e8;
   border: 1px solid black;
-  height: 1.4rem;
+  height: 2.8rem;
   width: 94%;
 }
 .class_strenght_line {
@@ -130,8 +130,6 @@
     width: 9%;
   }
 
-  .armor_name_desktop {
-  }
   .armor_bloc_contents_desktop {
     margin-bottom: 1rem;
   }
@@ -148,7 +146,7 @@
     width: 50%;
   }
   .armor_name_input_desktop {
-    height: 1.5rem;
+    height: 2.4rem;
     margin-top: 10px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;

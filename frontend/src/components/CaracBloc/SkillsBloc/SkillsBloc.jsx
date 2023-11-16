@@ -22,7 +22,12 @@ function SkillsBloc(props) {
                 <span className="custom_checkbox" />
               </label>
               <div className="value_imput">
-                <p className="skill_value">{skill1.value}</p>
+                <input
+                  id="testskill1"
+                  className="skill_value"
+                  type="text"
+                  value={skill1.value}
+                />
               </div>
               <p className="skill_name">{skill1.name}</p>
             </div>
@@ -33,7 +38,12 @@ function SkillsBloc(props) {
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">
-                  <p className="skill_value">{skill2.value}</p>
+                  <input
+                    id="testskill1"
+                    className="skill_value"
+                    type="text"
+                    value={skill2.value}
+                  />
                 </div>
                 <p className="skill_name">{skill2.name}</p>
               </div>
@@ -45,7 +55,12 @@ function SkillsBloc(props) {
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">
-                  <p className="skill_value">{skill3.value}</p>
+                  <input
+                    id="testskill1"
+                    className="skill_value"
+                    type="text"
+                    value={skill1.value}
+                  />
                 </div>
                 <p className="skill_name">{skill3.name}</p>
               </div>
@@ -57,7 +72,12 @@ function SkillsBloc(props) {
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">
-                  <p className="skill_value">{skill4.value}</p>
+                  <input
+                    id="testskill1"
+                    className="skill_value"
+                    type="text"
+                    value={skill1.value}
+                  />
                 </div>
                 <p className="skill_name">{skill4.name}</p>
               </div>
@@ -69,7 +89,12 @@ function SkillsBloc(props) {
                   <span className="custom_checkbox" />
                 </label>
                 <div className="value_imput">
-                  <p className="skill_value">{skill5.value}</p>
+                  <input
+                    id="testskill1"
+                    className="skill_value"
+                    type="text"
+                    value={skill1.value}
+                  />
                 </div>
                 <p className="skill_name">{skill5.name}</p>
               </div>

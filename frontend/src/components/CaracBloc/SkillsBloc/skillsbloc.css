@@ -71,8 +71,6 @@ input[type="checkbox"] {
 .value_imput {
   width: 45px;
   height: 40px;
-  border: solid 1px black;
-  background: var(--input-bg-color);
 }
 .skill_value {
   font-family: "Eagle Lake";

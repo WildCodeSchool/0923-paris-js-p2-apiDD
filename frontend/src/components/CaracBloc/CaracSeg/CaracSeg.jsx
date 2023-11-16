@@ -50,7 +50,7 @@ function CaracSeg(props) {
     }
   };
 
-  function strBonus() {
+  function statBonus() {
     if (caracNum === "") {
       return 0;
     }
@@ -65,7 +65,7 @@ function CaracSeg(props) {
     return null;
   }
 
-  const saveBonus = strBonus;
+  const saveBonus = statBonus;
 
   return (
     <>
@@ -83,7 +83,7 @@ function CaracSeg(props) {
         <div className="carac_main_content">
           <p className="carac_title">{name}</p>
           <div className="carac_bonus_content">
-            <p className={`carac_bonus ${caraClass}`}>{strBonus()}</p>
+            <p className={`carac_bonus ${caraClass}`}>{statBonus()}</p>
           </div>
         </div>
         {/* // bottom // */}

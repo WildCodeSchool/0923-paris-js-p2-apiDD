@@ -4,6 +4,12 @@ import { createContext, useContext, useState, useMemo } from "react";
 const CharacterContext = createContext();
 
 export function CharacterProvider({ children }) {
+  // CHAR INFOS
+  // const [character, setCharacter] = useState(new CharacterData());
+  const [playerClass, setPlayerClass] = useState("barbarian");
+  const [playerRace, setPlayerRace] = useState("humain");
+  const [playerLevel, setPlayerLevel] = useState(1);
+
   // STATS
   const [caracs, setCaracs] = useState([
     {
@@ -44,12 +50,6 @@ export function CharacterProvider({ children }) {
     },
   ]);
   // const [character, setCharacter] = useState(new CharacterData());
-
-  // CHAR INFOS
-  // const [character, setCharacter] = useState(new CharacterData());
-  const [playerClass, setPlayerClass] = useState("barbarian");
-  const [playerRace, setPlayerRace] = useState("humain");
-  const [playerLevel, setPlayerLevel] = useState(1);
 
   // HEALTH
   // COMBAT

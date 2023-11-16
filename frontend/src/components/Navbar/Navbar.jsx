@@ -10,7 +10,12 @@ function Navbar() {
 
   return (
     <div className={`navbar ${isOpen ? "active" : ""}`}>
-      <button type="button" className="menu-icon" onClick={toggleMenu}>
+      <button
+        type="button"
+        className="menu-icon"
+        onClick={toggleMenu}
+        label="Toggle Menu"
+      >
         <div className="bar" />
         <div className="bar" />
         <div className="bar" />

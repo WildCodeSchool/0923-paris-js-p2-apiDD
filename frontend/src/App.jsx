@@ -9,11 +9,13 @@ import SpellBloc from "./components/SpellBloc/SpellBloc";
 import EquipmentBloc from "./components/EquipmentBloc/EquipmentBloc";
 import AttackNinc from "./components/Attacks&Inc/AttackNinc";
 import { CharacterProvider } from "./context/CharacterContext";
+import HomePage from "./components/HomePage/HomePage";
 
 function App() {
   return (
     <CharacterProvider>
       <div className="result">
+        <HomePage />
         <CaracBloc />
         <Combat />
         <DeathSave />

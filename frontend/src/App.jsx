@@ -12,45 +12,51 @@ import BonusPerceptionBloc from "./components/BonusPerceptionBloc/BonusPerceptio
 import AttackNinc from "./components/Attacks&Inc/AttackNinc";
 import SnakeDragon from "./assets/dnd_ico/snake-dragon.png";
 import { CharacterProvider } from "./context/CharacterContext";
+import HomePage from "./components/HomePage/HomePage";
 
 function App() {
   return (
-    <CharacterProvider>
-      <div className="result Sheet_smartphone" id="CHARACTERS_SHEET">
-        <CharacterInfo />
-        <BonusPerceptionBloc />
-        <CaracBloc />
-        <Combat />
-        {window.innerWidth < 1024 && <HealthDice />}
-        <AttackNinc />
-        <SpellBloc />
-        <EquipmentBloc />
-        <div className="PositionSnakeDragon">
-          <img src={SnakeDragon} alt="snake dragon" id="snakeDragon" />
-        </div>
-      </div>
-      <div className="result Sheet_desktop" id="CHARACTERS_SHEET">
-        <div id="DesktopTopLine">
-          <CharacterInfo />
-        </div>
-        <div className="Desktop_columns_content">
-          <div id="DesktopLeftColumn">
+    <>
+      <HomePage />
+      <CharacterProvider>
+        <div className="result">
+          <div className="result Sheet_smartphone" id="CHARACTERS_SHEET">
+            <CharacterInfo />
             <BonusPerceptionBloc />
             <CaracBloc />
+            <Combat />
+            {window.innerWidth < 1024 && <HealthDice />}
+            <AttackNinc />
             <SpellBloc />
+            <EquipmentBloc />
             <div className="PositionSnakeDragon">
               <img src={SnakeDragon} alt="snake dragon" id="snakeDragon" />
             </div>
           </div>
-          <div id="DesktopRightColumn">
-            <Combat />
-            {window.innerWidth < 1024 && <HealthDice />}
-            <AttackNinc />
-            <EquipmentBloc />
+          <div className="result Sheet_desktop" id="CHARACTERS_SHEET">
+            <div id="DesktopTopLine">
+              <CharacterInfo />
+            </div>
+            <div className="Desktop_columns_content">
+              <div id="DesktopLeftColumn">
+                <BonusPerceptionBloc />
+                <CaracBloc />
+                <SpellBloc />
+                <div className="PositionSnakeDragon">
+                  <img src={SnakeDragon} alt="snake dragon" id="snakeDragon" />
+                </div>
+              </div>
+              <div id="DesktopRightColumn">
+                <Combat />
+                {window.innerWidth < 1024 && <HealthDice />}
+                <AttackNinc />
+                <EquipmentBloc />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </CharacterProvider>
+      </CharacterProvider>
+    </>
   );
 }
 

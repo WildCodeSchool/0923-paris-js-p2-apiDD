@@ -1,13 +1,14 @@
 import React from "react";
-import "./resetStyle.css";
-import "./App.css";
-import CaracBloc from "./components/CaracBloc/CaracBloc";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./pages/HomePage/HomePage";
+import CharacterSheet from "./pages/CharacterSheet";
 
 function App() {
   return (
-    <div>
-      <CaracBloc />
-    </div>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/charactersheet" element={<CharacterSheet />} />
+    </Routes>
   );
 }
 
